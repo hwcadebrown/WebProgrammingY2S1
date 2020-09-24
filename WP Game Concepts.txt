@@ -1,12 +1,12 @@
 ﻿Game Concepts 
 
-
 Type of game
 * Area fighting (vehicles?)
 * Tron/snake style (cutting off other payers with trails/lines, trains? Scale up with carriages and different models, pick up passengers to increase carriage line garbage ball? Collect trash and grow, consume smaller players garbage balls, sausage dogs? Eat treats to grow longer,)
 * Maze style (chase players around a maze area, try to destroy other players)
 * High Scores, for the single instance or every session ever played on the game (all time)? 
 Concept 
+
 Train Game
 * Players look to collect passenger icons to grow train carriages in a large arena 
 * Players look to cut off other players with their carriages in order to destroy them and pick up their passengers to further grow their own train
