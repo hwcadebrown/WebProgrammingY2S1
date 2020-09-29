@@ -4,4 +4,9 @@ Repository for Web Programming Y2 S1
 Team members: Alexander Wickham, Andrew McBain, 
 Nicole Stewart, Glenn Wright and Cade Brown
 
-(Roles for each member have not been decided yet)
+Roles/Jobs:
+Front end (HTML, CSS): Glenn Wright, gw31
+Front end (JavaScript): Nicole Stewart, ns133
+Graphics: Cade Brown, cb313
+Back end (Databases): Andrew McBain, aw127
+Back end (Game Server): Alexander Wickham, am454
