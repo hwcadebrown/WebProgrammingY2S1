@@ -1,0 +1,23 @@
+body {
+    background: #F4727D;
+}
+
+h1 {
+  font-family: Abel, sans-serif;
+  font-size: 900%;
+  color: #EFD691;
+  text-align: center;
+  vertical-align: top;
+  margin-top: -4px;
+  text-shadow: 10px 6px black;
+}
+
+h2 {
+  font-family: Abel, sans-serif;
+  font-size: 500%;
+  color: #EFD691;
+  text-align: center;
+  vertical-align: top;
+  margin-top: -4px;
+  text-shadow: 6px 4px black;
+}
