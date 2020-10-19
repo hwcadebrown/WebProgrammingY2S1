@@ -18,7 +18,7 @@ h1 {
   text-align: center;
   vertical-align: top;
   margin-top: -4px;
-  text-shadow: 10px 6px black;
+  text-shadow: 8px 5px black;
 }
 
 h2 {
@@ -29,4 +29,22 @@ h2 {
   vertical-align: top;
   margin-top: -4px;
   text-shadow: 6px 4px black;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  width: 500px;
+  height: 100px;
+  position: relative;
+  top: -70px;
+  text-align: center;
+  font-family: Abel, sans-serif;
+  font-size: 80px;
+  box-shadow: 10px 10px #B59959;
 }
