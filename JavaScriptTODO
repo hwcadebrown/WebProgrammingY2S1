@@ -1,0 +1,47 @@
+JavaScript: To-Do-List
+
+THE GAME BOARD
+-	The game is not going to be the size of the full screen but rather in a window that will appear on the page
+-	The game will move with each individual player meaning that they will not be able to see the full screen or all the other players at once
+-	The games will be played in an allocated time slot (e.g. 2 or 3 minutes)
+
+GAME PIECES
+
+TRAINS
+-	The train will be controlled using the arrow keys on the keyboard
+-	The train will always be moving in the direction it is facing and the user will just be controlling the direction 
+  - This will prevent users hiding in the corner of a game
+-	Players will be randomly assigned a colour of train as they enter the game
+
+PASSENGERS AND CARRIAGES
+-	The user will collect passengers/carriages by moving over the icon which will increment their score
+-	Passenger icons will move 
+  -	Need to look into this to determine the difficulty
+-	Once a user has collected a passenger, the icon will disappear from the screen
+-	New passengers will spawn after a certain period of time 
+  - E.g. 10 or 15 seconds
+-	After a user has collected a certain number of passengers, they will be awarded with a carriage 
+
+OBSTACLES
+-	When the player collides with an opponent’s train, the player is destroyed 
+-	When the player collides with an obstacle (e.g. buildings) the player is destroyed 
+-	When a player collides with their own carriages, they are destroyed
+-	When a player has been destroyed, all of their carriages and passengers become available for other players to collect for themselves
+  -	e.g. if a player has a score of 22, they may drop 4 carriages and 2 people
+-	When the player has been destroyed, they are shown a ‘death’ screen for a certain amount of time (e.g. 5 seconds) and then spawned back into the game to try and collect passengers again
+
+SCORE
+-	The players score will be incremented each time they pick a player up
+-	When a player has collected a certain number of passengers (e.g. 10) the train will gain a carriage 
+-	When a player is destroyed, their score is reset to 0
+-	The player with the highest number of passengers at the current time will be at the top of the leaderboard 
+-	The player with the highest number of passengers at the end of the game will be the winner 
+-	The game will have a feature that keeps track of which player gained the longest train throughout the entire game (whether they were destroyed or not) and that user will get a special mention at the end
+
+GAME OVER
+-	The game will have a time limit and will end when the timer is finished 
+-	The winner will be displayed at the end of the game along with the ‘special mention’ of the player who had the longest train
+-	Will have an option to return to the main menu
+
+NOTES
+-	Good game tutorial on W3Schools which shows many concepts which may be helpful
