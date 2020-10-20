@@ -31,6 +31,14 @@ h2 {
   text-shadow: 6px 4px black;
 }
 
+hr {
+  border: 5px solid #EFD691;
+  position: relative;
+  top: -270px;
+  width: 1250px;
+  box-shadow: 5px 5px black
+}
+
 form {
   text-align: center;
 }
