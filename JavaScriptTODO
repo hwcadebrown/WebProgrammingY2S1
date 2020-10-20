@@ -1,9 +1,9 @@
 JavaScript: To-Do-List
 
 THE GAME BOARD
-The game is not going to be the size of the full screen but rather in a window that will appear on the page
-The game will move with each individual player meaning that they will not be able to see the full screen or all the other players at once
-The games will be played in an allocated time slot (e.g. 2 or 3 minutes)
+- The game is not going to be the size of the full screen but rather in a window that will appear on the page
+- The game will move with each individual player meaning that they will not be able to see the full screen or all the other players at once
+- The games will be played in an allocated time slot (e.g. 2 or 3 minutes)
 
 GAME PIECES
 
