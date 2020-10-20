@@ -14,7 +14,7 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 20px;
+  grid-gap: 20px; 
   background-color: #2196F3;
   padding: 20px;
 }
