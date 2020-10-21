@@ -1,6 +1,5 @@
 <!--Andrew McBain and Cade-->
 body{
-	background-color: #0042aa;
 }
 
 @keyframes backgroundmv {
@@ -15,58 +14,58 @@ body{
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 20px;
+  grid-gap: 15px;
   background-color: black;
-  padding: 20px;
-	height: 93vh;
-	width: 96vw;
+	height: 97vh;
+	width: 99vw;
 }
 
 .grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
-  padding: 5px 0;
   font-size: 30px;
 }
 
-.item1 {
+.title {
   grid-column: 1 / span 4 ;
 	font-family: Abel, sans-serif;
-  font-size: 900%;
   color: #EFD691;
-	text-shadow: 4px 2px black;
-
+	text-shadow: 3px 2px black;
 }
 
-.item2 {
+.highscore {
   grid-row: 2 / span 4;
+	font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
 }
-.item3 {
+
+.userpane {
  grid-row: 2 / span 4;
- grid-column:2 / span 2 ;
+ grid-column: 2 / span 2 ;
+ font-family: Abel, sans-serif;
+ color: #EFD691;
+ text-shadow: 3px 2px black;
 }
-.item4 {
+
+.myscore {
  grid-row: 2 / span 4;
  grid-column:4 / span 1 ;
-}
-
-h2 {
-	font-family: Abel, sans-serif;
-  font-size: 120%;
-  color: #EFD691;
-  margin-top: -50px;
-  text-shadow: 3px 2px black;
+ font-family: Abel, sans-serif;
+ color: #EFD691;
+ text-shadow: 3px 2px black;
 }
 
 .txtbox {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
-  width: 400px;
-  height: 60px;
-  text-align: center;
+  width: 400px; height: 60px;
   font-family: Abel, sans-serif;
   font-size: 40px;
+	position: relative;
+	top: -25px;
+	text-align: center;
   box-shadow: 10px 10px #B59959;
 }
 
@@ -76,24 +75,16 @@ h2 {
   background-color: #F3D486;
   width: 250px;
   height: 60px;
-  position: relative;
-  top: -60px;
   font-family: Abel, sans-serif;
   font-size: 40px;
+	position: relative;
+	top: -40px;
   box-shadow: 6px 8px #B59959;
   cursor: pointer;
 }
-
-.relative {
- position: relative;
- text-align: center;
- top: -70px;
-}
-
 .accbuttons {
-	margin-right: 10px;
-  text-align: center;
   border: 1px solid #F3D486;
+	margin-top: 15px;
   border-radius: 25px;
   background-color: #F3D486;
   width: 150px;
