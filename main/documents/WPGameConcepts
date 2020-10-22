@@ -1,0 +1,61 @@
+Team XCGAN Game Concepts
+
+Type of game
+  -	Area fighting (vehicles?)
+  -	Tron/snake style (cutting off other payers with trails/lines, trains? Scale up with carriages and different models, pick up passengers to increase carriage line garbage ball? Collect trash and grow, consume smaller players garbage balls, sausage dogs? Eat treats to grow longer,)
+  -	Maze style (chase players around a maze area, try to destroy other players)
+  -	High Scores, for the single instance or every session ever played on the game (all time)? 
+
+Concept 
+Train Game:
+  -     Players look to collect passenger icons to grow train carriages in a large arena 
+  -	Players look to cut off other players with their carriages in order to destroy them and pick up their passengers to further grow their own train
+  -	Lobby leaderboard that keeps track of the player with the most ‘passenger points’ 
+  -	There will be obstacles like building/ hills that create more variation in chases between players. 
+  -	Respawning passengers so there isn’t a drought where players cannot collect any more due to another player collecting them all.
+  -	No train track system to prioritise fun/freedom over restricting the player.
+  -	Different train colours to differentiate players, or have train names chosen by the player.
+
+Website 
+  -	Login page: ability to sign in to a previously established account, button to lead to a new user page
+  -	Register new user page, identical in look to login page with inclusion of confirm password box 
+  -	Main Menu page : displays high score leaderboard, personal high / previous game scores, play button that allows user to join a session, *i* icon to display pop up window with game info
+  -	Game page- window containing actual game 
+  -	Colour palate: Blue + Yellow  + Black/ Peach + Yellow + Black
+
+Game 
+Player mechanics:
+  -	Make the train move using arrow keys 
+  -	Player is always moving, user controls direction 
+  -	Player can collect passengers/carriage by moving over their icon 
+  -	Player is assigned random colour when joining game to differentiate from other players 
+
+Passenger icon:
+  -	People icons move
+  -	Icons disappear upon pick up by player 
+  -	Spawn new people after a certain time frame 
+
+Collisions:
+  -	When the player collides with an opponent's train, the player is destroyed and their passengers are dropped to be poached by other players 
+  -	When a player collides with an obstacle, the player is again destroyed dropping their passengers 
+  -	When a player collides with their own carriages, they are again destroyed and drop their passengers 
+  -	When a player is killed all of their carriages/people become available for other players to collect (e.g if a player has a score of 22, they may drop 4 carriages and 2 people)
+  -	Upon destruction, a player is shown a ‘death’ screen and spawned back into the game to restart process  
+ 
+Score:
+  -	Ensure that the score is increased when a person is picked up
+  -	If a player is destroyed, their score is reset to 0
+  -	The player with the most amount of passengers at the current time will be at the top of the leaderboards
+  -	The player with most passengers at the end of the game is the winner
+  -	The game will keep track of what player had the longest carriage over the games run and display the user’s name at the end as a special mention 
+
+Game over:
+  -	Game has time limit and ends with a winner 
+  -	Winner is displayed on the game over screen 
+  -	Special mention to the player who got the most amount of passengers at one time over4 the games run is also displayed
+  -	Button to return to menu 
+
+Profile data:
+  -	Unique ID, Username & password
+  -	Register account (keep track of personal high scores)
+  -	Put high scores on the leaderboard even if not registered?
