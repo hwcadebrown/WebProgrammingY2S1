@@ -1,0 +1,105 @@
+<!--Andrew McBain and Cade-->
+body{
+	background-color: #0042aa;
+}
+
+@keyframes backgroundmv {
+  0%   {background-color:#0042aa;}
+  20%  {background-color:#0086aa;}
+  40%  {background-color:#0064aa;}
+  60%  {background-color:#0020aa;}
+  80%  {background-color:#0200aa;}
+  100% {background-color:#0042aa;}
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  background-color: black;
+  padding: 20px;
+	height: 93vh;
+	width: 96vw;
+}
+
+.grid-container > div {
+  animation: backgroundmv 60s infinite;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 4 ;
+	font-family: Abel, sans-serif;
+  font-size: 900%;
+  color: #EFD691;
+	text-shadow: 4px 2px black;
+
+}
+
+.item2 {
+  grid-row: 2 / span 4;
+}
+.item3 {
+ grid-row: 2 / span 4;
+ grid-column:2 / span 2 ;
+}
+.item4 {
+ grid-row: 2 / span 4;
+ grid-column:4 / span 1 ;
+}
+
+h2 {
+	font-family: Abel, sans-serif;
+  font-size: 120%;
+  color: #EFD691;
+  margin-top: -50px;
+  text-shadow: 3px 2px black;
+}
+
+.txtbox {
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  width: 400px;
+  height: 60px;
+  text-align: center;
+  font-family: Abel, sans-serif;
+  font-size: 40px;
+  box-shadow: 10px 10px #B59959;
+}
+
+.playbutton {
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  width: 250px;
+  height: 60px;
+  position: relative;
+  top: -60px;
+  font-family: Abel, sans-serif;
+  font-size: 40px;
+  box-shadow: 6px 8px #B59959;
+  cursor: pointer;
+}
+
+.relative {
+ position: relative;
+ text-align: center;
+ top: -70px;
+}
+
+.accbuttons {
+	margin-right: 10px;
+  text-align: center;
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  width: 150px;
+  height: 40px;
+  font-family: Abel, sans-serif;
+  font-size: 20px;
+  box-shadow: 6px 8px #B59959;
+  cursor: pointer;
+}
