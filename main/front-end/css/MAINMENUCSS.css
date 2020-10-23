@@ -3,7 +3,7 @@ body{
 }
 
 @keyframes backgroundmv {
-  0%   {background-color:#0042aa;}
+ 0%   {background-color:#0042aa;}
  20%  {background-color:#0086aa;}
  40%  {background-color:#0064aa;}
  60%  {background-color:#0020aa;}
