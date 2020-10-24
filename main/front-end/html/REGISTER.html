@@ -1,55 +1,41 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" type="text/css" href="../css/LOGIN.css">
-  </head>
+<html>
+<!-- Glenn Wright and Cade-->
+<head>
+  <title>Trains of Pain Register</title>
+	<link rel="stylesheet" type="text/css" href="../css/REGISTERCSS.css">
+</head>
 
-  <body style="background-color:#5FA4C4;">
+<body style="background-color:black;">
 
 <div class="grid-container">
-  <div class ="item1">
-  </br></br>
-  REGISTER
-  <br><br>
+
+  <div class="registertitle">
+    <h1>REGISTER</h1>
   </div>
 
-  <div class = "item2">
-	</br></br></br></br>
-	ALREADY HAVE AN ACCOUNT?
-	<br><br>
-  <input type="button" value="LOGIN" onclick="window.location.href='login.html'" />
+  <div class="registerpane">
+	   <br><br>
+	   <h3>ALREADY HAVE</h3>
+     <h3>AN ACCOUNT?</h3>
+     <input type="button" value="LOGIN" onclick="window.location.href='LOGIN.html'" class='loginbutton'/>
   </div>
 
-  <div class="item3">
-	<br><br>
-	Username
-	<br><br>
-  <input name="Username" type="text" size="30"><p>
+  <div class="register">
+	   <h4>USERNAME</h4>
+     <input name="USERNAME" type="text" size="30" class="usernametxt"><p>
+     <h4>PASSWORD</h4>
+     <input name="PASSWORD" type="text" size="30" class="passwordtxt"><p>
+     <h4>CONFIRM PASSWORD</h4>
+     <input name="CONFRMPASSWORD" type="text" size="30" class="passwordtxt"><p>
+     <input type="button" value="REGISTER" onclick="window.location.href='MAINMENU.html'" class="regbutton"/>
+   </div>
 
-  Password
+<div class = "menu">
   <br><br>
-  <input name="Password" type="text" size="30"><p>
-  <br><br>
-
-Confirm Password
-<br><br>
-<input name="ConfirmPassword" type="text" size="30"><p>
-<br><br>
-<input type="button" value="REGISTER" onclick="window.location.href='play.html'" />
-
+	<h3>BACK TO</h3>
+  <h3>MAIN MENU?</h3>
+	<input type="button" value="MENU" onclick="window.location.href='MAINMENU.html'" class="menubutton"/>
 </div>
-
-
-
-
-
-<div class = "item4">
-	</br></br></br></br>
-	Back to main Menu?
-	<br><br>
-	<input type="button" value="Menu" onclick="window.location.href='home.html'" />
-	</div>
-
 
   </body>
 
