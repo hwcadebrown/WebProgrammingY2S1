@@ -21,22 +21,25 @@
   </div>
 
   <div class="register">
-	   <h4>USERNAME</h4>
+	   <p>USERNAME</p>
      <input name="USERNAME" type="text" size="30" class="usernametxt"><p>
-     <h4>PASSWORD</h4>
-     <input name="PASSWORD" type="text" size="30" class="passwordtxt"><p>
-     <h4>CONFIRM PASSWORD</h4>
-     <input name="CONFRMPASSWORD" type="text" size="30" class="passwordtxt"><p>
+     <p>PASSWORD</p>
+     <input name="PASSWORD" type="password" id="passwordtxt" size="30" class="passwordtxt"><p>
+     <p onclick="showPass()" class="show">SHOW PASSWORD</p>
+     <p class="confpass">CONFIRM PASSWORD</p>
+     <input name="CONFRMPASSWORD" type="password" size="30" class="passwordconftxt"><p>
      <input type="button" value="REGISTER" onclick="window.location.href='MAINMENU.html'" class="regbutton"/>
    </div>
 
-<div class = "menu">
-  <br><br>
-	<h3>BACK TO</h3>
-  <h3>MAIN MENU?</h3>
-	<input type="button" value="MENU" onclick="window.location.href='MAINMENU.html'" class="menubutton"/>
-</div>
+  <div class = "menu">
+    <br><br>
+	  <h3>BACK TO</h3>
+    <h3>MAIN MENU?</h3>
+	  <input type="button" value="MENU" onclick="window.location.href='MAINMENU.html'" class="menubutton"/>
+  </div>
 
-  </body>
+<script src="../javascript/REGISTERJS.js"></script>
+
+</body>
 
 </html>
