@@ -3,8 +3,7 @@ function start() {
   gameBoard.start();
 }
 
-var gameBoard = {
-  var gameboard = document.getElementById("canvas")
+  var gameboard = document.getElementById("canvas");
   var context = gameboard.getContext("2d");
 
   const canvasBackgroundColour="#e6f0ff";
@@ -12,9 +11,9 @@ var gameBoard = {
   context.fillStyle=canvasBackgroundColour;
 
   context.fillRect(0, 0, gameboard.width, gameboard.height);
-}
 
-function trains(img, x, y, type) = {
+
+function trains(img, x, y, type) {
   this.type = type;
   if (type == "image") {
     this.image = new Image();
@@ -32,4 +31,5 @@ function trains(img, x, y, type) = {
   } else {
     context.fillStyle = img;
     context.fillRect(this.x, this.y);
+  }
 }
