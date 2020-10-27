@@ -1,4 +1,5 @@
-<!--Glenn Wright and Cade-->
+/* Glenn Wright and Cade */
+/* Register menu CSS */
 body{
 }
 
@@ -24,53 +25,30 @@ body{
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
-}
-
-.registertitle {
-  grid-column: 1 / span 4 ;
-	font-family: Abel, sans-serif;
+  font-family: Abel, sans-serif;
   color: #EFD691;
 	text-shadow: 3px 2px black;
 }
 
-.registerpane {
-	grid-row: 2 / span 4;
-	font-family: Abel, sans-serif;
-  color: #EFD691;
-	text-shadow: 2px 2px black;
+.registertitle {
+  grid-column: 1 / span 4 ;
 }
 
-.register {
+.loginpane {
+	grid-row: 2 / span 4;
+}
+
+.registerpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
- font-family: Abel, sans-serif;
- color: #EFD691;
- text-shadow: 2px 2px black;
 }
 
 .menu {
  grid-row: 2 / span 4;
  grid-column:4 / span 1 ;
- font-family: Abel, sans-serif;
- color: #EFD691;
- text-shadow: 2px 2px black;
 }
 
-.regbutton {
-  border: 1px solid #F3D486;
-  border-radius: 25px;
-  background-color: #F3D486;
-  width: 200px;
-  height: 40px;
-  font-family: Abel, sans-serif;
-  font-size: 25px;
-  position: relative;
-  top: -50px;
-  box-shadow: 6px 8px #B59959;
-  cursor: pointer;
-}
-
-.usernametxt {
+.txtboxes {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -78,37 +56,12 @@ body{
   font-family: Abel, sans-serif;
   font-size: 30px;
 	position: relative;
-	top: -50px;
+	top: -40px;
 	text-align: center;
-  box-shadow: 10px 10px #B59959;
+  box-shadow: 5px 5px #B59959;
 }
 
-.passwordtxt {
-  border: 1px solid #F3D486;
-  border-radius: 25px;
-  background-color: #F3D486;
-  width: 300px; height: 40px;
-  font-family: Abel, sans-serif;
-  font-size: 30px;
-	position: relative;
-	top: -50px;
-	text-align: center;
-  box-shadow: 10px 10px #B59959;
-}
-
-.loginbutton {
-  border: 1px solid #F3D486;
-  border-radius: 25px;
-  background-color: #F3D486;
-  width: 250px;
-  height: 60px;
-  font-family: Abel, sans-serif;
-  font-size: 40px;
-  box-shadow: 6px 8px #B59959;
-  cursor: pointer;
-}
-
-.menubutton {
+.buttons {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -128,24 +81,18 @@ body{
   font-family: Abel, sans-serif;
   font-size: 30px;
   position: relative;
-  top: -80px;
+  top: -70px;
   text-align: center;
-  box-shadow: 10px 10px #B59959;
+  box-shadow: 5px 5px #B59959;
 }
 
 .confpass {
   position: relative;
-  top: -50px
+  top: -30px;
 }
 
 .show {
   position: relative;
-  top: -60px;
+  top: -50px;
   font-size: 20px;
-}
-
-p {
-  position: relative;
-  top: -20px;
-  font-weight: bold;
 }
