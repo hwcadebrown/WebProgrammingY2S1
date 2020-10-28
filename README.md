@@ -15,3 +15,5 @@ Graphics: Cade Brown, cb313
 Back end (Databases): Andrew McBain, aw127
 
 Back end (Game Server): Alexander Wickham, am454
+
+You can view the website at https://hwcadebrown.github.io/WebProgrammingY2S1/
