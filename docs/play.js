@@ -31,7 +31,7 @@ window.onload=function(){
     {
       ctx.drawImage(img,x,y, 50, 50);
     }
-    img.src="/graphics/trains/BLUECARRIAGEFRONT.png";
+    img.src="BLUECARRIAGEFRONT.png";
     document.onkeydown=function(e)
     {
       pos++;
