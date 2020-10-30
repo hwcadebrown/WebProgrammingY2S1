@@ -5,15 +5,20 @@ function Person(x, y, personType) {
   this.personType = personType;
   this.setPointType = function(personType){
     switch (personType) {
-      case 0:
+      case 0
+        img.src = "PERSON1.gif";
         break;
       case 1;
+        img.src = "PERSON2.gif";
         break;
       case 2;
+        img.src = "PERSON3.gif";
         break;
       case 3;
+        img.src = "PERSON4.gif";
         break;
       case 4;
+        img.src = "PERSONPOWER.gif";
         break;
     }
   };
