@@ -20,7 +20,8 @@
   //context.drawImage(this, 0, 0, this.width, this.height);
 //}
 
-window.onload=function(){
+
+function Game(){
     var x=0;
     var y=0;
     var key,pos=0;
@@ -49,3 +50,5 @@ window.onload=function(){
       ctx.drawImage(img,x,y, 50, 50);
     });
 }
+var game = Game;
+window.onload= game;
