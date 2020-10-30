@@ -1,11 +1,15 @@
 //Alexander Wickham
-function Person(x, y, personType) {
+const generator = require("./generate");
+
+class Person() {
+  constructor(x, y, personType) {
   this.y = y;
   this.x = x;
   this.personType = personType;
-  this.setPointType = function(personType){
-    switch (personType) {
-      case 0
+}
+  setPointType(personType){
+    switch (personType)
+      case 0;
         img.src = "PERSON1.gif";
         break;
       case 1;
@@ -20,7 +24,7 @@ function Person(x, y, personType) {
       case 4;
         img.src = "PERSONPOWER.gif";
         break;
-    }
   };
 };
+function
 var aPerson = new Person(0,0,0);
