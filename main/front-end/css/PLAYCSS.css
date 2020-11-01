@@ -1,38 +1,35 @@
-<!--Andrew McBain -->
+<!--Nicole Stewart, Glenn Wright & Cade-->
 
- canvas {
-     border: 1px solid #d3d3d3;
-     background-color: #f1f1f1;
-     border: 1px solid blue;
-     background-color: black;
- }
+body {
+}
 
- body{
- 	background-color:;
- 	 font-family:"gill sans mt", helvetica, sans-serif;
- 	 font-size:18px;
- 	 }
+#area {
+  position : relative;
+  left : 10;
+  top : 50;
+	background-color: #EFD691;
+}
 
- .grid-container {
-   display: grid;
-   grid-template-columns: auto auto auto;
-   grid-gap: 20px;
-   background-color: #2196F3;
-   padding: 20px;
- }
+#score {
+  float: right;
+  font-size: 100px;
+  font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
+}
 
- .grid-container > div {
-   background-color: rgba(255, 255, 255, 0.8);
-   text-align: center;
-   padding: 20px 0;
-   font-size: 30px;
- }
 
- .item1 {
-   grid-column: 1 / span 4 ;
- }
-
- .game-board{
- 	grid-row: 2 / span 25;
- 	grid-column: 1 / span 4;
- }
+.buttons {
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  position: relative;
+  width: 80px;
+  height: 60px;
+  top: 25;
+  left: 10;
+  font-family: Abel, sans-serif;
+  font-size: 40px;
+  box-shadow: 6px 8px #B59959;
+  cursor: pointer;
+}
