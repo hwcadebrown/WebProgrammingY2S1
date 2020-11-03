@@ -25,7 +25,7 @@ function start() {
 
 function status() {
   if(playerHitWall()) {
-    alert('You Derailed!');
+    alert('You Derailed! Score: ' + score);
     start();
     return;
   }
@@ -60,7 +60,7 @@ function addcarriage(id) {
     $(carriage).css('position', 'absolute');
 		$(carriage).css('backgroundColor', '#0086aa');
 		$(carriage).appendTo(arena);
-	}
+}
 
 function personpos(min, max) {
     return Math.round((Math.random() * (max-min) + min) / 10) * 10;
@@ -144,9 +144,9 @@ function changedirection(event) {
 
 function playerHitWall() {
     const hitLeftWall = train[0].x < 0;
-    const hitRightWall = train[0].x > parseFloat(arena.style.width) - 10;
+    const hitRightWall = train[0].x > parseFloat($(arena).css('width')) - 10;
     const hitTopWall = train[0].y < 0;
-    const hitBottomWall = train[0].y > parseFloat(arena.style.height) - 10;
+    const hitBottomWall = train[0].y > parseFloat($(arena).css('height')) - 10;
 
     return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall
 }

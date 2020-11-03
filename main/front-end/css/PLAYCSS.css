@@ -3,11 +3,25 @@
 body {
 }
 
+@keyframes backgroundmv {
+  0%   {background-color:#0042aa;}
+  20%  {background-color:#0086aa;}
+  40%  {background-color:#0064aa;}
+  60%  {background-color:#0020aa;}
+  80%  {background-color:#0200aa;}
+  100% {background-color:#0042aa;}
+}
+
+.bod {
+  animation: backgroundmv 60s infinite;
+}
+
 #area {
   position : relative;
   left : 10;
   top : 50;
 	background-color: #EFD691;
+  border: 3px solid black;
 }
 
 #score {
@@ -18,6 +32,29 @@ body {
 	text-shadow: 3px 2px black;
 }
 
+#labelscore {
+  float: right;
+  position: relative;
+  top: -72.5px;
+  right: 20px;
+  font-size: 100px;
+  font-weight: 500;
+  font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
+}
+
+#labeltime {
+  float: right;
+  position: relative;
+  top: -72.5px;
+  right: 700px;
+  font-size: 100px;
+  font-weight: 500;
+  font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
+}
 
 .buttons {
   border: 1px solid #F3D486;
