@@ -1,0 +1,49 @@
+<html>
+<!-- Glenn Wright and Cade-->
+<!-- Register Menu Page -->
+<head>
+  <title>Trains of Pain Register</title>
+	<link rel = "stylesheet" type = "text/css" href = "register.css">
+</head>
+
+<body style = background-color:black>
+
+<div class = "grid-container">
+
+  <div class = "registertitle">
+    <h1>REGISTER</h1>
+  </div>
+
+  <div class = "loginpane">
+	   <br><br>
+	   <h3>ALREADY HAVE</h3>
+     <h3>AN ACCOUNT?</h3>
+     <input type = "button" value = "LOGIN" onclick = "window.location.href='login.html'" class = 'buttons'/>
+  </div>
+
+  <div class = "registerpane">
+	   <h4>USERNAME</h4>
+     <input name = "USERNAME" class = "txtboxes">
+     <h4>PASSWORD</h4>
+     <input name = "PASSWORD" type = "password" id = "passwordtxt" class = "txtboxes">
+     <h5 onclick = "showPass()" class = "show">SHOW PASSWORD</h5>
+     <h4 class = "confpass">CONFIRM PASSWORD</h4>
+     <input name = "CONFRMPASSWORD" type = "password" class = "passwordconftxt">
+     <br>
+     <input type = "button" value = "REGISTER" onclick = "window.location.href='index.html'" class = "buttons"/>
+   </div>
+
+  <div class = "menu">
+    <br><br>
+	  <h3>BACK TO</h3>
+    <h3>MAIN MENU?</h3>
+	  <input type = "button" value = "MENU" onclick = "window.location.href='index.html'" class = "buttons"/>
+  </div>
+
+</div>
+
+<script src = "register.js"></script>
+
+</body>
+
+</html>
