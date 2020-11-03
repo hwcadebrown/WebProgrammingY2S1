@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 
-var con = mysql.createConnection({
+const database = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: ""
 });
 
-con.connect(function(err) {
+database.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   con.query("CREATE DATABASE users", function (err, result) {
