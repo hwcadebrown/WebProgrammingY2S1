@@ -8,12 +8,14 @@ Roles/Jobs:
 
 Front end (HTML, CSS): Glenn Wright, gw31
 
-Front end (JavaScript): Nicole Stewart, ns133
+Front end (JavaScript): Nicole Stewart, ns133 (LEFT)
 
 Graphics: Cade Brown, cb313
 
 Back end (Databases): Andrew McBain, aw127
 
 Back end (Game Server): Alexander Wickham, am454
+
+Unassigned: Daniel Johnston, danbun2001
 
 You can view the website at https://hwcadebrown.github.io/WebProgrammingY2S1/
