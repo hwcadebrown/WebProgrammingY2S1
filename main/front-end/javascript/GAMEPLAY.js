@@ -1,10 +1,10 @@
-const GAME_SPEED = 100;
+const GAME_SPEED = 90 ;
 const arena = document.getElementById('area');
 $(arena).css('width', 1400);
 $(arena).css('height', 700);
 
-let dx = 10;
-let dy = 0;
+let directionx = 50;
+let directiony = 0;
 
 start();
 
@@ -24,7 +24,7 @@ function start() {
 }
 
 function status() {
-  if(playerHitWall()) {
+  if(playerHitWall() || playerHitSelf()) {
     alert('You Derailed! Score: ' + score);
     start();
     return;
@@ -42,10 +42,10 @@ function status() {
 function addperson() {
 	  let person = document.createElement('person');
 		person.id = "person";
-		$(person).css('width', 10);
-    $(person).css('height', 10);
+		$(person).css('width', 50);
+    $(person).css('height', 50);
 	  $(person).css('position', 'absolute');
-		$(person).css('background-image', 'url(' + '../html/GIFTEST.gif' + ')');
+		$(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
     $(person).appendTo(arena);
 
 		for (let n=0; n<train.length; n++)
@@ -55,26 +55,20 @@ function addperson() {
 function addcarriage(id) {
 		let carriage = document.createElement('carriage');
 		carriage.id = "carriage" + id;
-		$(carriage).css('width', 10);
-    $(carriage).css('height', 10);
+		$(carriage).css('width', 50);
+    $(carriage).css('height', 50);
     $(carriage).css('position', 'absolute');
-    if (train.length < 2) {
-		    $(carriage).css('background-image', 'url(' + '../html/FRONTORANGECARRIAGE.png' + ')');
-		    $(carriage).appendTo(arena);
-    }
-    else {
-      $(carriage).css('background-image', 'url(' + '../html/ORANGECARRIAGE.png' + ')');
-      $(carriage).appendTo(arena);
-    }
+    $(carriage).css('background-image', 'url(' + '../graphics/trains/PINKTRAIN.png' + ')');
+    $(carriage).appendTo(arena);
 }
 
 function personpos(min, max) {
-    return Math.round((Math.random() * (max-min) + min) / 10) * 10;
+    return Math.round((Math.random() * (max-min) + min) / 50) * 50;
 }
 
 function createperson() {
-    personX = personpos(0, parseFloat($(arena).css('width')) - 10);
-    personY = personpos(0, parseFloat($(arena).css('height')) - 10);
+    personX = personpos(0, parseFloat($(arena).css('width')) - 50);
+    personY = personpos(0, parseFloat($(arena).css('height')) - 50);
 
     train.forEach(function ispersonOntrain(part) {
       const personIsoNtrain = part.x.personX && part.y.personY;
@@ -88,7 +82,7 @@ function renderperson() {
 }
 
 function advancetrain() {
-    const head = {x: train[0].x + dx, y: train[0].y + dy};
+    const head = {x: train[0].x + directionx, y: train[0].y + directiony};
     train.unshift(head);
 
     const didPickUpPerson = train[0].x === personX && train[0].y === personY;
@@ -128,31 +122,38 @@ function changedirection(event) {
     const S = 83;
     const D = 68;
 
-    const moveUp = dy  === -10;
-    const moveDown = dy  ===  10;
-    const moveRight = dx  ===  10;
-    const moveLeft = dx  === -10;
+    const moveUp = directiony  === -50;
+    const moveDown = directiony  ===  50;
+    const moveRight = directionx  ===  50;
+    const moveLeft = directionx  === -50;
 
       if (direction === LEFT_KEY && !moveRight || direction === A && !moveRight) {
-        dx = -10;
-        dy =  0;
+        directionx = -50;
+        directiony =  0;
       } else if (direction === UP_KEY && !moveDown || direction === W && !moveDown) {
-        dx =  0;
-        dy = -10;
+        directionx =  0;
+        directiony = -50;
       } else if (direction === RIGHT_KEY && !moveLeft || direction === D && !moveLeft) {
-        dx = 10;
-        dy = 0;
+        directionx = 50;
+        directiony = 0;
       } else if (direction === DOWN_KEY && !moveUp || direction === S && !moveUp) {
-        dx = 0;
-        dy = 10;
+        directionx = 0;
+        directiony = 50;
       }
 }
 
+function playerHitSelf() {
+  for (let cart = 3; cart < train.length; cart++) {
+    if (train[cart].x === train[0].x && train[cart].y === train[0].y) return true;
+  }
+}
+
 function playerHitWall() {
+
     const hitLeftWall = train[0].x < 0;
-    const hitRightWall = train[0].x > parseFloat($(arena).css('width')) - 10;
+    const hitRightWall = train[0].x > parseFloat($(arena).css('width')) - 50;
     const hitTopWall = train[0].y < 0;
-    const hitBottomWall = train[0].y > parseFloat($(arena).css('height')) - 10;
+    const hitBottomWall = train[0].y > parseFloat($(arena).css('height')) - 50;
 
     return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall
 }
