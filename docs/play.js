@@ -45,7 +45,7 @@ function addperson() {
 		$(person).css('width', 50);
     $(person).css('height', 50);
 	  $(person).css('position', 'absolute');
-		$(person).css('background-image', 'url(' + "graphics/gifs/PERSON10.gif' + ')');
+		$(person).css('background-image', 'url(' + 'graphics/gifs/PERSON10.gif' + ')');
     $(person).appendTo(arena);
 
 		for (let n=0; n<train.length; n++)
