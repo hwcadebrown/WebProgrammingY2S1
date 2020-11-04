@@ -1,4 +1,4 @@
-const GAME_SPEED = 25;
+const GAME_SPEED = 100;
 const arena = document.getElementById('area');
 $(arena).css('width', 1400);
 $(arena).css('height', 700);
@@ -12,7 +12,7 @@ function start() {
     score = 0;
 		$('#score').html(0);
 
-		train = [ {x: 750, y: 350}, {x: 740, y: 350}, {x: 730, y: 350} ];
+		train = [ {x: 750, y: 350}];
 
 		$('#area').empty();
 
@@ -45,7 +45,7 @@ function addperson() {
 		$(person).css('width', 10);
     $(person).css('height', 10);
 	  $(person).css('position', 'absolute');
-		$(person).css('backgroundColor', 'gray');
+		$(person).css('background-image', 'url(' + 'GIFTEST.gif' + ')');
     $(person).appendTo(arena);
 
 		for (let n=0; n<train.length; n++)
@@ -58,8 +58,14 @@ function addcarriage(id) {
 		$(carriage).css('width', 10);
     $(carriage).css('height', 10);
     $(carriage).css('position', 'absolute');
-		$(carriage).css('backgroundColor', '#0086aa');
-		$(carriage).appendTo(arena);
+    if (train.length < 2) {
+		    $(carriage).css('background-image', 'url(' + 'FRONTORANGECARRIAGE.png' + ')');
+		    $(carriage).appendTo(arena);
+    }
+    else {
+      $(carriage).css('background-image', 'url(' + 'ORANGECARRIAGE.png' + ')');
+      $(carriage).appendTo(arena);
+    }
 }
 
 function personpos(min, max) {

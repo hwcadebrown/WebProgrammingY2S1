@@ -44,17 +44,6 @@ body {
 	text-shadow: 3px 2px black;
 }
 
-#labeltime {
-  float: right;
-  position: relative;
-  top: -72.5px;
-  right: 700px;
-  font-size: 100px;
-  font-weight: 500;
-  font-family: Abel, sans-serif;
-  color: #EFD691;
-	text-shadow: 3px 2px black;
-}
 
 .buttons {
   border: 1px solid #F3D486;
