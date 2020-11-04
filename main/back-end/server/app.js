@@ -5,15 +5,34 @@ const mysql = require('mysql');
 const db = mysql.createConnection({
 host :'localhost',
 user :'root',
-password :'',
-database: 'users'
-
-
-
+password :'HyStErIa0312',
+database : 'users'
 });
+//Connect
+db.connect((err) => {
+  if(err){
+    throw err;
+  }
+  console.log('Mysql connected');
+  });
 
 const app = express();
 
+
+//Create DB
+app.get('/createdb', () => {
+   let sql = 'CREATE DATABASE users';
+   db.query(sql, (err, result)=> {
+      if(err) throw err;
+      console.log(result);
+      res.send('Database created...');
+   })
+});
+//Create table
+app.get('/createprofilestable,(res, res) => {
+    let sql = 'CREATE TABLE profiles(id int AUTO_INCREMENT, username VARCHAR(), password VARCHAR())'
+});
+
 app.listen('3000', () => {
-  console.log('Server started with nodemon')
+  console.log('Server started with nodemon');
 });
