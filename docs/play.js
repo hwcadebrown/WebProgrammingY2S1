@@ -52,7 +52,7 @@ function addperson() {
     $(person).appendTo(arena);
 
     for (let i = 0; i < train.length; i++)
-		{ addcarriage(i); }w
+		{ addcarriage(i); }
 }
 
 function addperson2() {
