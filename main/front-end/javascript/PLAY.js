@@ -1,4 +1,4 @@
-const GAME_SPEED = 90 ;
+const GAME_SPEED = 90;
 const arena = document.getElementById('area');
 $(arena).css('width', 1400);
 $(arena).css('height', 700);
@@ -9,23 +9,26 @@ let directiony = 0;
 start();
 
 function start() {
-		$('#score').html(score = 0);
+  $('#score').html(score = 0);
 
-		train = [ {x: 750, y: 350}];
+  train = [{
+    x: 750,
+    y: 350
+  }];
 
-		$('#area').empty();
+  $('#area').empty();
 
-		status();
-    createperson();
-    createperson2();
-    addperson();
-		attatchcarriage();
+  status();
+  createperson();
+  createperson2();
+  addperson();
+  attatchcarriage();
 
-		$(document).on("keydown", changedirection);
+  $(document).on("keydown", changedirection);
 }
 
 function status() {
-  if(playerHitWall() || playerHitSelf()) {
+  if (playerHitWall() || playerHitSelf()) {
     alert('You Derailed! Score: ' + score);
     start();
     return;
