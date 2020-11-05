@@ -9,8 +9,7 @@ let directiony = 0;
 start();
 
 function start() {
-    score = 0;
-		$('#score').html(0);
+		$('#score').html(score = 0);
 
 		train = [ {x: 750, y: 350}];
 
@@ -100,15 +99,13 @@ function advancetrain() {
     const didPickUpPerson = train[0].x === personX && train[0].y === personY;
     const didPickUpPerson2 = train[0].x === personX2 && train[0].y === personY2;
     if (didPickUpPerson) {
-      score++;
-      $('#score').html(score);
+      $('#score').html(score++);
 
 		addcarriage(train.length - 1);
       createperson();
     }
     else if (didPickUpPerson2) {
-      score += 2;
-      $('#score').html(score);
+      $('#score').html(score += 2);
 
 		addcarriage(train.length - 1);
       createperson2();
