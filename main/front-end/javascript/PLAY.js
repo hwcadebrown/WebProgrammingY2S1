@@ -1,56 +1,41 @@
-//Nicole Stewart
+const GAME_SPEED = 90 ;
+const arena = document.getElementById('area');
+$(arena).css('width', 1400);
+$(arena).css('height', 700);
 
-//create the canvas
-//var gameboard = document.getElementById("canvas");
-//var context = gameboard.getContext("2d");
-//set the canvas background colour
-//const canvasBackgroundColour="#3e3e3e";
-//context.fillStyle=canvasBackgroundColour;
-//context.fillRect(0, 0, gameboard.width, gameboard.height);
+let directionx = 50;
+let directiony = 0;
 
-//set the image size of the train
-//const image = new Image(60, 50);
-//draw the image onto the screen
-//image.onload = drawImage;
-//link to the image of the train
-//image.src = "../graphics/trains/BLUECARRIAGEFRONT.png";
+start();
 
-//function to draw the image onto the screen
-//function drawImage() {
-  //context.drawImage(this, 0, 0, this.width, this.height);
-//}
+function start() {
+		$('#score').html(score = 0);
 
+		train = [ {x: 750, y: 350}];
 
-function Game(){
-    var x=0;
-    var y=0;
-    var key,pos=0;
-    var canvas=document.getElementById("canvas");
-    var ctx=canvas.getContext("2d");
-    canvas.style.height='100%';
-    canvas.height = canvas.offsetHeight;
-    const img=new Image(10, 10);
-    img.onload=function()
-    {
-      ctx.drawImage(img,x,y, 50, 50);
-    }
-    img.src="BLUECARRIAGEFRONT.png";
-    document.onkeydown=function(e)
-    {
-      pos++;
-      key=window.event?e.keyCode:e.which;
-    }
-    document.onkeyup=function(e){pos--; key = 0}
-    setInterval(function()
-    {
-      if(pos==0)return;
-      if(key==37)x-=1;
-      if(key==38)y-=1;
-      if(key==39)x+=1;
-      if(key==40)y+=1;
-      canvas.width=canvas.width;
-      ctx.drawImage(img,x,y, 50, 50);
-    });
+		$('#area').empty();
+
+		status();
+    createperson();
+    createperson2();
+    addperson();
+		attatchcarriage();
+
+		$(document).on("keydown", changedirection);
 }
-var game = Game;
-window.onload= game;
+
+function status() {
+  if(playerHitWall() || playerHitSelf()) {
+    alert('You Derailed! Score: ' + score);
+    start();
+    return;
+  }
+
+  setTimeout(function onTick() {
+    changingDirection = false;
+    status();
+    renderperson();
+    rendertrain();
+    advancetrain();
+  }, GAME_SPEED)
+}
