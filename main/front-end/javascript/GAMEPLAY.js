@@ -18,7 +18,9 @@ function start() {
 
 		status();
 		createperson();
+    createperson2();
     addperson();
+    addperson2();
 
 		$(document).on("keydown", changedirection);
 }
@@ -34,6 +36,7 @@ function status() {
     changingDirection = false;
     status();
     renderperson();
+    renderperson2();
     rendertrain();
     advancetrain();
   }, GAME_SPEED)
@@ -48,8 +51,18 @@ function addperson() {
 		$(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
     $(person).appendTo(arena);
 
-		for (let n=0; n<train.length; n++)
-		{ addcarriage(n); }
+    for (let i = 0; i < train.length; i++)
+		{ addcarriage(i); }
+}
+
+function addperson2() {
+	  let person2 = document.createElement('person2');
+		person2.id = "person2";
+		$(person2).css('width', 50);
+    $(person2).css('height', 50);
+	  $(person2).css('position', 'absolute');
+		$(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
+    $(person2).appendTo(arena);
 }
 
 function addcarriage(id) {
@@ -76,9 +89,25 @@ function createperson() {
     });
 }
 
+function createperson2() {
+    personX2 = personpos(0, parseFloat($(arena).css('width')) - 50);
+    personY2 = personpos(0, parseFloat($(arena).css('height')) - 50);
+
+    train.forEach(function ispersonOntrain2(part) {
+      const personIsoNtrain2 = part.x.personX2 && part.y.personY2;
+      if (personIsoNtrain2) createperson2();
+    });
+}
+
+
 function renderperson() {
 	  $(person).css('left', personX);
 	  $(person).css('top', personY);
+}
+
+function renderperson2() {
+	  $(person2).css('left', personX2);
+	  $(person2).css('top', personY2);
 }
 
 function advancetrain() {
@@ -86,12 +115,20 @@ function advancetrain() {
     train.unshift(head);
 
     const didPickUpPerson = train[0].x === personX && train[0].y === personY;
+    const didPickUpPerson2 = train[0].x === personX2 && train[0].y === personY2;
     if (didPickUpPerson) {
       score++;
       $('#score').html(score);
 
 		addcarriage(train.length - 1);
       createperson();
+    }
+    else if (didPickUpPerson2) {
+      score += 2;
+      $('#score').html(score);
+
+		addcarriage(train.length - 1);
+      createperson2();
     }
     else {
       train.pop();
