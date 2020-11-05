@@ -17,10 +17,9 @@ function start() {
 		$('#area').empty();
 
 		status();
-		createperson();
+    createperson();
     createperson2();
     addperson();
-    addperson2();
 
 		$(document).on("keydown", changedirection);
 }
@@ -36,7 +35,6 @@ function status() {
     changingDirection = false;
     status();
     renderperson();
-    renderperson2();
     rendertrain();
     advancetrain();
   }, GAME_SPEED)
@@ -51,18 +49,16 @@ function addperson() {
 		$(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
     $(person).appendTo(arena);
 
-    for (let i = 0; i < train.length; i++)
-		{ addcarriage(i); }
-}
-
-function addperson2() {
-	  let person2 = document.createElement('person2');
+    let person2 = document.createElement('person2');
 		person2.id = "person2";
 		$(person2).css('width', 50);
     $(person2).css('height', 50);
 	  $(person2).css('position', 'absolute');
 		$(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
     $(person2).appendTo(arena);
+
+    for (let i = 0; i < train.length; i++)
+		{ addcarriage(i); }
 }
 
 function addcarriage(id) {
@@ -82,33 +78,20 @@ function personpos(min, max) {
 function createperson() {
     personX = personpos(0, parseFloat($(arena).css('width')) - 50);
     personY = personpos(0, parseFloat($(arena).css('height')) - 50);
-
-    train.forEach(function ispersonOntrain(part) {
-      const personIsoNtrain = part.x.personX && part.y.personY;
-      if (personIsoNtrain) createperson();
-    });
 }
 
 function createperson2() {
     personX2 = personpos(0, parseFloat($(arena).css('width')) - 50);
     personY2 = personpos(0, parseFloat($(arena).css('height')) - 50);
-
-    train.forEach(function ispersonOntrain2(part) {
-      const personIsoNtrain2 = part.x.personX2 && part.y.personY2;
-      if (personIsoNtrain2) createperson2();
-    });
 }
-
 
 function renderperson() {
 	  $(person).css('left', personX);
 	  $(person).css('top', personY);
-}
-
-function renderperson2() {
-	  $(person2).css('left', personX2);
+    $(person2).css('left', personX2);
 	  $(person2).css('top', personY2);
 }
+
 
 function advancetrain() {
     const head = {x: train[0].x + directionx, y: train[0].y + directiony};
