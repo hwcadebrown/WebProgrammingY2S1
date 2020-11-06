@@ -30,7 +30,12 @@ app.get('/createdb', () => {
 });
 //Create table
 app.get('/createprofilestable,(res, res) => {
-    let sql = 'CREATE TABLE profiles(id int AUTO_INCREMENT, username VARCHAR(), password VARCHAR())'
+    let sql = 'CREATE TABLE profiles(id int AUTO_INCREMENT, username VARCHAR(40), password VARCHAR(30), PRIMARY KEY id)';
+    db.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Posts table created...')
+    });
 });
 
 app.listen('3000', () => {
