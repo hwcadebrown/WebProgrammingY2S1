@@ -12,8 +12,8 @@ function start() {
   $('#score').html(score = 0);
 
   train = [{
-    x: randompos(0, parseFloat($(arena).css('width')) - 100),
-    y: randompos(0, parseFloat($(arena).css('height')) - 100)
+    x: randompos(0, parseFloat($(arena).css('width')) - 50),
+    y: randompos(0, parseFloat($(arena).css('height')) - 50)
   }];
 
   $('#area').empty();
