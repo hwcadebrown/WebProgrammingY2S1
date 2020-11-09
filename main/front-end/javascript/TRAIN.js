@@ -24,7 +24,7 @@ function advancetrain() {
   const didPickUpPerson = train[0].x === personX && train[0].y === personY;
   const didPickUpPerson2 = train[0].x === personX2 && train[0].y === personY2;
   if (didPickUpPerson) {
-    $('#score').html(score++);
+    $('#score').html(score += 1);
 
     addcarriage(train.length - 1);
     createperson();

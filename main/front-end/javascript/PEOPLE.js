@@ -16,18 +16,14 @@ function addperson() {
   $(person2).appendTo(arena);
 }
 
-function personpos(min, max) {
-  return Math.round((Math.random() * (max - min) + min) / 50) * 50;
-}
-
 function createperson() {
-  personX = personpos(0, parseFloat($(arena).css('width')) - 50);
-  personY = personpos(0, parseFloat($(arena).css('height')) - 50);
+  personX = randompos(0, parseFloat($(arena).css('width')) - 50);
+  personY = randompos(0, parseFloat($(arena).css('height')) - 50);
 }
 
 function createperson2() {
-  personX2 = personpos(0, parseFloat($(arena).css('width')) - 50);
-  personY2 = personpos(0, parseFloat($(arena).css('height')) - 50);
+  personX2 = randompos(0, parseFloat($(arena).css('width')) - 50);
+  personY2 = randompos(0, parseFloat($(arena).css('height')) - 50);
 }
 
 function renderperson() {

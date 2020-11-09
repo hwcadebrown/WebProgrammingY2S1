@@ -1,3 +1,7 @@
+function randompos(min, max) {
+  return Math.round((Math.random() * (max - min) + min) / 50) * 50;
+}
+
 function changedirection(event) {
   const direction = event.keyCode;
 
