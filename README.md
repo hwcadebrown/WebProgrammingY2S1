@@ -10,7 +10,7 @@ Front end (HTML, CSS): Glenn Wright, gw31
 
 Front end (JavaScript): Nicole Stewart, ns133 **(LEFT)**
 
-Front end: Daniel Johnston, danbun2001 **(JOINED)**
+Front end: Daniel Johnstone, danbun2001 **(JOINED)**
 
 Graphics & Front end: Cade Brown, cb313
 
