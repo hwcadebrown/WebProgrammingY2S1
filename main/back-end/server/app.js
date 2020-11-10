@@ -26,7 +26,7 @@ app.get('/createdb', () => {
       if(err) throw err;
       console.log(result);
       res.send('Database created...');
-   })
+   });
 });
 //Create table
 app.get('/createprofilestable,(res, res) => {
