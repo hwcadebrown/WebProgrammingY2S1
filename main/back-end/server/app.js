@@ -34,7 +34,7 @@ app.get('/createprofilestable,(res, res) => {
     db.query(sql, (err, result) => {
       if(err) throw err;
       console.log(result);
-      res.send('Posts table created...')
+      res.send('Posts table created...');
     });
 });
 
