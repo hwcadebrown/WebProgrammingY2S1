@@ -4,7 +4,7 @@ function addperson() {
   $(person).css('width', 50);
   $(person).css('height', 50);
   $(person).css('position', 'absolute');
-  $(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
+  $(person).css('background-image', 'url(' + 'graphics/gifs/PERSON10.gif' + ')');
   $(person).appendTo(arena);
 
   let person2 = document.createElement('person2');
@@ -12,7 +12,7 @@ function addperson() {
   $(person2).css('width', 50);
   $(person2).css('height', 50);
   $(person2).css('position', 'absolute');
-  $(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
+  $(person2).css('background-image', 'url(' + 'graphics/gifs/PERSON20.gif' + ')');
   $(person2).appendTo(arena);
 }
 

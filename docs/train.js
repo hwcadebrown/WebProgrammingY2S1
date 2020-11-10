@@ -4,7 +4,7 @@ function addcarriage(id) {
   $(carriage).css('width', 50);
   $(carriage).css('height', 50);
   $(carriage).css('position', 'absolute');
-  $(carriage).css('background-image', 'url(' + '../graphics/trains/PINKTRAIN.png' + ')');
+  $(carriage).css('background-image', 'url(' + 'graphics/trains/PINKTRAIN.png' + ')');
   $(carriage).appendTo(arena);
 }
 

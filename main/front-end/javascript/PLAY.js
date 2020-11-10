@@ -12,8 +12,8 @@ function start() {
   $('#score').html(score = 0);
 
   train = [{
-    x: 750,
-    y: 350
+    x: randompos(0, parseFloat($(arena).css('width')) - 50),
+    y: randompos(0, parseFloat($(arena).css('height')) - 50)
   }];
 
   $('#area').empty();
@@ -29,6 +29,7 @@ function start() {
 
 function status() {
   if (playerHitWall() || playerHitSelf()) {
+    // window.location.href='MAINMENU.html' (leave for now)
     alert('You Derailed! Score: ' + score);
     start();
     return;
