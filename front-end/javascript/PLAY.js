@@ -1,11 +1,10 @@
-const GAME_SPEED = 90;
+const GAME_SPEED = 50;
 const arena = document.getElementById('area');
-$(arena).css('width', 1400);
-$(arena).css('height', 700);
+$(arena).css('width', 4750);
+$(arena).css('height', 2400);
 
 let directionx = 50;
 let directiony = 0;
-
 start();
 
 function start() {
@@ -16,7 +15,7 @@ function start() {
     y: randompos(0, parseFloat($(arena).css('height')) - 50)
   }];
 
-  $('#area').empty();
+	$('#area').empty();
 
   status();
   createperson();
@@ -41,5 +40,6 @@ function status() {
     renderperson();
     rendertrain();
     advancetrain();
+
   }, GAME_SPEED)
 }
