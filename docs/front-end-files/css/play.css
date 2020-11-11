@@ -1,7 +1,4 @@
-<!--Nicole Stewart, Glenn Wright & Cade-->
-
-body {
-}
+/* Nicole Stewart, Glenn Wright & Cade--> */
 
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
@@ -18,10 +15,10 @@ body {
 
 #area {
   position : relative;
-  left : 10;
-  top : 50;
+  top : 140;
 	background-color: #EFD691;
   border: 3px solid black;
+  zoom: 30%;
 }
 
 #score {
