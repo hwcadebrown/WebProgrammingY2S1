@@ -1,33 +1,25 @@
 function colorPicker() {
   var color = Math.floor((Math.random() * 10) + 1);
-  if(color === 1) {
-    return '../graphics/trains/PINKTRAIN.png';
-  }
-  if(color === 2) {
-    return '../graphics/trains/BLUETRAIN.png';
-  }
-  if(color === 3) {
-    return '../graphics/trains/GREENTRAIN.png';
-  }
-  if(color === 4) {
-    return '../graphics/trains/REDTRAIN.png';
-  }
-  if(color === 5) {
-    return '../graphics/trains/ORANGETRAIN.png';
-  }
-  if(color === 6) {
-    return '../graphics/trains/SKYBLUETRAIN.png';
-  }
-  if(color === 7) {
-    return '../graphics/trains/DARKGREENTRAIN.png';
-  }
-  if(color === 8) {
-    return '../graphics/trains/PURPLETRAIN.png';
-  }
-  if(color === 9) {
-    return '../graphics/trains/PEACHTRAIN.png';
-  }
-  if(color === 10) {
-    return '../graphics/trains/GRAYTRAIN.png';
+  switch (color) {
+    case 1:
+      return '../graphics/trains/PINKTRAIN.png';
+    case 2:
+      return '../graphics/trains/BLUETRAIN.png';
+    case 3:
+      return '../graphics/trains/GREENTRAIN.png';
+    case 4:
+      return '../graphics/trains/REDTRAIN.png';
+    case 5:
+      return '../graphics/trains/ORANGETRAIN.png';
+    case 6:
+      return '../graphics/trains/SKYBLUETRAIN.png';
+    case 7:
+      return '../graphics/trains/DARKGREENTRAIN.png';
+    case 8:
+      return '../graphics/trains/PURPLETRAIN.png';
+    case 9:
+      return '../graphics/trains/PEACHTRAIN.png';
+    case 10:
+      return '../graphics/trains/GRAYTRAIN.png';
   }
 }
