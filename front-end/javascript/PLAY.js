@@ -27,6 +27,11 @@ function start() {
   $(document).on("keydown", changedirection);
 }
 
+
+var gameOverBox;
+
+gameOverBox = document.getElementById("gameOver");
+
 function status() {
   if (playerHitWall() || playerHitSelf()) {
     // window.location.href='MAINMENU.html' (leave for now)
