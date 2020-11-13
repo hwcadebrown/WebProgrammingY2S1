@@ -24,22 +24,6 @@ function start() {
   attatchcarriage();
 
   $(document).on("keydown", changedirection);
-  $(document).on("swipeleft", function() {
-    directionx = -50;
-    directiony = 0;
-  });
-  $(document).on("swiperight", function() {
-    directionx = 50;
-    directiony = 0;
-  });
-  $(document).on("swipeup", function() {
-    directionx = 0;
-    directiony = -50;
-  });
-  $(document).on("swipedown", function() {
-    directionx = 0;
-    directiony = 50;
-  });
 }
 
 function status() {
