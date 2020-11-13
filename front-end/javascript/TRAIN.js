@@ -23,6 +23,7 @@ function advancetrain() {
 
   const didPickUpPerson = train[0].x === personX && train[0].y === personY;
   const didPickUpPerson2 = train[0].x === personX2 && train[0].y === personY2;
+  const didPickUpPerson3 = train[0].x === personX3 && train[0].y === personY3;
   if (didPickUpPerson) {
     $('#score').html(score += 1);
 
@@ -33,6 +34,10 @@ function advancetrain() {
 
     addcarriage(train.length - 1);
     createperson2();
+  } else if (didPickUpPerson3) {
+    $('#score').html(score -= 1);
+    createperson3();
+    train.pop();
   } else {
     train.pop();
   }

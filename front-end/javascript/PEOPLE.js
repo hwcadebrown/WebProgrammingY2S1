@@ -14,6 +14,14 @@ function addperson() {
   $(person2).css('position', 'absolute');
   $(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
   $(person2).appendTo(arena);
+
+  let badperson = document.createElement('badperson');
+  badperson.id = "badperson";
+  $(badperson).css('width', 50);
+  $(badperson).css('height', 50);
+  $(badperson).css('position', 'absolute');
+  $(badperson).css('background-image', 'url(' + '../graphics/gifs/PERSON3.gif' + ')');
+  $(badperson).appendTo(arena);
 }
 
 function createperson() {
@@ -26,9 +34,16 @@ function createperson2() {
   personY2 = randompos(0, parseFloat($(arena).css('height')) - 50);
 }
 
+function createperson3() {
+  personX3 = randompos(0, parseFloat($(arena).css('width')) - 50);
+  personY3 = randompos(0, parseFloat($(arena).css('height')) - 50);
+}
+
 function renderperson() {
   $(person).css('left', personX);
   $(person).css('top', personY);
   $(person2).css('left', personX2);
   $(person2).css('top', personY2);
+  $(badperson).css('left', personX3);
+  $(badperson).css('top', personY3);
 }

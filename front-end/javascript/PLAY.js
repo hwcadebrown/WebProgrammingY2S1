@@ -20,6 +20,7 @@ function start() {
   status();
   createperson();
   createperson2();
+  createperson3();
   addperson();
   attatchcarriage();
 
