@@ -18,6 +18,7 @@ function start() {
 	$('#area').empty();
 
   status();
+  //playerHits();
   createperson();
   createperson2();
   createperson3();
@@ -29,24 +30,37 @@ function start() {
 
 
 var gameOverBox;
+var gameState;
+
+
 
 gameOverBox = document.getElementById("gameOver");
 
 function status() {
   if (playerHitWall() || playerHitSelf()) {
     // window.location.href='MAINMENU.html' (leave for now)
-    alert('You Derailed! Score: ' + score);
+    //alert('You Derailed! Score: ' + score);
+    setState("gameOver");
     start();
     return;
   }
 
-/*function playerHits(playerHitSelf, playerHitWall) {
-  if (playerHitWall() || playerHitSelf()) {
-    setState("gameOver")
-  }
-}
 
+
+if (gameState != "gameOver") {
+  setTimeout(function onTick() {
+    changingDirection = false;
+    status();
+    //playerHits();
+    renderperson();
+    rendertrain();
+    advancetrain();
+
+  }, GAME_SPEED )
+}
+}
   function setState(state) {
+
     gameState = state;
     showMenu(state);
   }
@@ -55,18 +69,8 @@ function status() {
     menu.style.visibility = "visible";
   }
 
-  function showMenu(state)
+  function showMenu(state) {
   if(state == "gameOver") {
-    displayMenu(gameOverMenu);
-  }*/
-
-
-  setTimeout(function onTick() {
-    changingDirection = false;
-    status();
-    renderperson();
-    rendertrain();
-    advancetrain();
-
-  }, GAME_SPEED)
+    displayMenu(gameOverBox);
+  }
 }

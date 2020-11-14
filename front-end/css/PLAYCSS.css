@@ -58,6 +58,7 @@
 }
 
 #gameOver {
-  position: absolute;
+
+  position: relative;
   visibility: hidden;
 }
