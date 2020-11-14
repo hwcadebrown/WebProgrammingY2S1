@@ -32,15 +32,15 @@ var gameOverBox;
 
 gameOverBox = document.getElementById("gameOver");
 
-/*function status() {
+function status() {
   if (playerHitWall() || playerHitSelf()) {
     // window.location.href='MAINMENU.html' (leave for now)
     alert('You Derailed! Score: ' + score);
     start();
     return;
-  }*/
+  }
 
-function playerHits(playerHitSelf, playerHitWall) {
+/*function playerHits(playerHitSelf, playerHitWall) {
   if (playerHitWall() || playerHitSelf()) {
     setState("gameOver")
   }
@@ -58,7 +58,7 @@ function playerHits(playerHitSelf, playerHitWall) {
   function showMenu(state)
   if(state == "gameOver") {
     displayMenu(gameOverMenu);
-  }
+  }*/
 
 
   setTimeout(function onTick() {
