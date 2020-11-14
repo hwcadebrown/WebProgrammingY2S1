@@ -5,20 +5,21 @@
   <link rel="stylesheet" type="text/css" href="../css/PLAYCSS.css">
 </head>
 
+
 <body class="bod">
+  <div id="wraper">
+  <div id="gameOver">
+    <h1 class "title" >You Derailed!</h1>
+    <h3  onclick= "window.location.href='PLAY.html'" id = "retryButton">Retry</h3> <h3 onclick= "window.location.href='MAINMENU.html'" id="menuButton">Menu</h3>
+  </div>
 
-<div> </div>
-
-<section id="gameOver">
-  <h1 class "title" >You Derailed!</h1>
-  <h3 id = "retryButton">Retry</h3> <h3 id ="menuButton">Menu</h3>
-</section>
 
   <input type="button" value="<" onclick="window.location.href='MAINMENU.html'" class="buttons" />
   <div id="score"></div>
   <h1 id="labelscore"> Score: </h1>
   <div id="area"></div>
 
+</div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="../javascript/jquery-3.5.1.js"></script>
