@@ -13,6 +13,11 @@
   animation: backgroundmv 60s infinite;
 }
 
+#wraper {
+  position: relative;
+  width: 70%;
+}
+
 #area {
   position : relative;
   top : 140;
@@ -58,7 +63,12 @@
 }
 
 #gameOver {
-
-  position: relative;
+  width: 350px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  position: absolute;
+  margin: auto;
   visibility: hidden;
 }
