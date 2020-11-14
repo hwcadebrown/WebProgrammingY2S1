@@ -5,22 +5,24 @@
   <link rel="stylesheet" type="text/css" href="../css/PLAYCSS.css">
 </head>
 
-
 <body class="bod">
-  <div id="wraper">
+
+  <div id="score"></div>
+  <h1 id="labelscore"> Score: </h1>
+
   <div id="gameOver">
-    <h1 class "title" >You Derailed!</h1>
-    <h3  onclick= "window.location.href='PLAY.html'" id = "retryButton">Retry</h3> <h3 onclick= "window.location.href='MAINMENU.html'" id="menuButton">Menu</h3>
+    <h1 id="title">YOU DERAILED!</h1>
+    <h3 onclick="window.location.href='PLAY.html'" id="retryButton">RETRY</h3>
+    <h3 onclick="window.location.href='MAINMENU.html'" id="menuButton">MENU</h3>
   </div>
 
 
-  <input type="button" value="<" onclick="window.location.href='MAINMENU.html'" class="buttons" />
-  <div id="score"></div>
-  <h1 id="labelscore"> Score: </h1>
+  <input type="button" value="<" onclick="window.location.href='MAINMENU.html'" id="backbutton" />
   <div id="area"></div>
 
-</div>
+  </div>
 </body>
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="../javascript/jquery-3.5.1.js"></script>
 <script src="../javascript/PEOPLE.js"></script>
@@ -28,4 +30,5 @@
 <script src="../javascript/TRAIN.js"></script>
 <script src="../javascript/CLIENT.js"></script>
 <script src="../javascript/PLAY.js"></script>
+
 </html>

@@ -1,4 +1,4 @@
-/* Nicole Stewart, Glenn Wright & Cade--> */
+/* Glenn Wright & Cade--> */
 
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
@@ -11,11 +11,6 @@
 
 .bod {
   animation: backgroundmv 60s infinite;
-}
-
-#wraper {
-  position: relative;
-  width: 70%;
 }
 
 #area {
@@ -47,7 +42,7 @@
 }
 
 
-.buttons {
+#backbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -63,12 +58,28 @@
 }
 
 #gameOver {
-  width: 350px;
-  height: 200px;
-  top: 50%;
-  left: 50%;
+  font-size: 60px;
+  font-family: Abel, sans-serif;
+  color: #0086aa;
+	text-shadow: 1px 1px black;
+  text-align: center;
   z-index: 10;
   position: absolute;
-  margin: auto;
+  top: 150px;
+  left: 275px;
   visibility: hidden;
+}
+
+h3 {
+  border: 1px solid #0042aa;
+  border-radius: 25px;
+  background-color: #0042aa;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  left: 300px;
+  font-family: Abel, sans-serif;
+  font-size: 80px;
+  box-shadow: 6px 8px #0200aa;
+  cursor: pointer;
 }
