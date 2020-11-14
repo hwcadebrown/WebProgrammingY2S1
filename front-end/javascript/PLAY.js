@@ -32,13 +32,34 @@ var gameOverBox;
 
 gameOverBox = document.getElementById("gameOver");
 
-function status() {
+/*function status() {
   if (playerHitWall() || playerHitSelf()) {
     // window.location.href='MAINMENU.html' (leave for now)
     alert('You Derailed! Score: ' + score);
     start();
     return;
+  }*/
+
+function playerHits(playerHitSelf, playerHitWall) {
+  if (playerHitWall() || playerHitSelf()) {
+    setState("gameOver")
   }
+}
+
+  function setState(state) {
+    gameState = state;
+    showMenu(state);
+  }
+
+  function displayMenu(menu) {
+    menu.style.visibility = "visible";
+  }
+
+  function showMenu(state)
+  if(state == "gameOver") {
+    displayMenu(gameOverMenu);
+  }
+
 
   setTimeout(function onTick() {
     changingDirection = false;
