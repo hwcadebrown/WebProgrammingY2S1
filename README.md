@@ -2,7 +2,7 @@
 Repository for Web Programming Y2 S1
 
 Team members: Alexander Wickham, Andrew McBain, 
-Nicole Stewart, Glenn Wright and Cade Brown
+Dan Johnstone, Glenn Wright and Cade Brown
 
 Roles/Jobs:
 
