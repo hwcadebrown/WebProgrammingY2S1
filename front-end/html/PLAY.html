@@ -1,0 +1,46 @@
+<html>
+<!-- Glenn Wright and Cade-->
+<!-- Play Page (Gameplay) -->
+
+<head>
+  <!-- Play page title in browser -->
+  <title>Trains Of Pain!</title>
+  <!-- Reference to stylesheet for Play -->
+  <link rel="stylesheet" type="text/css" href="../css/PLAYCSS.css">
+</head>
+
+<!-- Body container, set to the class 'bod' -->
+<body id="bod">
+
+  <!-- Score division which will show the players score -->
+  <div id="score"></div>
+  <!-- Score label header which gives the players score some label text -->
+  <h1 id="labelscore"> Score: </h1>
+
+  <!-- Gameover division which displays to the user a game over screen -->
+  <div id="gameOver">
+    <!-- Heading which shows the text 'YOU DERAILED' upon losing the game -->
+    <h1 id="title">YOU DERAILED!</h1>
+    <!-- Heading which shows the text 'RETRY' which restarts the game if clicked -->
+    <h3 onclick="window.location.href='PLAY.html'" id="retryButton">RETRY</h3>
+    <!-- Heading which shows the text 'MENU' which goes to the main menu if clicked -->
+    <h3 onclick="window.location.href='MAINMENU.html'" id="menuButton">MENU</h3>
+  </div>
+
+  <!-- Back button which allows the player to go back to the main menu at any time -->
+  <input type="button" value="<" onclick="window.location.href='MAINMENU.html'" id="backbutton" />
+  <!-- Area division which is the arena where the game will be played -->
+  <div id="area"></div>
+
+</body>
+
+<!-- Loads all of the javascript code required for the gameplay -->
+<script src="../javascript/CLIENTSERVER.js"></script>
+<script src="../javascript/jquery-3.5.1.js"></script>
+<script src="../javascript/PEOPLE.js"></script>
+<script src="../javascript/COLOR.js"></script>
+<script src="../javascript/TRAIN.js"></script>
+<script src="../javascript/CLIENT.js"></script>
+<script src="../javascript/PLAY.js"></script>
+
+</html>

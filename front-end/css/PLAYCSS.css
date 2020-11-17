@@ -1,0 +1,93 @@
+/* Glenn Wright & Cade--> */
+/* Play CSS */
+
+/* creates a background which changes in color over time */
+@keyframes backgroundmv {
+  0%   {background-color:#0042aa;}
+  20%  {background-color:#0086aa;}
+  40%  {background-color:#0064aa;}
+  60%  {background-color:#0020aa;}
+  80%  {background-color:#0200aa;}
+  100% {background-color:#0042aa;}
+}
+
+/* animates the background over a 60 second loop */
+#bod {
+  animation: backgroundmv 60s infinite;
+}
+
+/* styles the area that the gameplay takes place in */
+#area {
+  position : relative;
+  top : 140;
+	background-color: #EFD691;
+  border: 3px solid black;
+  zoom: 30%;
+}
+
+/* styles the score counter that tracks the players score during gameplay */
+#score {
+  float: right;
+  font-size: 100px;
+  font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
+}
+
+/* styles the label that is next to score counter */
+#labelscore {
+  float: right;
+  position: relative;
+  top: -72.5px;
+  right: 20px;
+  font-size: 100px;
+  font-weight: 500;
+  font-family: Abel, sans-serif;
+  color: #EFD691;
+	text-shadow: 3px 2px black;
+}
+
+/* styles the back button which lets the player go back to the menu */
+#backbutton {
+  border: 1px solid #F3D486;
+  border-radius: 25px;
+  background-color: #F3D486;
+  position: relative;
+  width: 80px;
+  height: 60px;
+  top: 25;
+  left: 10;
+  font-family: Abel, sans-serif;
+  font-size: 40px;
+  box-shadow: 6px 8px #B59959;
+  cursor: pointer;
+}
+
+/* styles the game over popup which appears when the player crashes */
+#gameOver {
+  font-size: 60px;
+  font-family: Abel, sans-serif;
+  color: #0086aa;
+	text-shadow: 1px 1px black;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  top: 150px;
+  left: 275px;
+  visibility: hidden;
+}
+
+/* styles the h3 headers to stay consistient with the rest of the website */
+h3 {
+  border: 1px solid #0042aa;
+  border-radius: 25px;
+  background-color: #0042aa;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  left: 300px;
+  font-family: Abel, sans-serif;
+  font-size: 80px;
+  box-shadow: 6px 8px #0200aa;
+  cursor: pointer;
+}

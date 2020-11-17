@@ -1,8 +1,7 @@
 /* Andrew McBain and Cade */
 /* Main menu CSS */
-body{
-}
 
+/* creates a background which changes in color over time */
 @keyframes backgroundmv {
  0%   {background-color:#0042aa;}
  20%  {background-color:#0086aa;}
@@ -12,7 +11,8 @@ body{
  100% {background-color:#0042aa;}
 }
 
-.grid-container {
+/* styles the grid that we will be storing our different divisions in */
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 15px;
@@ -21,7 +21,8 @@ body{
 	width: 99vw;
 }
 
-.grid-container > div {
+/* styles the elements inside the grid's division, loops background over 60s */
+#grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
@@ -30,25 +31,30 @@ body{
 	text-shadow: 3px 2px black;
 }
 
-.title {
+/* places our title pane in the grid */
+#title {
   grid-column: 1 / span 4;
 }
 
-.highscore {
+/* places our highscore pane in the grid */
+#highscore {
   grid-row: 2 / span 4;
 }
 
-.userpane {
+/* places our user pane in the grid */
+#userpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
 }
 
-.myscore {
+/* places our myscore pane in the grid */
+#myscore {
  grid-row: 2 / span 4;
  grid-column:4 / span 1;
 }
 
-.txtbox {
+/* styles the textbox where the user will enter their player name */
+#txtbox {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -60,7 +66,8 @@ body{
   box-shadow: 10px 10px #B59959;
 }
 
-.playbutton {
+/* styles the play button which takes the user to the game screen */
+#playbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -73,6 +80,7 @@ body{
   cursor: pointer;
 }
 
+/* styles the account buttons relating to logging in and registering */
 .accbuttons {
   border: 1px solid #F3D486;
 	margin-top: 15px;
