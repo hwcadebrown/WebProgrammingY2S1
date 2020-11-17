@@ -12,11 +12,26 @@ const arena = document.getElementById('area');
 $(arena).css('width', 4900);
 $(arena).css('height', 2400);
 
-/* directionx and directiony intitialised to placeholder values,
-the directionx of 50 and directiony of 0 will start the player
-moving right, these determine the direction the player is moving
+/* randomly chooses 50 or -50 which dictates which direction the player
+heads in when spawning, can either be right or left */
+function randomdirection() {
+  // generates the number 1 or 2
+  var direction = Math.floor((Math.random() * 2) + 1);
+  // switch case, if 1 then train heads left, if 2 then train head right
+  switch(direction) {
+    case 1:
+      return 50;
+    case 2:
+      return -50;
+  }
+}
+
+/* directionx and directiony intitialised to the values of
+directionx being the number -50 or 50 chosen at random and
+directiony is 0, this will start the player moving either
+right or left and determine the direction the player is moving
 in at a specific instance */
-let directionx = 50;
+let directionx = randomdirection();
 let directiony = 0;
 
 // calls the start function, which intitialises the elements needed
