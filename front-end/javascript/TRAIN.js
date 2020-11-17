@@ -91,7 +91,7 @@ function rendertrain() {
   }
 }
 
-// renders individual parts to be seen on the arena
+// renders individual parts to be seen on the arena (also creates train hitbox)
 function rendertrainPart(t, trainPart) {
   // renders the carriage at the position t of the train
   let part = "carriage" + t;
