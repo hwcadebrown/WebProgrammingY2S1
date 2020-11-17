@@ -65,29 +65,27 @@
 
 /* styles the game over popup which appears when the player crashes */
 #gameOver {
-  font-size: 60px;
-  font-family: Abel, sans-serif;
-  color: #0086aa;
-	text-shadow: 1px 1px black;
+  vertical-align: center;
   text-align: center;
+  font-size: 70px;
+  font-family: Abel, sans-serif;
+  color: #0064aa;
+	text-shadow: 6px 0px black;
   z-index: 10;
-  position: absolute;
+  position: fixed;
   top: 150px;
-  left: 275px;
+  left: 160px;
   visibility: hidden;
 }
 
 /* styles the h3 headers to stay consistient with the rest of the website */
-h3 {
-  border: 1px solid #0042aa;
+.accbuttons {
+  border: 1px solid #0064aa;
   border-radius: 25px;
-  background-color: #0042aa;
-  position: relative;
-  width: 300px;
-  height: 100px;
-  left: 300px;
+  background-color: #0064aa;
+  width: 250px; height: 80px;
   font-family: Abel, sans-serif;
-  font-size: 80px;
-  box-shadow: 6px 8px #0200aa;
+  font-size: 60px;
+  box-shadow: 6px 8px #0020aa;
   cursor: pointer;
 }
