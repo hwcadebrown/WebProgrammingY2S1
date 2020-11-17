@@ -9,7 +9,7 @@ const GAME_SPEED = 50;
 const arena = document.getElementById('area');
 
 // styles the arena's width and height
-$(arena).css('width', 4750);
+$(arena).css('width', 4900);
 $(arena).css('height', 2400);
 
 /* directionx and directiony intitialised to placeholder values,
