@@ -1,8 +1,7 @@
 /* Andrew McBain and Cade */
 /* Login menu CSS */
-body{
-}
 
+/* creates a background which changes in color over time */
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
   20%  {background-color:#0086aa;}
@@ -12,7 +11,7 @@ body{
   100% {background-color:#0042aa;}
 }
 
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 15px;
@@ -21,7 +20,7 @@ body{
 	width: 99vw;
 }
 
-.grid-container > div {
+#grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
@@ -30,20 +29,20 @@ body{
 	text-shadow: 3px 2px black;
 }
 
-.logintitle {
+#logintitle {
   grid-column: 1 / span 4 ;
 }
 
-.registerpane {
+#registerpane {
 	grid-row: 2 / span 4;
 }
 
-.loginpane {
+#loginpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
 }
 
-.menupane {
+#menupane {
  grid-row: 2 / span 4;
  grid-column:4 / span 1 ;
 }
@@ -71,7 +70,7 @@ body{
   box-shadow: 6px 8px #B59959;
 }
 
-.loginbutton {
+#loginbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -84,7 +83,7 @@ body{
   cursor: pointer;
 }
 
-.show {
+#show {
   position: relative;
   top: -50px;
   font-size: 20px;
