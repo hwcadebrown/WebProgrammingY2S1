@@ -67,6 +67,9 @@ function advancetrain() {
   } else if (didPickUpPerson3) {
     // takes 1 point off the score variable
     $('#score').html(score -= 1);
+    if(score < 0) {
+      $('#score').html(score = 0);
+    }
     // creates a new PERSON3 in the arena to be collected again
     createperson3();
     /* removes the last carriage of the train, if this isn't put in then an
