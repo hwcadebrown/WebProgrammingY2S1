@@ -19,15 +19,15 @@
 	</audio>
 
 	<!-- Created a grid container to allow us to create sperate pane's in the menu -->
-	<div class="grid-container">
+	<div id="grid-container">
 
 		<!-- Header/Title displayed on the Main Menu -->
-		<div class="title">
+		<div id="title">
 			<h1>TRAINS OF PAIN!</h1>
 		</div>
 
 		<!-- High Score pane which will hold the global high scores of all players -->
-		<div class="highscore">
+		<div id="highscore">
 			<h3>HIGH SCORES</h3>
 			-
 			<br><br>
@@ -42,13 +42,13 @@
 		</div>
 
 		<!-- User pane where the user can enter their name, press play, register or login -->
-		<div class="userpane">
+		<div id="userpane">
 			<br>
 			<h2>ENTER NAME</h2>
 			<br>
-			<input type="text" class="txtbox">
+			<input type="text" id="txtbox">
 			<br><br>
-			<input type="button" value="PLAY" onclick="window.location.href='PLAY.html'" class="playbutton" />
+			<input type="button" value="PLAY" onclick="window.location.href='PLAY.html'" id="playbutton" />
 			<br>
 			<input type="button" value="LOGIN" onclick="window.location.href='LOGIN.html'" class="accbuttons" />
 			<br>
@@ -57,7 +57,7 @@
 		</div>
 
 		<!-- My Score plane which will hold the high scores for the currently logged in player -->
-		<div class="myscore">
+		<div id="myscore">
 			<h3>MY SCORES</h3>
 			-
 			<br><br>
@@ -73,6 +73,7 @@
 
 	</div>
 
+<!-- Closes body container -->
 </body>
 
 </html>

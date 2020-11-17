@@ -1,7 +1,5 @@
 /* Andrew McBain and Cade */
 /* Main menu CSS */
-body{
-}
 
 @keyframes backgroundmv {
  0%   {background-color:#0042aa;}
@@ -12,7 +10,7 @@ body{
  100% {background-color:#0042aa;}
 }
 
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 15px;
@@ -21,7 +19,7 @@ body{
 	width: 99vw;
 }
 
-.grid-container > div {
+#grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
@@ -30,25 +28,25 @@ body{
 	text-shadow: 3px 2px black;
 }
 
-.title {
+#title {
   grid-column: 1 / span 4;
 }
 
-.highscore {
+#highscore {
   grid-row: 2 / span 4;
 }
 
-.userpane {
+#userpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
 }
 
-.myscore {
+#myscore {
  grid-row: 2 / span 4;
  grid-column:4 / span 1;
 }
 
-.txtbox {
+#txtbox {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -60,7 +58,7 @@ body{
   box-shadow: 10px 10px #B59959;
 }
 
-.playbutton {
+#playbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
