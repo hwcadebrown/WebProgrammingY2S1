@@ -1,3 +1,6 @@
+// Cade Brown
+// Chooses the color of each carriage that gets added to the train
+
 // function for picking the color of each carriage added to the train
 function colorPicker() {
   // color variable which generates a random number from 1 to 10
