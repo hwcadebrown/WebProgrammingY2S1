@@ -1,5 +1,7 @@
 /* Glenn Wright & Cade--> */
+/* Play CSS */
 
+/* creates a background which changes in color over time */
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
   20%  {background-color:#0086aa;}
@@ -9,10 +11,12 @@
   100% {background-color:#0042aa;}
 }
 
+/* animates the background over a 60 second loop */
 #bod {
   animation: backgroundmv 60s infinite;
 }
 
+/* styles the area that the gameplay takes place in */
 #area {
   position : relative;
   top : 140;
@@ -21,6 +25,7 @@
   zoom: 30%;
 }
 
+/* styles the score counter that tracks the players score during gameplay */
 #score {
   float: right;
   font-size: 100px;
@@ -29,6 +34,7 @@
 	text-shadow: 3px 2px black;
 }
 
+/* styles the label that is next to score counter */
 #labelscore {
   float: right;
   position: relative;
@@ -41,7 +47,7 @@
 	text-shadow: 3px 2px black;
 }
 
-
+/* styles the back button which lets the player go back to the menu */
 #backbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
@@ -57,6 +63,7 @@
   cursor: pointer;
 }
 
+/* styles the game over popup which appears when the player crashes */
 #gameOver {
   font-size: 60px;
   font-family: Abel, sans-serif;
@@ -70,6 +77,7 @@
   visibility: hidden;
 }
 
+/* styles the h3 headers to stay consistient with the rest of the website */
 h3 {
   border: 1px solid #0042aa;
   border-radius: 25px;
