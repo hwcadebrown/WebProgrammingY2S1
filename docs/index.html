@@ -1,64 +1,79 @@
 <html>
-<!--Andrew McBain and Cade Brown-->
+<!--Andrew McBain and Cade-->
 <!-- Main Menu Page (Home) -->
+
 <head>
+	<!-- Main Menu page title in browser -->
 	<title>Trains of Pain Menu</title>
-	<link rel = "stylesheet" type = "text/css" href = "index.css">
-	<link rel="shortcut icon" href="bluecarriagefront_Pgy_icon.ico">
+	<!-- Reference to stylesheet for Main Menu -->
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body style = background-color:black>
+<!-- Makes the color of the page background black -->
+<body style=background-color:black>
 
-<div class = "grid-container">
+	<!-- Main Menu music, this may or may not be removed in final version -->
+	<audio autoplay>
+		<source src="../../temp/tempmusic.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
 
-	<div class = "title">
-		<h1>TRAINS OF PAIN!</h1>
+	<!-- Created a grid container to allow us to create sperate pane's in the menu -->
+	<div id="grid-container">
+
+		<!-- Header/Title displayed on the Main Menu -->
+		<div id="title">
+			<h1>TRAINS OF PAIN!</h1>
+		</div>
+
+		<!-- High Score pane which will hold the global high scores of all players -->
+		<div id="highscore">
+			<h3>HIGH SCORES</h3>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br>
+		</div>
+
+		<!-- User pane where the user can enter their name, press play, register or login -->
+		<div id="userpane">
+			<br>
+			<h2>ENTER NAME</h2>
+			<br>
+			<input type="text" id="txtbox">
+			<br><br>
+			<input type="button" value="PLAY" onclick="window.location.href='front-end-files/html/play.html'" id="playbutton" />
+			<br>
+			<input type="button" value="LOGIN" onclick="window.location.href='front-end-files/html/login.html'" class="accbuttons" />
+			<br>
+			<input type="button" value="REGISTER" onclick="window.location.href='front-end-files/html/register.html'" class="accbuttons" />
+			<br><br>
+		</div>
+
+		<!-- My Score plane which will hold the high scores for the currently logged in player -->
+		<div id="myscore">
+			<h3>MY SCORES</h3>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br><br>
+			-
+			<br>
+		</div>
+
 	</div>
 
-	<div class = "highscore">
-		<h3>HIGH SCORES</h3>
-			-
-		<br><br>
-			-
-		<br><br>
-			-
-		<br><br>
-			-
-		<br><br>
-			-
-		<br>
-	</div>
-
-	<div class = "userpane">
-		<br>
-		<h2>ENTER NAME</h2>
-		<br>
-		<input type = "text" class = "txtbox">
-		<br><br>
-		<input type = "button" value = "PLAY" onclick = "window.location.href='front-end-files/html/play.html'" class = "playbutton"/>
-		<br>
-		<input type = "button" value = "LOGIN" onclick = "window.location.href='front-end-files/html/login.html'" class = "accbuttons"/>
-		<br>
-		<input type = "button" value = "REGISTER" onclick = "window.location.href='front-end-files/html/register.html'" class = "accbuttons"/>
-		<br><br>
-	</div>
-
-	<div class = "myscore">
-		<h3>MY SCORES</h3>
-		-
-		<br><br>
-		-
-		<br><br>
-		-
-		<br><br>
-		-
-		<br><br>
-		-
-		<br>
-	</div>
-
-</div>
-
+<!-- Closes body container -->
 </body>
 
 </html>

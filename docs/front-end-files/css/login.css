@@ -1,8 +1,7 @@
 /* Andrew McBain and Cade */
 /* Login menu CSS */
-body{
-}
 
+/* creates a background which changes in color over time */
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
   20%  {background-color:#0086aa;}
@@ -12,7 +11,8 @@ body{
   100% {background-color:#0042aa;}
 }
 
-.grid-container {
+/* styles the grid that we will be storing our different divisions in */
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 15px;
@@ -21,7 +21,8 @@ body{
 	width: 99vw;
 }
 
-.grid-container > div {
+/* styles the elements inside the grid's division, loops background over 60s */
+#grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
@@ -30,24 +31,29 @@ body{
 	text-shadow: 3px 2px black;
 }
 
-.logintitle {
+/* places our login title pane in the grid */
+#logintitle {
   grid-column: 1 / span 4 ;
 }
 
-.registerpane {
+/* places our register pane in the grid */
+#registerpane {
 	grid-row: 2 / span 4;
 }
 
-.loginpane {
+/* places our login pane in the grid */
+#loginpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
 }
 
-.menupane {
+/* places our menu pane in the grid */
+#menupane {
  grid-row: 2 / span 4;
  grid-column:4 / span 1 ;
 }
 
+/* styles the buttons included on the page, all the same style so theyre consistient */
 .buttons {
   border: 1px solid #F3D486;
   border-radius: 25px;
@@ -59,6 +65,7 @@ body{
   cursor: pointer;
 }
 
+/* styles the textboxes where the user will enter their name and password */
 .txtboxes {
   border: 1px solid #F3D486;
   border-radius: 25px;
@@ -71,7 +78,9 @@ body{
   box-shadow: 6px 8px #B59959;
 }
 
-.loginbutton {
+/* styles the login button, this can't be in the button class as it
+is at a different position from the other buttons but is the same style */
+#loginbutton {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -84,7 +93,8 @@ body{
   cursor: pointer;
 }
 
-.show {
+/* styles the show password text and places it below the password textbox */
+#show {
   position: relative;
   top: -50px;
   font-size: 20px;

@@ -1,50 +1,61 @@
 <html>
-<!--Andrew McBain and Cade-->
-<!-- Login Menu Page -->
+<!-- Andrew McBain and Cade -->
+<!-- Login Menu Page (User login) -->
+
 <head>
+	<!-- Login page title in browser -->
 	<title>Trains of Pain Login</title>
-	<link rel = "stylesheet" type = "text/css" href = "../css/login.css">
+	<!-- Reference to stylesheet for Login -->
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 
-<body style = background-color:black>
+<!-- Body container, inline styles the color of the page background black -->
+<body style=background-color:black>
 
-<div class = "grid-container">
+	<!-- Created a grid container to allow us to create sperate pane's in the login page -->
+	<div id="grid-container">
 
-	<div class = "logintitle">
-		<h1>LOGIN</h1>
+		<!-- Header/Title displayed on the Login screen -->
+		<div id="logintitle">
+			<h1>LOGIN</h1>
+		</div>
+
+		<!-- Register pane which will link to the register menu for registration -->
+		<div id="registerpane">
+			<br><br>
+			<h3>DON'T</h3>
+			<h3>HAVE AN</h3>
+			<h3>ACCOUNT?</h3>
+			<input type="button" value="REGISTER" onclick="window.location.href='register.html'" class="buttons" />
+		</div>
+
+		<!-- Login pane where the user can enter their account details and login -->
+		<div id="loginpane">
+			<br>
+			<h3>USERNAME</h3>
+			<input name="USERNAME" class="txtboxes">
+			<h3>PASSWORD</h3>
+			<input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
+			<h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
+			<br>
+			<input type="button" value="LOGIN" onclick="window.location.href='../../index.html'" id="loginbutton" />
+		</div>
+
+		<!-- Menu pane which links back to the main menu without user signing in -->
+		<div id="menupane">
+			<br><br>
+			<h3>CONTINUE</h3>
+			<h3>WITHOUT</h3>
+			<h3>SIGNING IN?</h3>
+			<input type="button" value="MENU" onclick="window.location.href='../../index.html'" class="buttons" />
+		</div>
+
 	</div>
 
-	<div class = "registerpane">
-		<br><br>
-		<h3>DON'T</h3>
-		<h3>HAVE AN</h3>
-		<h3>ACCOUNT?</h3>
-		<input type = "button" value = "REGISTER" onclick = "window.location.href='register.html'" class = "buttons"/>
-	</div>
-
-	<div class = "loginpane">
-		<br>
-		<h3>USERNAME</h3>
-		<input name = "USERNAME" class = "txtboxes">
-		<h3>PASSWORD</h3>
-		<input name = "PASSWORD" type = "password" id = "passwordtxt" class = "txtboxes">
-		<h5 onclick = "showPass()" class = "show">SHOW PASSWORD</h5>
-		<br>
-		<input type = "button" value = "LOGIN" onclick = "window.location.href='../../index.html'" class = "loginbutton"/>
-	</div>
-
-	<div class = "menupane">
-		<br><br>
-		<h3>CONTINUE</h3>
-		<h3>WITHOUT</h3>
-		<h3>SIGNING IN?</h3>
-		<input type = "button" value = "MENU" onclick = "window.location.href='../../index.html'" class = "buttons"/>
-	</div>
-
-</div>
-
-<script src = "../js/register.js"></script>
-
+<!-- Closes body container -->
 </body>
+
+<!-- Load the javascript code required for the register menu (show password)-->
+<script src="../js/register.js"></script>
 
 </html>
