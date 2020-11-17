@@ -82,10 +82,10 @@ function status() {
       // playerHits();
       // renders the people gifs and places them at a random position
       renderperson();
-      // renders the train in the arena
-      rendertrain();
       // advances the train according the the direction is heading in
       advancetrain();
+      // renders the train in the arena
+      rendertrain();
     }, GAME_SPEED) // sets the GAME_SPEED to 50, if not set again would go supersonic speeds
   }
 }
