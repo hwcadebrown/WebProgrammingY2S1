@@ -37,6 +37,8 @@ app.get("/", isLoggedIn, (req, res) => {
 
 
 
-app.listen('3000', () => {
-  console.log('Server started with nodemon');
-});
+//app.listen('3000', () => {
+  //console.log('Server started with nodemon');
+//});
+
+module.exports = app;
