@@ -63,6 +63,7 @@ function start() {
   createperson(1);
   createperson(2);
   createperson(3);
+  createperson(4);
   addperson();
   attatchcarriage();
 
