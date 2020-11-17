@@ -61,8 +61,8 @@ db.connect((err) => {
 
 
 app.post('/auth', function(request, response) {
-	var username = request.body.username;
-	var password = request.body.password;
+	var username = request.body.USERNAME;
+	var password = request.body.PASSWORD;
 	if (username && password) {
 		connection.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
