@@ -77,15 +77,15 @@ function status() {
 
     // game advances after each tick of the game
     setTimeout(function onTick() {
-      // calls the status function again
-      status();
       // playerHits();
-      // renders the people gifs and places them at a random position
-      renderperson();
       // advances the train according the the direction is heading in
       advancetrain();
       // renders the train in the arena
       rendertrain();
+      // renders the people gifs and places them at a random position
+      renderperson();
+      // calls the status function again
+      status();
     }, GAME_SPEED) // sets the GAME_SPEED to 50, if not set again would go supersonic speeds
   }
 }
