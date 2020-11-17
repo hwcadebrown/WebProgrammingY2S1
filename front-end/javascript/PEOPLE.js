@@ -59,15 +59,6 @@ function createperson(typeperson) {
   personY = randompos(0, parseFloat($(arena).css('height')) - 50);
   }
 
-  else if(typeperson === 4) {
-  /* the x position of the first person is anywhere within the arenas total
-  width (minus the sprite size) */
-  personX = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the first person is anywhere within the arenas total
-  height (minus the sprite size) */
-  personY = randompos(0, parseFloat($(arena).css('height')) - 50);
-  }
-
   // if typeperson equals 2 then powerperson is created
   else if(typeperson === 2) {
   /* the x position of the power person is anywhere within the arenas total
