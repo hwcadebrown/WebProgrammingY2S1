@@ -1,7 +1,14 @@
+// Cade Brown
+// Adding people to the game for players to pick up
+
+// function which adds the people to the game arena
 function addperson() {
+  // first person variable initialised with identifier 'person'
   let person = document.createElement('person');
   person.id = "person";
+  // width of the person gif set to 50px
   $(person).css('width', 50);
+  // height of the person gif set to 50px
   $(person).css('height', 50);
   $(person).css('position', 'absolute');
   $(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
