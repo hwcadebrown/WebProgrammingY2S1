@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 
-/* styles the game over popup which appears when the player crashes */
+/* styles the game over popup and title which appears when the player crashes */
 #gameOver {
   vertical-align: center;
   text-align: center;
@@ -78,7 +78,7 @@
   visibility: hidden;
 }
 
-/* styles the h3 headers to stay consistient with the rest of the website */
+/* styles the game over buttons to stay consistient with the rest of the website */
 .accbuttons {
   border: 1px solid #0064aa;
   border-radius: 25px;
