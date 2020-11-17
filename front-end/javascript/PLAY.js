@@ -60,9 +60,9 @@ function start() {
 
   /* creates the elements we need for gameplay, this includes the people
   and adding them to the arena and the carriage for the players train */
-  createperson();
-  createperson2();
-  createperson3();
+  createperson(1);
+  createperson(2);
+  createperson(3);
   addperson();
   attatchcarriage();
 

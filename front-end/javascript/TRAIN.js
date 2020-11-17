@@ -52,7 +52,7 @@ function advancetrain() {
     // adds a carriage at the ends of the trains body (last carriage added)
     addcarriage(train.length - 1);
     // creates a new PERSON1 in the arena to be collected again
-    createperson();
+    createperson(1);
 
     // if PERSON2 is picked up then this set of operations will be executed
   } else if (didPickUpPerson2) {
@@ -61,7 +61,7 @@ function advancetrain() {
     // adds a carriage at the ends of the trains body (last carriage added)
     addcarriage(train.length - 1);
     // creates a new PERSON2 in the arena to be collected again
-    createperson2();
+    createperson(2);
 
     // if PERSON3 is picked up then this set of operations will be executed
   } else if (didPickUpPerson3) {
@@ -71,7 +71,7 @@ function advancetrain() {
       $('#score').html(score = 0);
     }
     // creates a new PERSON3 in the arena to be collected again
-    createperson3();
+    createperson(3);
     /* removes the last carriage of the train, if this isn't put in then an
     invisble carriage will be attatched so this will prevent it */
     train.pop();

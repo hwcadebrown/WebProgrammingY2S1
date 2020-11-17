@@ -46,33 +46,38 @@ function addperson() {
   $(badperson).appendTo(arena);
 }
 
-// creates the first person and places them at a random position on the arena
-function createperson() {
+// creates the people and places them at a random position on the arena
+function createperson(typeperson) {
+
+  // if typeperson equals 1 then person is created
+  if(typeperson === 1) {
   /* the x position of the first person is anywhere within the arenas total
   width (minus the sprite size) */
   personX = randompos(0, parseFloat($(arena).css('width')) - 50);
   /* the y position of the first person is anywhere within the arenas total
   height (minus the sprite size) */
   personY = randompos(0, parseFloat($(arena).css('height')) - 50);
-}
+  }
 
-// creates the second person and places them at a random position on the arena
-function createperson2() {
+  // if typeperson equals 2 then person2 is created
+  else if(typeperson === 2) {
   /* the x position of the second person is anywhere within the arenas total
   width (minus the sprite size) */
   personX2 = randompos(0, parseFloat($(arena).css('width')) - 50);
   /* the y position of the second person is anywhere within the arenas total
   height (minus the sprite size) */
   personY2 = randompos(0, parseFloat($(arena).css('height')) - 50);
-}
+  }
 
-function createperson3() {
+  // if typeperson equals 3 then the badperson is created
+  else if(typeperson === 3) {
   /* the x position of the third person is anywhere within the arenas total
   width (minus the sprite size) */
   personX3 = randompos(0, parseFloat($(arena).css('width')) - 50);
   /* the y position of the third person is anywhere within the arenas total
   height (minus the sprite size) */
   personY3 = randompos(0, parseFloat($(arena).css('height')) - 50);
+  }
 }
 
 // renders each person so they can be seen on the arena (also creates hitboxes)
