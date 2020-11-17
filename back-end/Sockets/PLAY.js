@@ -8,6 +8,6 @@ class Play {
   removePlayer(){}
   changeDirection(){}
 }
-modules.export = {
+modules.exports = {
   Play
 };
