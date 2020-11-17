@@ -55,11 +55,6 @@ function start() {
   $(document).on("keydown", changedirection);
 }
 
-var gameOverBox;
-var gameState;
-
-gameOverBox = document.getElementById("gameOver");
-
 // status function which advances the gameplay with repeated calls
 function status() {
 
@@ -70,16 +65,15 @@ function status() {
     // window.location.href='MAINMENU.html' (leave for now)
     // alert('You Derailed! Score: ' + score);
 
-    // sets the state of the setState function to gameOver
-    setState("gameOver");
+    // shows the game over popup to the player, allowing them to retry or go to menu
+    showMenu();
 
-    // restarts the game from the beginning by calling start function
-    start();
-    return;
+    // the train has derailed and will no longer move or function, it is dead...
+    train = [];
   }
 
   // if the gameState is not set to gameOver the game will advance
-  if (gameState != "gameOver") {
+  if (showMenu != "gameOver") {
 
     // game advances after each tick of the game
     setTimeout(function onTick() {
@@ -93,27 +87,11 @@ function status() {
       // advances the train according the the direction is heading in
       advancetrain();
     }, GAME_SPEED) // sets the GAME_SPEED to 50, if not set again would go supersonic speeds
-
   }
 }
 
-// setts the state of the game
-function setState(state) {
-
-  // sets the gameState to the value of the parameter state
-  gameState = state;
-  // calls the showMneu function with the current state
-  showMenu(gameState);
-}
-
-// makes the gameOver menu visible to the player
-function displayMenu(menu) {
-  menu.style.visibility = "visible";
-}
-
-// shows the gameOver menu to the player
-function showMenu(state) {
-  if (state == "gameOver") {
-    displayMenu(gameOverBox);
-  }
+// shows the gameOver popup to the player
+function showMenu() {
+  gameOverBox = document.getElementById("gameOver")
+  gameOverBox.style.visibility = "visible";
 }
