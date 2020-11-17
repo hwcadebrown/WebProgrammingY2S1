@@ -1,20 +1,26 @@
 <html>
 <!-- Glenn Wright and Cade-->
-<!-- Register Menu Page -->
+<!-- Register Menu Page (User registration) -->
 
 <head>
+  <!-- Register page title in browser -->
   <title>Trains of Pain Register</title>
+  <!-- Reference to stylesheet for Register -->
   <link rel="stylesheet" type="text/css" href="../css/REGISTERCSS.css">
 </head>
 
+<!-- Body container, inline styles so the background color of the page is black -->
 <body style=background-color:black>
 
+  <!-- Grid container created allowing us to create sperate pane's in the register page -->
   <div class="grid-container">
 
+    <!-- Header/Title displayed on the Register screen -->
     <div class="registertitle">
       <h1>REGISTER</h1>
     </div>
 
+    <!-- Login pane which will link to the login menu for the user to sign into their account-->
     <div class="loginpane">
       <br><br>
       <h3>ALREADY HAVE</h3>
@@ -22,6 +28,7 @@
       <input type="button" value="LOGIN" onclick="window.location.href='LOGIN.html'" class='buttons' />
     </div>
 
+    <!-- Register pane where the user can enter account details and create an account-->
     <div class="registerpane">
       <h4>USERNAME</h4>
       <input name="USERNAME" class="txtboxes">
@@ -34,6 +41,7 @@
       <input type="button" value="REGISTER" onclick="window.location.href='MAINMENU.html'" class="buttons" />
     </div>
 
+    <!-- Menu pane which links back to the main menu without user regsistering -->
     <div class="menu">
       <br><br>
       <h3>BACK TO</h3>
@@ -43,8 +51,9 @@
 
   </div>
 
-  <script src="../javascript/REGISTERJS.js"></script>
-
 </body>
+
+<!-- Load the javascript code required for the register menu (show password)-->
+<script src="../javascript/REGISTERJS.js"></script>
 
 </html>
