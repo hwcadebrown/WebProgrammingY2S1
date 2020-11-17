@@ -13,15 +13,15 @@
 <body style=background-color:black>
 
   <!-- Grid container created allowing us to create sperate pane's in the register page -->
-  <div class="grid-container">
+  <div id="grid-container">
 
     <!-- Header/Title displayed on the Register screen -->
-    <div class="registertitle">
+    <div id="registertitle">
       <h1>REGISTER</h1>
     </div>
 
     <!-- Login pane which will link to the login menu for the user to sign into their account-->
-    <div class="loginpane">
+    <div id="loginpane">
       <br><br>
       <h3>ALREADY HAVE</h3>
       <h3>AN ACCOUNT?</h3>
@@ -29,20 +29,20 @@
     </div>
 
     <!-- Register pane where the user can enter account details and create an account-->
-    <div class="registerpane">
+    <div id="registerpane">
       <h4>USERNAME</h4>
       <input name="USERNAME" class="txtboxes">
       <h4>PASSWORD</h4>
       <input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
-      <h5 onclick="showPass()" class="show">SHOW PASSWORD</h5>
-      <h4 class="confpass">CONFIRM PASSWORD</h4>
-      <input name="CONFRMPASSWORD" type="password" class="passwordconftxt">
+      <h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
+      <h4 id="confpass">CONFIRM PASSWORD</h4>
+      <input name="CONFRMPASSWORD" type="password" id="passwordconftxt">
       <br>
       <input type="button" value="REGISTER" onclick="window.location.href='MAINMENU.html'" class="buttons" />
     </div>
 
     <!-- Menu pane which links back to the main menu without user regsistering -->
-    <div class="menu">
+    <div id="menu">
       <br><br>
       <h3>BACK TO</h3>
       <h3>MAIN MENU?</h3>

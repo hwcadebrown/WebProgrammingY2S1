@@ -1,7 +1,5 @@
 /* Glenn Wright and Cade */
 /* Register menu CSS */
-body{
-}
 
 @keyframes backgroundmv {
   0%   {background-color:#0042aa;}
@@ -12,7 +10,7 @@ body{
   100% {background-color:#0042aa;}
 }
 
-.grid-container {
+#grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 15px;
@@ -21,7 +19,7 @@ body{
 	width: 99vw;
 }
 
-.grid-container > div {
+#grid-container > div {
   animation: backgroundmv 60s infinite;
   text-align: center;
   font-size: 30px;
@@ -30,20 +28,20 @@ body{
 	text-shadow: 3px 2px black;
 }
 
-.registertitle {
+#registertitle {
   grid-column: 1 / span 4 ;
 }
 
-.loginpane {
+#loginpane {
 	grid-row: 2 / span 4;
 }
 
-.registerpane {
+#registerpane {
  grid-row: 2 / span 4;
  grid-column: 2 / span 2;
 }
 
-.menu {
+#menu {
  grid-row: 2 / span 4;
  grid-column:4 / span 1 ;
 }
@@ -73,7 +71,7 @@ body{
   cursor: pointer;
 }
 
-.passwordconftxt {
+#passwordconftxt {
   border: 1px solid #F3D486;
   border-radius: 25px;
   background-color: #F3D486;
@@ -86,12 +84,12 @@ body{
   box-shadow: 5px 5px #B59959;
 }
 
-.confpass {
+#confpass {
   position: relative;
   top: -30px;
 }
 
-.show {
+#show {
   position: relative;
   top: -50px;
   font-size: 20px;
