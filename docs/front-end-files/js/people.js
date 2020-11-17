@@ -13,7 +13,7 @@ function addperson() {
   // the position of the person will be absolute, placed with randompos
   $(person).css('position', 'absolute');
   // sets the background of the person to the specified person gif
-  $(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
+  $(person).css('background-image', 'url(' + '../../graphics/gifs/PERSON1.gif' + ')');
   // adds the person to the games arena
   $(person).appendTo(arena);
 
@@ -27,7 +27,7 @@ function addperson() {
   // the position of the person2 will be absolute, placed with randompos
   $(person2).css('position', 'absolute');
   // sets the background of the person2 to the specified person gif
-  $(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
+  $(person2).css('background-image', 'url(' + '../../graphics/gifs/PERSON2.gif' + ')');
   // adds the person2 to the games arena
   $(person2).appendTo(arena);
 
@@ -41,7 +41,7 @@ function addperson() {
   // the position of the badperson will be absolute, placed with randompos
   $(badperson).css('position', 'absolute');
   // sets the background of the badperson to the specified person gif
-  $(badperson).css('background-image', 'url(' + '../graphics/gifs/PERSON3.gif' + ')');
+  $(badperson).css('background-image', 'url(' + '../../graphics/gifs/PERSON3.gif' + ')');
   // adds the badperson to the games arena
   $(badperson).appendTo(arena);
 }
