@@ -19,6 +19,8 @@ password :''
 
 const app = express();
 
+app.use(express.static(__dirname + "../../../front-end"));
+
 //Connect
 db.connect((err) => {
   if(err){
