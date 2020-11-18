@@ -56,8 +56,32 @@ db.connect((err) => {
   app.use(bodyParser.urlencoded({extended : true}));
   app.use(bodyParser.json());
 
-  app.get('/', function(request, response) {
+  app.get('/login', function(request, response) {
 	response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
+});
+
+app.get('/register', function(request, response) {
+response.sendFile(path.join(__dirname + '../../../front-end/html/REGISTER.html'));
+});
+
+app.post('/add', function(req,res){
+  var username = request.body.USERNAME;
+  var password = request.body.PASSWORD;
+  var confirmpassword = request.body.CONFIRMPASSWORD;
+  if (password == confirmpassword) {
+    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [req.body.USERNAME, req.body.PASSWORD], function(err) {
+      if (err) {
+        return console.log(err.message);
+      } else {
+
+      console.log("User has been added");
+      res.redirect('/menu');
+      }
+    });
+  } else {
+    response.send('Please enter Username and Password!');
+		response.end();
+  }
 });
 
 
