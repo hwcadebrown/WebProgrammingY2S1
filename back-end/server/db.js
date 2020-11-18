@@ -64,11 +64,11 @@ app.post('/auth', function(request, response) {
 	var username = request.body.USERNAME;
 	var password = request.body.PASSWORD;
 	if (username && password) {
-		connection.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('../../../front-end/html/MAINMENU.html');
+				response.redirect('/menu');
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}
@@ -82,13 +82,13 @@ app.post('/auth', function(request, response) {
 
 
 
-app.get('../../../front-end/html/MAINMENU.html', function(request, response) {
+app.get('/menu', function(request, response) {
 	if (request.session.loggedin) {
-		response.send('Welcome back, ' + request.session.username + '!');
+		response.sendFile(path.join(__dirname + '../../../front-end/html/MAINMENU.html'));
 	} else {
 		response.send('Please login to view this page!');
 	}
-	response.end();
+	//response.end();
 });
 
 app.listen(3000);
