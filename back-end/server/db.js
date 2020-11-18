@@ -64,24 +64,24 @@ app.get('/register', function(request, response) {
 response.sendFile(path.join(__dirname + '../../../front-end/html/REGISTER.html'));
 });
 
-app.post('/add', function(req,res){
+app.post('/add', function(request, response){
   var username = request.body.USERNAME;
   var password = request.body.PASSWORD;
   var confirmpassword = request.body.CONFIRMPASSWORD;
-  if (password == confirmpassword) {
-    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [req.body.USERNAME, req.body.PASSWORD], function(err) {
+  //if (password == confirmpassword) {
+    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [request.body.USERNAME, request.body.PASSWORD], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
-
+      request.session.loggedin = true;
       console.log("User has been added");
-      res.redirect('/menu');
+      response.redirect('/menu');
       }
     });
-  } else {
-    response.send('Please enter Username and Password!');
-		response.end();
-  }
+  //} else {
+    //response.send('Please enter Username and Password!');
+	//	response.end();
+  //}
 });
 
 

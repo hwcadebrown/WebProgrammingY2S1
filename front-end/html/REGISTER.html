@@ -25,11 +25,12 @@
       <br><br>
       <h3>ALREADY HAVE</h3>
       <h3>AN ACCOUNT?</h3>
-      <input type="button" value="LOGIN" onclick="window.location.href='LOGIN.html'" class='buttons' />
+      <input type="button" value="LOGIN" class='buttons' />
     </div>
 
     <!-- Register pane where the user can enter account details and create an account-->
     <div id="registerpane">
+      <form action="/add" method="POST" name="login_user">
       <h4>USERNAME</h4>
       <input name="USERNAME" class="txtboxes">
       <h4>PASSWORD</h4>
@@ -38,7 +39,8 @@
       <h4 id="confpass">CONFIRM PASSWORD</h4>
       <input name="CONFRMPASSWORD" type="password" id="passwordconftxt">
       <br>
-      <input type="button" value="REGISTER" onclick="window.location.href='MAINMENU.html'" class="buttons" />
+      <input type="submit" value="REGISTER" class="buttons" />
+      </form>
     </div>
 
     <!-- Menu pane which links back to the main menu without user regsistering -->
