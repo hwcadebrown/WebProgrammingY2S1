@@ -30,12 +30,14 @@ class Train{
   collisionDetect(area, carriages){}
     switch (expression) {
       case expression:
-        
+
         break;
       default:
 
     }
-  moveTrain(area){}
+  moveTrain(area){
+
+  }
 
   changeDirection(){}
 

@@ -38,7 +38,7 @@ io.on('connection',function(newPlayer){
   //Creates a bunch of listener that will activate once the user trigger an event to create them
   //If the user changes direction it
   newPlayer.on('changesDirection',function(direction){
-
+    
   })
 
 

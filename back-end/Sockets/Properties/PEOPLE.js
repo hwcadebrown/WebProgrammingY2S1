@@ -10,6 +10,10 @@ class Passenger{
     if (x == null || y == null){
       this.x = randomise();
       this.y = radomise();
+      while(area.infoAtTile(this.x,this.y) != -1){
+        this.x = randomise();
+        this.y = radomise();
+      }
     }
     else{
       this.x = x;
@@ -35,6 +39,9 @@ class Passenger{
       return 1;
       break;
     }
+  }
+  getType(){
+    return type;
   }
 }
 module.exports = {

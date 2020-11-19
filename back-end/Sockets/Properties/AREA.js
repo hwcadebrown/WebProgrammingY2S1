@@ -1,6 +1,8 @@
 //Alexander Wickham
 //Due to recent difficulties we have realised that we are going to have to create a grid systum.
 //This is done in the back end as every user will use the same area
+const People = require("./PEOPLE");
+
 class Area {
   constructor(width, height){
     this.width = width;
@@ -45,6 +47,29 @@ class Area {
     }
   }
 
+  trainSpawn(train){
+    let id = train.id;
+    let carriages = train.noCarriages;
+    let length = train.length;
+    for (let count = 0,count<length, count+=2){
+      this.setTile(carriages[count], carriages[count+1],id);
+    }
+  }
+
+  trainDespawn(train){
+    let carriages =  train.noCarriages;
+    let id = train.id;
+    let length = train.length;
+    let runningPass = [];
+    for (let count = 0,count<length, count+=2){
+        let person = new People.Passenger(this,carriages[count],carriages[count+1]);
+        runningPass.push(person);
+        this.setTile(carriages[count],carriages[count+1],person);
+      }
+      this.setTile(train.x,train.y, 1);
+      train.noCarriages;
+      return runningPass;
+    }
 }
 module.exports = {
   Area
