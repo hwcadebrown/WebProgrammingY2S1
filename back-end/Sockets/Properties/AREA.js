@@ -66,7 +66,7 @@ class Area {
         runningPass.push(person);
         this.setTile(carriages[count],carriages[count+1],person);
       }
-      this.setTile(train.x,train.y, 1);
+      this.setTile(train.x,train.y, 1); 
       train.noCarriages;
       return runningPass;
     }
