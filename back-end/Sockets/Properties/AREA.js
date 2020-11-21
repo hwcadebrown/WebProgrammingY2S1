@@ -13,11 +13,10 @@ class Area {
   //This is where the main grid layout is created
   createMainStage(width, height) {
     let tiles = [];
+    for (let count = 0; count < height; count++) {
+      placeholder.push(0);
+    }
     for (let count = 0; count < width; count++) {
-      let placeholder = [];
-      for (let count2 = 0; count2 < height; count2++) {
-        placeholder.push(0);
-      }
       tiles.push(placeholder);
     }
 
