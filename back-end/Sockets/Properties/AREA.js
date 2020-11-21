@@ -4,6 +4,7 @@
 const People = require("./PEOPLE");
 
 class Area {
+
   constructor(width, height) {
     this.width = width;
     this.height = height;
@@ -38,13 +39,13 @@ class Area {
 
   //Creates a find and change tile system that will be used when trying to change and test the data as you go on.
   setTile(x, y, data) {
-    if (0 < x && x < this.width && 0 < y && y < height) {
+    if (0 < x && x < this.width && 0 < y && y < this.height) {
       this.tiles[x][y] = data;
     }
   }
 
   infoAtTile(x, y) {
-    if (0 < x && x < this.width && 0 < y && y < height) {
+    if (0 < x && x < this.width && 0 < y && y < this.height) {
       return this.tiles[x][y];
     } else {
       return -1;
@@ -75,6 +76,7 @@ class Area {
     return runningPass;
   }
 }
+
 module.exports = {
   Area
 }

@@ -40,7 +40,7 @@ db.connect((err) => {
   });
   //Create table
   app.get('/createprofilestable' , (req, res) => {
-      let sql = "CREATE TABLE IF NOT EXISTS profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40), password VARCHAR(30), highscore INT )";
+      let sql = "CREATE TABLE IF NOT EXISTS profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(30) NOT NULL, highscore INT )";
       db.query(sql, (err, result) => {
         if(err) throw err;
         console.log(result);
