@@ -64,7 +64,7 @@ if the head (front) of the train crashes into any of the carriages attatched
 the game will end */
 function playerHitSelf() {
   // once carts are over 3 the player may be able to crash into themselves
-  for (let cart = 3; cart < train.length; cart++) {
+  for (var cart = 3; cart < train.length; cart++) {
     /* if the head of the train meets a cart at any position of the train then
     true is returned, this function is used in PLAY.js to determine if the
     game ends */
