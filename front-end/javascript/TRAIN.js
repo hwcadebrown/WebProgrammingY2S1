@@ -4,7 +4,7 @@
 // function which adds a carriage to the game
 function addcarriage(id) {
   // carriage variable initialised with identifier 'carriage'
-  let carriage = document.createElement('carriage');
+  var carriage = document.createElement('carriage');
   carriage.id = "carriage" + id;
   // width of the carriage set to 50px
   $(carriage).css('width', 50);
@@ -21,7 +21,7 @@ function addcarriage(id) {
 // attacthes the carriage to the train
 function attatchcarriage() {
   // amount of carriages added won't go larger than the whole length of train
-  for (let i = 0; i < train.length; i++) {
+  for (var i = 0; i < train.length; i++) {
     // calls the addcarriage function to add to the train
     addcarriage(i);
   }
@@ -88,7 +88,7 @@ function advancetrain() {
 function rendertrain() {
   /* loops through each carriage attatched to the train and will render
   each carriage that the player currently has on their train */
-  for (let t = 0; t < train.length; t++) {
+  for (var t = 0; t < train.length; t++) {
     // calls the rendertrainPart function to render each part
     rendertrainPart(t, train[t])
   }
@@ -97,9 +97,9 @@ function rendertrain() {
 // renders individual parts to be seen on the arena (also creates train hitbox)
 function rendertrainPart(t, trainPart) {
   // renders the carriage at the position t of the train
-  let part = "carriage" + t;
+  var part = "carriage" + t;
   // assigns the carriage variable to equal the part variable we just created
-  let carriage = document.getElementById(part);
+  var carriage = document.getElementById(part);
   // assigns the left property to the x-coord of the train
   $(carriage).css('left', trainPart.x);
   // assigns the top property to the y-coord of the train

@@ -4,7 +4,7 @@
 // function for picking the color of each carriage added to the train
 function colorPicker() {
   // color variable which generates a random number from 1 to 10
-  let color = Math.floor((Math.random() * 10) + 1);
+  var color = Math.floor((Math.random() * 10) + 1);
   // switch case which chooses the color depending on what number generated
   switch (color) {
     // if 1 is generated then the pink carriage is added

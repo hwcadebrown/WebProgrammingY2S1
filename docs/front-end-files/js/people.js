@@ -4,7 +4,7 @@
 // function which adds the people to the game arena
 function addperson() {
   // first person variable initialised with identifier 'person'
-  let person = document.createElement('person');
+  var person = document.createElement('person');
   person.id = "person";
   // width of the person gif set to 50px
   $(person).css('width', 50);
@@ -13,12 +13,12 @@ function addperson() {
   // the position of the person will be absolute, placed with randompos
   $(person).css('position', 'absolute');
   // sets the background of the person to the specified person gif
-  $(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
+  $(person).css('background-image', 'url(' + '../../graphics/gifs/PERSON1.gif' + ')');
   // adds the person to the games arena
   $(person).appendTo(arena);
 
   // spower person variable initialised with identifier 'powerperson'
-  let powerperson = document.createElement('powerperson');
+  var powerperson = document.createElement('powerperson');
   powerperson.id = "powerperson";
   // width of the powerperson gif set to 50px
   $(powerperson).css('width', 50);
@@ -27,12 +27,12 @@ function addperson() {
   // the position of the powerperson will be absolute, placed with randompos
   $(powerperson).css('position', 'absolute');
   // sets the background of the powerperson to the specified person gif
-  $(powerperson).css('background-image', 'url(' + '../graphics/gifs/POWERPERSON.gif' + ')');
+  $(powerperson).css('background-image', 'url(' + '../../graphics/gifs/POWERPERSON.gif' + ')');
   // adds the powerperson to the games arena
   $(powerperson).appendTo(arena);
 
   // bad person variable initialised with identifier 'badperson'
-  let badperson = document.createElement('badperson');
+  var badperson = document.createElement('badperson');
   badperson.id = "badperson";
   // width of the badperson gif set to 50px
   $(badperson).css('width', 50);
@@ -41,7 +41,7 @@ function addperson() {
   // the position of the badperson will be absolute, placed with randompos
   $(badperson).css('position', 'absolute');
   // sets the background of the badperson to the specified person gif
-  $(badperson).css('background-image', 'url(' + '../graphics/gifs/BADPERSON.gif' + ')');
+  $(badperson).css('background-image', 'url(' + '../../graphics/gifs/BADPERSON.gif' + ')');
   // adds the badperson to the games arena
   $(badperson).appendTo(arena);
 }

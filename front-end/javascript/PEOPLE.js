@@ -4,7 +4,7 @@
 // function which adds the people to the game arena
 function addperson() {
   // first person variable initialised with identifier 'person'
-  let person = document.createElement('person');
+  var person = document.createElement('person');
   person.id = "person";
   // width of the person gif set to 50px
   $(person).css('width', 50);
@@ -18,7 +18,7 @@ function addperson() {
   $(person).appendTo(arena);
 
   // spower person variable initialised with identifier 'powerperson'
-  let powerperson = document.createElement('powerperson');
+  var powerperson = document.createElement('powerperson');
   powerperson.id = "powerperson";
   // width of the powerperson gif set to 50px
   $(powerperson).css('width', 50);
@@ -32,7 +32,7 @@ function addperson() {
   $(powerperson).appendTo(arena);
 
   // bad person variable initialised with identifier 'badperson'
-  let badperson = document.createElement('badperson');
+  var badperson = document.createElement('badperson');
   badperson.id = "badperson";
   // width of the badperson gif set to 50px
   $(badperson).css('width', 50);
