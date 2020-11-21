@@ -43,6 +43,10 @@ class Passenger {
     }
   }
 
+  randomise(1, 20) {
+    return Math.round((Math.random() * (1 - 20) + 1) / 50) * 50;
+  }
+
   getType() {
     return type;
   }
