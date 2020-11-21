@@ -5,11 +5,13 @@ class Play {
 
   constructor() {
     this.gameStage = new Area.Area(20, 20);
-
+    this.trains = [];
+    this.passengers = [];
+    this.directions = [];
   }
 
   trainUpdates() {
-    for (let count; count < this.snake.length; count++) {
+    for (let count = 0; count < this.train.length; count++) {
     }
   }
 
