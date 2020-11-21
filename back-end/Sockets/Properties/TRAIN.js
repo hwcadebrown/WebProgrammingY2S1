@@ -49,7 +49,9 @@ class Train {
           newCarriage = 2;
           break
       }
-    } else if (carriages === 0) {} else {
+    }
+    else if (carriages === 0) {}
+    else {
       this.isActive = false;
     }
   }
@@ -67,7 +69,8 @@ class Train {
         newSpace = this.noCarriage.pop();
         area.setTile(newSpace[0], newSpace[1], 0);
       }
-    } else {
+    }
+    else {
       this.newCarriage--;
       this.length++;
       this.score = this.length;
@@ -78,8 +81,8 @@ class Train {
   }
 
   changeDirection(newX, newY) {
-    this.direction.x = newX;
-    this.direction.y = newY;
+    this.direction.leftOrright = newX;
+    this.direction.upOrdown = newY;
   }
 }
 
