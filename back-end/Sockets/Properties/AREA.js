@@ -16,6 +16,7 @@ class Area {
     for (let count = 0; count < height; count++) {
       placeholder.push(0);
     }
+    
     for (let count = 0; count < width; count++) {
       tiles.push(placeholder);
     }
