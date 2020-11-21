@@ -16,7 +16,7 @@ $(arena).css('height', 2400);
 heads in when spawning, can either be right or left */
 function randomdirection() {
   // generates the number 1 or 2
-  var direction = Math.floor((Math.random() * 2) + 1);
+  let direction = Math.floor((Math.random() * 2) + 1);
   // switch case, if 1 then train heads left, if 2 then train head right
   switch(direction) {
     case 1:
