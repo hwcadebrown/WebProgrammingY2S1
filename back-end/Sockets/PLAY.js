@@ -11,11 +11,14 @@ class Play {
 
   trainUpdates() {
     for (let count = 0; count < this.trains.length; count++) {
-      let direction = directions[count];
-      let train = this.trains[count];
-      if (train.isActive){
-        let newPassengers = this.area.trainDespawn(train)
-        train.
+      if (this.trains[count].isActive){
+        train.changeDirection(this.directions[count];);
+        this.gameStage = this.trains[count].updateTrain(this.gameStage);
+      }
+      if (!this.trains[count].isActive){
+        let newPassengers = this.area.trainDespawn(this.trains[count]);
+        let id = this.trains[count].id;
+        this.removePlayerViaID(id);
       }
 
     }
@@ -35,6 +38,10 @@ class Play {
 
   removePlayer(clientConnection){
     const id = clientConnection.id;
+    removePlayerViaID(id)
+  }
+
+  removePlayerViaID(id){
     let trainRemove = gettingTrainFromID(id);
     if (trainRemove != -1){
       let index = this.trains.findIndex(trainRemove);
@@ -42,9 +49,8 @@ class Play {
       this.passengers = this.passengers.concat(escapedPassengers);
         this.trains.splice(index,1);
         this.directions.splice(index,1);
-    }
+      }
   }
-
   gettingTrainFromID(id){
     this.trains.forEach((possibleTrain){
       if (possibleTrain.id == id){

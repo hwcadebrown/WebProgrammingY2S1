@@ -14,7 +14,7 @@ directionx being the number -50 or 50 chosen at random and
 directiony is 0, this will start the player moving either
 right or left and determine the direction the player is moving
 in at a specific instance */
-var directionx = 50;
+var directionx = 1;
 var directiony = 0;
 
 // calls the start function, which intitialises the elements needed
