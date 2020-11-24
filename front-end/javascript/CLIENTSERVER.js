@@ -21,22 +21,24 @@ webConnection.on('game situation', function(play){
 })
 
 displayTrain(train) {
-  if (this.isActive == False;) // train has crashed so do not display
+  if (!this.isActive;) // train has crashed so do not display
   {return;}
 
   // draw train carriages
 
   // iterates through each point on the train
-  for (var t = 0; t < train.length; t++) {
-    let cartPos = this.train[t]; // get current point
-
+  for (var t = 0; t < train.length; t++){
+    // get current point
+    var x = train.carriages[t];
+    var y = train.carriages[t];
     // calculate grid position for plotting current point
-    let X = getPlotX(point[0]) + currentOffset.x;
-    let Y = getPlotY(point[1]) + currentOffset.y;
+    x = getFrontAreaPoint(x);
+    y = getFrontAreaPoint(y);
 
-    // get the image of the shape
-    let cartColor = colorPicker();
+  }
+}
 
-  // draw train head
-  this.rendertrain();
+getFrontAreaPoint(gridSpot){
+
+  return (gridSpot*50);
 }

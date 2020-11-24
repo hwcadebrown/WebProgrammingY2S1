@@ -72,9 +72,6 @@ class Play {
     if (trainChangingDirection != -1){
       this.directions[index] = newDirection;
     }
-
-
-
   }
 
   generateTrainLocation(){
@@ -87,7 +84,6 @@ class Play {
     }
     return [x,y];
   }
-
 }
 
 modules.exports = {

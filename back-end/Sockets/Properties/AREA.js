@@ -4,7 +4,7 @@
 const People = require("./PEOPLE");
 
 class Area {
-  constructor(width, height, x, y, data, train){
+  constructor(width, height){
     this.width = width;
     this.height = height;
     this.gameGrid = this.createMainStage(this.width,this.height);
