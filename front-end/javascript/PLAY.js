@@ -61,9 +61,9 @@ function start() {
   /* creates the elements we need for gameplay, this includes the people
   and adding them to the arena and the carriage for the players train */
   createperson(1);
+  createperson(1);
   createperson(2);
   createperson(3);
-  createperson(4);
   addperson();
   attatchcarriage();
 
@@ -77,10 +77,6 @@ function status() {
   /* if the player hits themselves or one of the arenas walls then
   the game ends */
   if (playerHitWall() || playerHitSelf()) {
-
-    // window.location.href='MAINMENU.html' (leave for now)
-    // alert('You Derailed! Score: ' + score);
-
     // shows the game over popup to the player, allowing them to retry or go to menu
     showMenu();
 
@@ -89,7 +85,7 @@ function status() {
   }
 
   // if the gameState is not set to gameOver the game will advance
-  if (showMenu != "gameOver") {
+  else {
 
     // game advances after each tick of the game
     setTimeout(function onTick() {
@@ -108,6 +104,6 @@ function status() {
 
 // shows the gameOver popup to the player
 function showMenu() {
-  gameOverBox = document.getElementById("gameOver")
+  gameOverBox = document.getElementById("gameOver");
   gameOverBox.style.visibility = "visible";
 }
