@@ -4,6 +4,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const Sequelize = require('sequelize');
+const PORT = process.env.PORT || 3000;
 
 /*
 module.exports = new Sequelize('', '', '', {
@@ -131,6 +132,6 @@ app.get('/menu', function(request, response) {
 	//response.end();
 });
 
-app.listen(3000);
+app.listen(PORT);
 
 module.exports = db;
