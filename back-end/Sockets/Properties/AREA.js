@@ -61,11 +61,11 @@ class Area {
   }
 
   trainDespawn(train){
-    let carriages =  train.noCarriages;
+    let carriages = train.noCarriages;
     let id = train.id;
     let length = train.length;
     let runningPass = [];
-    for (let count = 0,count<length, count+=2){
+    for (let count = 0, count<length, count+=2){
         let person = new People.Passenger(this,carriages[count],carriages[count+1]);
         runningPass.push(person);
         this.setTile(carriages[count],carriages[count+1],person);

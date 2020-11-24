@@ -38,8 +38,8 @@ io.on('connection',function(newPlayer){
   Run_Game()
   //Creates a bunch of listener that will activate once the user trigger an event to create them
   //If the user changes direction it
-  newPlayer.on('changesDirection',function(direction){
-    gameCurrent.changeDirection(newPlayer, direction);
+  newPlayer.on('changesDirection',function(directionx, directiony){
+    gameCurrent.changeDirection(newPlayer, directionx, directiony);
   })
 
   newPlayer.on('disconnect',function(){

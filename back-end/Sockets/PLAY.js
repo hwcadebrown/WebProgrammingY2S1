@@ -10,7 +10,13 @@ class Play {
   }
 
   trainUpdates() {
-    for (let count = 0; count < this.train.length; count++) {
+    for (let count = 0; count < this.trains.length; count++) {
+      let direction = directions[count];
+      let train = this.trains[count];
+      if (train.isActive){
+        let newPassengers = this.area.trainDespawn(train)
+        train.
+      }
 
     }
   }
@@ -51,11 +57,11 @@ class Play {
 
   }
 
-  changeDirection(clientConnection, newDirection){
+  changeDirection(clientConnection, newDirectionx, newDirectiony){
 
     const id = clientConnection.id;
 
-    let trainChangingDirection = gettingTrainFromID(id);
+    let trainChangingDire ction = gettingTrainFromID(id);
     let index = this.trains.findIndex(trainChangingDirection);
     if (trainChangingDirection != -1){
       this.directions[index] = newDirection;
