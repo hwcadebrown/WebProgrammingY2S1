@@ -49,6 +49,33 @@ io.on('connection',function(newPlayer){
   })
 })
 
+displayTrain() {
+  if (train === []) return; // train has crashed so do not display
+
+  // draw train carriages
+  this.attatchcarriage();
+
+  // iterates through each point on the train excluding the ends
+  for (var t = 0; t < train.length; t++) {
+    let cartPos = this.train[t]; // get current point
+    let cartPrevPos = this.train[t - 1]; // get point before (closer to head)
+    let cartNextPos = this.train[t + 1]; // get point after (closer to tail)
+
+    // calculate grid position for plotting current point
+    let X = getPlotX(point[0]) + currentOffset.x;
+    let Y = getPlotY(point[1]) + currentOffset.y;
+
+    // get the image of the shape
+    let cartColor = colorPicker();
+
+    // draw the image at the appropriate angle
+    cartColor.display(X * TILE_SIZE, Y * TILE_SIZE); // draws cell
+  }
+
+  // draw train head
+  this.rendertrain();
+}
+
 setInterval(function(){
   Run_Game();
 }, 200)
