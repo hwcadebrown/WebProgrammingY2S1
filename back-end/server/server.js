@@ -38,18 +38,9 @@ io.on('connection',function(newPlayer){
   //Creates a bunch of listener that will activate once the user trigger an event to create them
   //If the user changes direction it
   newPlayer.on('changesDirection',function(direction){
-
+    gameCurrent.changeDirection(newPlayer, direction);
   })
-
-
-  newPlayer.on('pickUpPassenger', function(person){
-
-  })
-  //May need another one
-
-  //newPlayer.on('',function(){});
-
-  //Listens out for the disconnect after the user leave for one reason or another
+  
   newPlayer.on('disconnect',function(){
     console.log('user has  left the game')
   })
