@@ -4,10 +4,14 @@
 const People = require("./PEOPLE");
 
 class Area {
-  constructor(width, height){
+  constructor(width, height, x, y, data, train){
     this.width = width;
     this.height = height;
     this.gameGrid = this.createMainStage(this.width,this.height);
+    this.train = train;
+    this.data = data;
+    this.x = x;
+    this.y = y;
   }
   //This is where the main grid layout is created
   createMainStage(width,height){

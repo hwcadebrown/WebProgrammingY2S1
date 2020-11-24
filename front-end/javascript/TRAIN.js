@@ -79,7 +79,7 @@ function advancetrain() {
     /* else case removes the last carriage of the train, if this isn't done
     then a ghost train of the player will spawn re-enacting all the movements
     the player makes and if the player hits any previously visited position
-    the player dies, truly scary stuff */
+    the player dies, truly scary stuff*/
     train.pop();
   }
 }
