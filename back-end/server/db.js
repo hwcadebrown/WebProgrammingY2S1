@@ -145,7 +145,8 @@ app.get('/menu', function(request, response) {
 	if (request.session.loggedin) {
 		response.sendFile(path.join(__dirname + '../../../front-end/html/MAINMENU.html'));
 	} else {
-		response.send('Please login to view this page!');
+		response.send('Please login to view this page');
+    response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 	}
 	//response.end();
 });
