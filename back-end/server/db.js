@@ -28,7 +28,7 @@ const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
 database : 'users',
-password :''
+password :'5ab9889d'
 });
 
 const app = express();
