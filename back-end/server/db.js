@@ -45,6 +45,7 @@ db.connect((err) => {
   });
 
   //Create DB
+  /*
   app.get('/createdb', (req, res) => {
      let sql = 'CREATE DATABASE IF NOT EXISTS users';
      db.query(sql, (err, result)=> {
@@ -53,6 +54,7 @@ db.connect((err) => {
         res.send('Database created...');
      });
   });
+  */
   //Create table
   app.get('/createprofilestable' , (req, res) => {
       let sql = "CREATE TABLE IF NOT EXISTS profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(30) NOT NULL, highscore INT )";
@@ -72,6 +74,11 @@ db.connect((err) => {
   app.use(bodyParser.json());
 
   app.get('/', function(request, response) {
+    let sql = "CREATE TABLE IF NOT EXISTS profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(30) NOT NULL, highscore INT )";
+    db.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+    });
 	response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 });
 
