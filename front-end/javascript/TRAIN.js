@@ -60,8 +60,6 @@ function advancetrain() {
     $('#score').html(score += 2);
     // adds a carriage at the ends of the trains body (last carriage added)
     addcarriage(train.length - 1);
-    addcarriage(train.length - 1);
-    
     // creates a new PERSON2 in the arena to be collected again
     createperson(2);
 
