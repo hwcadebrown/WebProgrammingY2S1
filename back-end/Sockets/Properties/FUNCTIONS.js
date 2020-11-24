@@ -1,5 +1,5 @@
 class Functions {
-  
+
   constructor(event){
     this.event = event;
   }
@@ -52,21 +52,6 @@ class Functions {
       directiony = 50;
     }
   }
-
-  /* if the number of carts (carriages) is more than 3 then there's a chance
-  the player could crash into themselves, so once they reach that threshold
-  if the head (front) of the train crashes into any of the carriages attatched
-  the game will end */
-  playerHitSelf() {
-    // once carts are over 3 the player may be able to crash into themselves
-    for (var cart = 3; cart < train.length; cart++) {
-      /* if the head of the train meets a cart at any position of the train then
-      true is returned, this function is used in PLAY.js to determine if the
-      game ends */
-      if (train[cart].x === train[0].x && train[cart].y === train[0].y) return true;
-    }
-  }
-
 
   // function for picking the color of each carriage added to the train
   colorPicker() {

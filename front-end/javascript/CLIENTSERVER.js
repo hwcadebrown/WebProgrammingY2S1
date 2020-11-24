@@ -25,7 +25,6 @@ displayTrain(train) {
   {return;}
 
   // draw train carriages
-  this.displaycarriages();
 
   // iterates through each point on the train excluding the ends
   for (var t = 0; t < train.length; t++) {
@@ -41,8 +40,7 @@ displayTrain(train) {
     let cartColor = colorPicker();
 
     // draw the image at the appropriate angle
-    cartColor.display(X * TILE_SIZE, Y * TILE_SIZE); // draws cell
-  }
+
   // draw train head
   this.rendertrain();
 }

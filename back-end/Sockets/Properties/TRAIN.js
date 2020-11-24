@@ -2,15 +2,14 @@
 const Area = require("./AREA");
 
 class Train {
-
   constructor(x, y, uniqueID, direction, length, score, trainColour, noCarriages, isActive, newCarriage) {
     this.id = uniqueID;
     this.x = x;
     this.y = y;
     this.direction = {
       leftOrright: 0,
-      upOrdown: 1
-    };
+      upOrdown: 1};
+
     this.length = 1;
     this.score = 1;
     this.trainColour = "";
