@@ -137,7 +137,9 @@ app.post('/auth', function(request, response) {
 	}
 });
 
-
+app.get('/backmenu', function(request, response) {
+		response.sendFile(path.join(__dirname + '../../../front-end/html/MAINMENU.html'));
+});
 
 app.get('/menu', function(request, response) {
 	if (request.session.loggedin) {
