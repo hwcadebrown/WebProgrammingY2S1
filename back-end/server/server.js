@@ -44,11 +44,11 @@ io.on('connection',function(newPlayer){
 
   newPlayer.on('disconnect',function(){
     console.log('user has  left the game')
-    gameCurrent.removePlayer(newPlayer)
+    gameCurrent.removePlayer(newPlayer);
     Run_Game()
   })
 })
 
 setInterval(function(){
-
+  Run_Game();
 }, 200)

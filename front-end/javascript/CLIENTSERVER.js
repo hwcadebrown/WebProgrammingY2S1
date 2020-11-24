@@ -14,7 +14,7 @@ webConnection.on('game situation', function(play){
   })
 
   if (player.isActive == False){
-
+    webConnection.on('')
     return;
   }
 })

@@ -1,4 +1,4 @@
-// Alexander Wickham
+//Alexander Wickham
 const AREAfile = require("./AREA");
 
 class Passenger {
