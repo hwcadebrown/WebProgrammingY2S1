@@ -43,17 +43,23 @@
 
 		<!-- User pane where the user can enter their name, press play, register or login -->
 		<div id="userpane">
+			<form action = "/play" method= "GET" name="start-game">
 			<br>
 			<h2>ENTER NAME</h2>
 			<br>
 			<input type="text" id="txtbox">
 			<br><br>
-			<input type="button" value="PLAY" onclick="window.location.href='PLAY.html'" id="playbutton" />
+			<input type="submit" value="PLAY" onclick="window.location.href='PLAY.html'" id="playbutton" />
+			</form>
 			<br>
-			<input type="button" value="LOGIN" onclick="window.location.href='LOGIN.html'" class="accbuttons" />
+			<form action = "/login" method= "GET" name="start-game">
+			<input type="submit" value="LOGIN" onclick="window.location.href='LOGIN.html'" class="accbuttons" />
+			</form>
 			<br>
-			<input type="button" value="REGISTER" onclick="window.location.href='register.html'" class="accbuttons" />
+			<form action = "/register" method= "GET" name="start-game">
+			<input type="submit" value="REGISTER" onclick="window.location.href='register.html'" class="accbuttons" />
 			<br><br>
+			</form>
 		</div>
 
 		<!-- My Score plane which will hold the high scores for the currently logged in player -->
