@@ -86,6 +86,15 @@ app.get('/register', function(request, response) {
 response.sendFile(path.join(__dirname + '../../../front-end/html/REGISTER.html'));
 });
 
+app.get('/login', function(request, response) {
+response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
+});
+
+
+app.get('/play', function(request, response) {
+response.sendFile(path.join(__dirname + '../../../front-end/html/PLAY.html'));
+});
+
 app.post('/add', function(request, response){
   var username = request.body.USERNAME;
   var password = request.body.PASSWORD;
