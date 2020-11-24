@@ -64,7 +64,7 @@ if the head (front) of the train crashes into any of the carriages attatched
 the game will end */
 function playerHitSelf() {
   // once carts are over 3 the player may be able to crash into themselves
-  for (let cart = 3; cart < train.length; cart++) {
+  for (var cart = 3; cart < train.length; cart++) {
     /* if the head of the train meets a cart at any position of the train then
     true is returned, this function is used in PLAY.js to determine if the
     game ends */
@@ -76,17 +76,21 @@ function playerHitSelf() {
 function playerHitWall() {
 
   /* train has hitLeftWall if the head of the train is at a position on the
-  horizontal axis lower than 0 in the arena */
-  const hitLeftWall = train[0].x < 0;
+  horizontal axis lower than 50 in the arena */
+  const hitLeftWall = train[0].x < 50;
   /* train has hitRightWall if the head of the train is at a position on the
-  horizontal axis more than the width of the arena (minus sprite size) */
-  const hitRightWall = train[0].x > parseFloat($(arena).css('width')) - 50;
+  horizontal axis more than the width of the arena (minus sprite size) * 2
+  as the train would go one step out of bounds if it was just -50, this is
+  because the train is advanced before being rendered on the screen so the
+  train hit the wall just before being rendered and would render outside arena */
+  const hitRightWall = train[0].x > parseFloat($(arena).css('width')) - 100;
   /* train has hitTopWall if the head of the train is at a position on the
   vertical axis less than the height of the arena */
-  const hitTopWall = train[0].y < 0;
+  const hitTopWall = train[0].y < 50;
   /* train has hitBottomWall if the head of the train is at a position on the
-  vertical axis more than the height of the arena (minus sprite size) */
-  const hitBottomWall = train[0].y > parseFloat($(arena).css('height')) - 50;
+  vertical axis more than the height of the arena (minus sprite size) [explained
+  in hitRightWall commentary in further detail] */
+  const hitBottomWall = train[0].y > parseFloat($(arena).css('height')) - 100;
 
   // returns one of these values depending on which wall the train has hit
   return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall

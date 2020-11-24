@@ -23,22 +23,26 @@
 		<!-- Register pane which will link to the register menu for registration -->
 		<div id="registerpane">
 			<br><br>
+			<form action = "/register" method= "GET" name="register-user">
 			<h3>DON'T</h3>
 			<h3>HAVE AN</h3>
 			<h3>ACCOUNT?</h3>
-			<input type="button" value="REGISTER" onclick="window.location.href='REGISTER.html'" class="buttons" />
+			<input type="submit" value="REGISTER"  class="buttons" />
+			</form>
 		</div>
 
 		<!-- Login pane where the user can enter their account details and login -->
 		<div id="loginpane">
 			<br>
+			<form action="/auth" method="POST" name="login_user">
 			<h3>USERNAME</h3>
-			<input name="USERNAME" class="txtboxes">
+			<input name="USERNAME" type="test" class="txtboxes">
 			<h3>PASSWORD</h3>
 			<input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
 			<h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
 			<br>
-			<input type="button" value="LOGIN" onclick="window.location.href='MAINMENU.html'" id="loginbutton" />
+			<input type="submit" value="LOGIN" class="buttons" />
+			</form>
 		</div>
 
 		<!-- Menu pane which links back to the main menu without user signing in -->

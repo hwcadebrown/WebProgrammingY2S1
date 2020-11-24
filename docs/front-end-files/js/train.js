@@ -42,8 +42,8 @@ function advancetrain() {
 
   // variables which check if the trains head is at the position of the person
   const didPickUpPerson = train[0].x === personX && train[0].y === personY;
-  const didPickUpPerson2 = train[0].x === personX2 && train[0].y === personY2;
-  const didPickUpPerson3 = train[0].x === personX3 && train[0].y === personY3;
+  const didPickUpPowerPerson = train[0].x === personXpower && train[0].y === personYpower;
+  const didPickUpBadPerson = train[0].x === personXbad && train[0].y === personYbad;
 
   // if PERSON1 is picked up then this set of operations will be executed
   if (didPickUpPerson) {
@@ -52,23 +52,26 @@ function advancetrain() {
     // adds a carriage at the ends of the trains body (last carriage added)
     addcarriage(train.length - 1);
     // creates a new PERSON1 in the arena to be collected again
-    createperson();
+    createperson(1);
 
     // if PERSON2 is picked up then this set of operations will be executed
-  } else if (didPickUpPerson2) {
+  } else if (didPickUpPowerPerson) {
     // adds 2 points to the score variable
     $('#score').html(score += 2);
     // adds a carriage at the ends of the trains body (last carriage added)
     addcarriage(train.length - 1);
     // creates a new PERSON2 in the arena to be collected again
-    createperson2();
+    createperson(2);
 
     // if PERSON3 is picked up then this set of operations will be executed
-  } else if (didPickUpPerson3) {
+  } else if (didPickUpBadPerson) {
     // takes 1 point off the score variable
     $('#score').html(score -= 1);
+    if(score < 0) {
+      $('#score').html(score = 0);
+    }
     // creates a new PERSON3 in the arena to be collected again
-    createperson3();
+    createperson(3);
     /* removes the last carriage of the train, if this isn't put in then an
     invisble carriage will be attatched so this will prevent it */
     train.pop();

@@ -4,7 +4,7 @@
 // function which adds the people to the game arena
 function addperson() {
   // first person variable initialised with identifier 'person'
-  let person = document.createElement('person');
+  var person = document.createElement('person');
   person.id = "person";
   // width of the person gif set to 50px
   $(person).css('width', 50);
@@ -17,22 +17,22 @@ function addperson() {
   // adds the person to the games arena
   $(person).appendTo(arena);
 
-  // second person variable initialised with identifier 'person2'
-  let person2 = document.createElement('person2');
-  person2.id = "person2";
-  // width of the person2 gif set to 50px
-  $(person2).css('width', 50);
-  // height of the person2 gif set to 50px
-  $(person2).css('height', 50);
-  // the position of the person2 will be absolute, placed with randompos
-  $(person2).css('position', 'absolute');
-  // sets the background of the person2 to the specified person gif
-  $(person2).css('background-image', 'url(' + '../graphics/gifs/PERSON2.gif' + ')');
-  // adds the person2 to the games arena
-  $(person2).appendTo(arena);
+  // spower person variable initialised with identifier 'powerperson'
+  var powerperson = document.createElement('powerperson');
+  powerperson.id = "powerperson";
+  // width of the powerperson gif set to 50px
+  $(powerperson).css('width', 50);
+  // height of the powerperson gif set to 50px
+  $(powerperson).css('height', 50);
+  // the position of the powerperson will be absolute, placed with randompos
+  $(powerperson).css('position', 'absolute');
+  // sets the background of the powerperson to the specified person gif
+  $(powerperson).css('background-image', 'url(' + '../graphics/gifs/POWERPERSON.gif' + ')');
+  // adds the powerperson to the games arena
+  $(powerperson).appendTo(arena);
 
-  // third person variable initialised with identifier 'badperson'
-  let badperson = document.createElement('badperson');
+  // bad person variable initialised with identifier 'badperson'
+  var badperson = document.createElement('badperson');
   badperson.id = "badperson";
   // width of the badperson gif set to 50px
   $(badperson).css('width', 50);
@@ -41,38 +41,43 @@ function addperson() {
   // the position of the badperson will be absolute, placed with randompos
   $(badperson).css('position', 'absolute');
   // sets the background of the badperson to the specified person gif
-  $(badperson).css('background-image', 'url(' + '../graphics/gifs/PERSON3.gif' + ')');
+  $(badperson).css('background-image', 'url(' + '../graphics/gifs/BADPERSON.gif' + ')');
   // adds the badperson to the games arena
   $(badperson).appendTo(arena);
 }
 
-// creates the first person and places them at a random position on the arena
-function createperson() {
+// creates the people and places them at a random position on the arena
+function createperson(typeperson) {
+
+  // if typeperson equals 1 then person is created
+  if(typeperson === 1) {
   /* the x position of the first person is anywhere within the arenas total
   width (minus the sprite size) */
   personX = randompos(0, parseFloat($(arena).css('width')) - 50);
   /* the y position of the first person is anywhere within the arenas total
   height (minus the sprite size) */
   personY = randompos(0, parseFloat($(arena).css('height')) - 50);
-}
+  }
 
-// creates the second person and places them at a random position on the arena
-function createperson2() {
-  /* the x position of the second person is anywhere within the arenas total
+  // if typeperson equals 2 then powerperson is created
+  else if(typeperson === 2) {
+  /* the x position of the power person is anywhere within the arenas total
   width (minus the sprite size) */
-  personX2 = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the second person is anywhere within the arenas total
+  personXpower = randompos(0, parseFloat($(arena).css('width')) - 50);
+  /* the y position of the power person is anywhere within the arenas total
   height (minus the sprite size) */
-  personY2 = randompos(0, parseFloat($(arena).css('height')) - 50);
-}
+  personYpower = randompos(0, parseFloat($(arena).css('height')) - 50);
+  }
 
-function createperson3() {
-  /* the x position of the third person is anywhere within the arenas total
+  // if typeperson equals 3 then the badperson is created
+  else if(typeperson === 3) {
+  /* the x position of the bad person is anywhere within the arenas total
   width (minus the sprite size) */
-  personX3 = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the third person is anywhere within the arenas total
+  personXbad = randompos(0, parseFloat($(arena).css('width')) - 50);
+  /* the y position of the bad person is anywhere within the arenas total
   height (minus the sprite size) */
-  personY3 = randompos(0, parseFloat($(arena).css('height')) - 50);
+  personYbad = randompos(0, parseFloat($(arena).css('height')) - 50);
+  }
 }
 
 // renders each person so they can be seen on the arena (also creates hitboxes)
@@ -81,12 +86,12 @@ function renderperson() {
   $(person).css('left', personX);
   // assigns the top property to the y-coord of the first person
   $(person).css('top', personY);
-  // assigns the left property to the x-coord of the second person
-  $(person2).css('left', personX2);
-  // assigns the top property to the y-coord of the second person
-  $(person2).css('top', personY2);
-  // assigns the left property to the x-coord of the third person
-  $(badperson).css('left', personX3);
-  // assigns the top property to the y-coord of the third person
-  $(badperson).css('top', personY3);
+  // assigns the left property to the x-coord of the power person
+  $(powerperson).css('left', personXpower);
+  // assigns the top property to the y-coord of the power person
+  $(powerperson).css('top', personYpower);
+  // assigns the left property to the x-coord of the bad person
+  $(badperson).css('left', personXbad);
+  // assigns the top property to the y-coord of the bad person
+  $(badperson).css('top', personYbad);
 }

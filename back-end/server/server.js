@@ -17,7 +17,7 @@ catch(error){
   console.log(error)
 }
 //Creates a server with a listen and a port
-const server = app.listen(port, () => console.log(`Listening on log ${port}...`));
+const server = app.listen(tempPort, () => console.log(`Listening on log ${temPort}...`))
 //Makes it so the server can be use socket module properly
 const io = socketio(server);
 //Uses the main play file a requirement as it nessarcy to use it
@@ -26,31 +26,29 @@ const game_play = require("./Socket/PLAY")
 let gameCurrent = new game_play.Play;
 //Will stream the game to the user
 let Run_Game = () =>
-  gameCurrent.trainUpdates());
+  gameCurrent.trainUpdates())
   io.socket.emit('game situation', gameCurrent);
 }
+
 //sets a base connection to the server that starts the game off.
 io.on('connection',function(newPlayer){
   //Adds a new player to the game, will change it so it incorperates the player name into train
   gameCurrent.addNewPlayer(newPlayer);
   //Runs the game for the user
-  Run_Game();
+  Run_Game()
   //Creates a bunch of listener that will activate once the user trigger an event to create them
   //If the user changes direction it
   newPlayer.on('changesDirection',function(direction){
+    gameCurrent.changeDirection(newPlayer, direction);
+  })
 
-  });
-
-
-  newPlayer.on('pickUpPassenger', function(person){
-
-  });
-  //May need another one
-
-  //newPlayer.on('',function(){});
-
-  //Listens out for the disconnect after the user leave for one reason or another
   newPlayer.on('disconnect',function(){
     console.log('user has  left the game')
-  });
-});
+    gameCurrent.removePlayer(newPlayer);
+    Run_Game()
+  })
+})
+
+setInterval(function(){
+  Run_Game();
+}, 200)

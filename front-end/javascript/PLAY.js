@@ -9,15 +9,30 @@ const GAME_SPEED = 50;
 const arena = document.getElementById('area');
 
 // styles the arena's width and height
-$(arena).css('width', 4750);
+$(arena).css('width', 4900);
 $(arena).css('height', 2400);
 
-/* directionx and directiony intitialised to placeholder values,
-the directionx of 50 and directiony of 0 will start the player
-moving right, these determine the direction the player is moving
+/* randomly chooses 50 or -50 which dictates which direction the player
+heads in when spawning, can either be right or left */
+function randomdirection() {
+  // generates the number 1 or 2
+  var direction = Math.floor((Math.random() * 2) + 1);
+  // switch case, if 1 then train heads left, if 2 then train head right
+  switch(direction) {
+    case 1:
+      return 50;
+    case 2:
+      return -50;
+  }
+}
+
+/* directionx and directiony intitialised to the values of
+directionx being the number -50 or 50 chosen at random and
+directiony is 0, this will start the player moving either
+right or left and determine the direction the player is moving
 in at a specific instance */
-let directionx = 50;
-let directiony = 0;
+var directionx = randomdirection();
+var directiony = 0;
 
 // calls the start function, which intitialises the elements needed
 start();
@@ -45,9 +60,10 @@ function start() {
 
   /* creates the elements we need for gameplay, this includes the people
   and adding them to the arena and the carriage for the players train */
-  createperson();
-  createperson2();
-  createperson3();
+  createperson(1);
+  createperson(1);
+  createperson(2);
+  createperson(3);
   addperson();
   attatchcarriage();
 
@@ -55,65 +71,39 @@ function start() {
   $(document).on("keydown", changedirection);
 }
 
-var gameOverBox;
-var gameState;
-
-gameOverBox = document.getElementById("gameOver");
-
 // status function which advances the gameplay with repeated calls
 function status() {
 
   /* if the player hits themselves or one of the arenas walls then
   the game ends */
   if (playerHitWall() || playerHitSelf()) {
+    // shows the game over popup to the player, allowing them to retry or go to menu
+    showMenu();
 
-    // window.location.href='MAINMENU.html' (leave for now)
-    // alert('You Derailed! Score: ' + score);
-
-    // sets the state of the setState function to gameOver
-    setState("gameOver");
-
-    // restarts the game from the beginning by calling start function
-    start();
-    return;
+    // the train has derailed and will no longer move or function, it is dead...
+    train = [];
   }
 
   // if the gameState is not set to gameOver the game will advance
-  if (gameState != "gameOver") {
+  else {
 
     // game advances after each tick of the game
     setTimeout(function onTick() {
-      // calls the status function again
-      status();
       // playerHits();
-      // renders the people gifs and places them at a random position
-      renderperson();
-      // renders the train in the arena
-      rendertrain();
       // advances the train according the the direction is heading in
       advancetrain();
+      // renders the train in the arena
+      rendertrain();
+      // renders the people gifs and places them at a random position
+      renderperson();
+      // calls the status function again
+      status();
     }, GAME_SPEED) // sets the GAME_SPEED to 50, if not set again would go supersonic speeds
-
   }
 }
 
-// setts the state of the game
-function setState(state) {
-
-  // sets the gameState to the value of the parameter state
-  gameState = state;
-  // calls the showMneu function with the current state
-  showMenu(gameState);
-}
-
-// makes the gameOver menu visible to the player
-function displayMenu(menu) {
-  menu.style.visibility = "visible";
-}
-
-// shows the gameOver menu to the player
-function showMenu(state) {
-  if (state == "gameOver") {
-    displayMenu(gameOverBox);
-  }
+// shows the gameOver popup to the player
+function showMenu() {
+  gameOverBox = document.getElementById("gameOver");
+  gameOverBox.style.visibility = "visible";
 }
