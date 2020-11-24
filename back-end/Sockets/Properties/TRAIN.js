@@ -3,7 +3,7 @@ const Area = require("./AREA");
 
 class Train {
 
-  constructor(x, y, uniqueID) {
+  constructor(x, y, uniqueID, direction, length, score, trainColour, noCarriages, isActive, newCarriage) {
     this.id = uniqueID;
     this.x = x;
     this.y = y;
@@ -49,9 +49,7 @@ class Train {
           newCarriage = 2;
           break
       }
-    }
-    else if (carriages === 0) {}
-    else {
+    } else if (carriages === 0) {} else {
       this.isActive = false;
     }
   }
@@ -69,8 +67,7 @@ class Train {
         newSpace = this.noCarriage.pop();
         area.setTile(newSpace[0], newSpace[1], 0);
       }
-    }
-    else {
+    } else {
       this.newCarriage--;
       this.length++;
       this.score = this.length;
