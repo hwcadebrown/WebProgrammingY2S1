@@ -118,3 +118,5 @@ app.get('/menu', function(request, response) {
 });
 
 app.listen(3000);
+
+module.exports = db;
