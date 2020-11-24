@@ -59,9 +59,9 @@ function advancetrain() {
     // adds 2 points to the score variable
     $('#score').html(score += 2);
     // adds a carriage at the ends of the trains body (last carriage added)
-    for (let j = 0; j < 2; j++) {
     addcarriage(train.length - 1);
-    }
+    addcarriage(train.length - 1);
+    
     // creates a new PERSON2 in the arena to be collected again
     createperson2();
 
