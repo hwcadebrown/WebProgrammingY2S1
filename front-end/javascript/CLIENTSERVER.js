@@ -35,9 +35,9 @@ displayTrain(train) {
 
    var carriage = document.createElement('carriage');
 
-   $(carriage).css(x, 50);
+   $(carriage.x).css(x, 50);
    // height of the carriage set to 50px
-   $(carriage).css(y, 50);
+   $(carriage.y).css(y, 50);
    // the position of the carriage will be absolute, placed with randompos
    $(carriage).css('position', 'absolute');
    // sets the color of the carriage, this uses the colorPicker function
