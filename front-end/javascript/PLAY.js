@@ -47,8 +47,7 @@ function status() {
       // calls the status function again
       status();
     } // sets the GAME_SPEED to 50, if not set again would go supersonic speeds
-  }
-}
+  )}
 
 // shows the gameOver popup to the player
 function showMenu() {
