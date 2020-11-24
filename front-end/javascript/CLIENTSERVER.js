@@ -29,8 +29,8 @@ displayTrain(train) {
   // iterates through each point on the train
   for (var t = 0; t < train.length; t++){
     // get current point
-    var x = train.carriages[t];
-    var y = train.carriages[t];
+    var x = train.carriages[t].leftOrright;
+    var y = train.carriages[t].upOrdown;
     // calculate grid position for plotting current point
     x = getFrontAreaPoint(x);
     y = getFrontAreaPoint(y);
@@ -39,6 +39,5 @@ displayTrain(train) {
 }
 
 getFrontAreaPoint(gridSpot){
-
   return (gridSpot*50);
 }
