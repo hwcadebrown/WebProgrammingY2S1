@@ -15,25 +15,25 @@ app.use(bodyParser.urlencoded({extended: false}));
 const db = require('./db.js');
 
 
-app.use(express.static("front-end"));
+app.use(express.static(__dirname + "../../../front-end"));
 
-app.get("/", isLoggedIn, (req, res) => {
-  console.log("login page loaded")
+//app.get("/", isLoggedIn, (req, res) => {
+//  console.log("login page loaded")
 
-  res.sendFile(path.join(_dirname, "/../front-end/html/LOGIN.html"))
-});
+  //res.sendFile(path.join(_dirname, "/../front-end/html/LOGIN.html"))
+//});
 
-app.get("/", isLoggedIn, (req, res) => {
-  console.log("main menu page loaded")
+//app.get("/", isLoggedIn, (req, res) => {
+  //console.log("main menu page loaded")
 
-  res.sendFile(path.join(_dirname, "/../front-end/html/MAINMENU.html"))
-});
+//  res.sendFile(path.join(_dirname, "/../front-end/html/MAINMENU.html"))
+//});
 
-app.get("/", isLoggedIn, (req, res) => {
-  console.log("game page loaded")
+//app.get("/", isLoggedIn, (req, res) => {
+  //console.log("game page loaded")
 
-  res.sendFile(path.join(_dirname, "/../front-end/html/PLAY.html"))
-});
+  //res.sendFile(path.join(_dirname, "/../front-end/html/PLAY.html"))
+//});
 
 
 

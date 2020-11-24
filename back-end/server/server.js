@@ -29,6 +29,7 @@ let Run_Game = () =>
   gameCurrent.trainUpdates())
   io.socket.emit('game situation', gameCurrent);
 }
+
 //sets a base connection to the server that starts the game off.
 io.on('connection',function(newPlayer){
   //Adds a new player to the game, will change it so it incorperates the player name into train
@@ -40,12 +41,14 @@ io.on('connection',function(newPlayer){
   newPlayer.on('changesDirection',function(direction){
     gameCurrent.changeDirection(newPlayer, direction);
   })
-  
+
   newPlayer.on('disconnect',function(){
     console.log('user has  left the game')
+    gameCurrent.removePlayer(newPlayer);
+    Run_Game()
   })
 })
 
 setInterval(function(){
-
+  Run_Game();
 }, 200)
