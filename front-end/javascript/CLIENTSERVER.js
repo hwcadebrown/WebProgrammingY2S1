@@ -26,11 +26,9 @@ displayTrain(train) {
 
   // draw train carriages
 
-  // iterates through each point on the train excluding the ends
+  // iterates through each point on the train
   for (var t = 0; t < train.length; t++) {
     let cartPos = this.train[t]; // get current point
-    let cartPrevPos = this.train[t - 1]; // get point before (closer to head)
-    let cartNextPos = this.train[t + 1]; // get point after (closer to tail)
 
     // calculate grid position for plotting current point
     let X = getPlotX(point[0]) + currentOffset.x;
@@ -38,8 +36,6 @@ displayTrain(train) {
 
     // get the image of the shape
     let cartColor = colorPicker();
-
-    // draw the image at the appropriate angle
 
   // draw train head
   this.rendertrain();
