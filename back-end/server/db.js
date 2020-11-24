@@ -99,7 +99,7 @@ app.post('/add', function(request, response){
   var username = request.body.USERNAME;
   var password = request.body.PASSWORD;
   var confirmpassword = request.body.CONFIRMPASSWORD;
-  //if (password == confirmpassword) {
+  if (password == confirmpassword) {
     db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [request.body.USERNAME, request.body.PASSWORD], function(err) {
       if (err) {
         return console.log(err.message);
@@ -109,10 +109,11 @@ app.post('/add', function(request, response){
       response.redirect('/menu');
       }
     });
-  //} else {
-    //response.send('Please enter Username and Password!');
+  } else {
+    response.send('Please enter Username and Password!');
 	//	response.end();
-  //}
+  }
+});
 });
 
 
@@ -149,7 +150,7 @@ app.get('/menu', function(request, response) {
     response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 	}
 	//response.end();
-  
+
 });
 
 app.listen(PORT);
