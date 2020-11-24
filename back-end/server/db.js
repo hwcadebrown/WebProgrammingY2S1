@@ -71,7 +71,7 @@ db.connect((err) => {
   app.use(bodyParser.urlencoded({extended : true}));
   app.use(bodyParser.json());
 
-  app.get('/login', function(request, response) {
+  app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 });
 
@@ -133,5 +133,3 @@ app.get('/menu', function(request, response) {
 });
 
 app.listen(PORT);
-
-module.exports = db;
