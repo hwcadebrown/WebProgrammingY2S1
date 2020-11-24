@@ -149,6 +149,7 @@ app.get('/menu', function(request, response) {
     response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 	}
 	//response.end();
+  
 });
 
 app.listen(PORT);
