@@ -3,7 +3,7 @@ const Area = require("./Properties/AREA");
 const Train = require("./Properties/TRAIN");
 class Play {
   constructor() {
-    this.gameStage = new Area.Area(20, 20);
+    this.gameStage = new Area.Area(98,48);
     this.trains = [];
     this.passengers = [];
     this.directions = [];
