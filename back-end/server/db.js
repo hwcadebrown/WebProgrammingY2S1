@@ -27,7 +27,7 @@ password :''
 const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
-database : 'users',
+database : 'heroku_cb8d33a19f2dd74',
 password :'5ab9889d'
 });
 
