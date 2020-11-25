@@ -27,14 +27,15 @@ changedirection(event) {
   /* if the left arrow key or A is pressed the train will change direction
   to move left IF the train is NOT already moving right */
   if (direction === LEFT_KEY && !moveRight || direction === A && !moveRight) {
-    directionx = -1;
+    directionx = 1;
     directiony = 0;
 
     /* if the up arrow key or W is pressed the train will change direction
     to move upwards IF the train is NOT already moving down */
   } else if (direction === UP_KEY && !moveDown || direction === W && !moveDown) {
     directionx = 0;
-    directiony = -1;
+    directiony = 1;
+
 
     /* if the right arrow key or D is pressed the train will change direction
     to move right IF the train is NOT already moving left */
@@ -48,4 +49,5 @@ changedirection(event) {
     directionx = 0;
     directiony = 1;
   }
+  socket.emit("changedirection", directionx, directiony);
 }
