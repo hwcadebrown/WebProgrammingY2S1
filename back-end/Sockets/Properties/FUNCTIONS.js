@@ -1,5 +1,5 @@
 class Functions {
-    
+
   // function for picking the color of each carriage added to the train
   colorPicker() {
     // color variable which generates a random number from 1 to 10
@@ -47,4 +47,10 @@ class Functions {
         return 'gray';
     }
   }
+
+  randomise(min, max) {
+    return Math.round((Math.random() * (max - min) + min) / 1) * 1;
+  }
+
+
 }
