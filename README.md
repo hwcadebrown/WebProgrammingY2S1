@@ -1,10 +1,10 @@
 # WebProgrammingY2S1 Team XCGAN
 Repository for Web Programming Y2 S1
 
-Team members: Alexander Wickham, Andrew McBain, 
-Daniel Johnstone, Glenn Wright and Cade Brown
+# Team Members
+Alexander Wickham, Andrew McBain, Daniel Johnstone, Glenn Wright and Cade Brown
 
-Roles/Jobs:
+# Roles/Jobs
 
 Front end (HTML, CSS): Glenn Wright, gw31
 
@@ -18,4 +18,6 @@ Back end (Databases): Andrew McBain, aw127
 
 Back end (Game Server): Alexander Wickham, am454
 
-You can view the website at https://hwcadebrown.github.io/WebProgrammingY2S1/
+# Deployment
+
+You can view a demo state of the game at https://hwcadebrown.github.io/WebProgrammingY2S1/
