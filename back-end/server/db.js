@@ -166,4 +166,4 @@ app.get('/menu', function(request, response) {
 
 //app.listen(PORT);
 
-module.export = app;
+module.export = db;
