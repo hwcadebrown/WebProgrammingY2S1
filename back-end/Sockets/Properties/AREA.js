@@ -1,7 +1,7 @@
 //Alexander Wickham
 //Due to recent difficulties we have realised that we are going to have to create a grid systum.
 //This is done in the back end as every user will use the same area
-const People = require("./Passenger");
+const People = require("./PEOPLE");
 
 class Area {
   constructor(width, height){

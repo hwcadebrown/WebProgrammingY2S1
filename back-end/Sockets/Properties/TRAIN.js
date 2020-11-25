@@ -1,5 +1,5 @@
 //Alexander Wickham
-const Area = require("./Area");
+const Area = require("./AREA");
 
 class Train {
   constructor(x, y, uniqueID, direction, length, score, trainColour, noCarriages, isActive, newCarriage) {
