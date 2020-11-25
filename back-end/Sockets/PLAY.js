@@ -1,5 +1,5 @@
 const Passenger = require("./Properties/Passenger");
-const Area = require("./Properties/Area");
+//const Area = require("./Properties/Area");
 const Train = require("./Properties/Train");
 class Play {
   constructor() {
