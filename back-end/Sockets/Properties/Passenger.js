@@ -10,9 +10,8 @@ class Passenger {
     this.x = -1;
     this.y = -1;
     this.respawn(area, this.x, this.y);
-
-    }
   }
+
 
   respawn(area, x, y, type) {
     while (area.infoAtTile(this.x, this.y) != -1) {
