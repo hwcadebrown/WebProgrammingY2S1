@@ -52,13 +52,13 @@ class Play {
       }
   }
   gettingTrainFromID(id){
-    this.trains.forEach((possibleTrain){
-      if (possibleTrain.id == id){
-        return possibleTrain;
-      }
-      return -1;
-
-    })
+    this.trains.forEach(loopingThroughItems());
+  }
+  loopingThroughItems(possibleTrain){
+    if (possibleTrain.id == id){
+      return possibleTrain
+    }
+    return -1;
   }
 
   changeDirection(clientConnection, newDirectionx, newDirectiony){
