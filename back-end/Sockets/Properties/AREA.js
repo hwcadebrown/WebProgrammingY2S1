@@ -8,8 +8,6 @@ class Area {
     this.width = width;
     this.height = height;
     this.gameGrid = this.createMainStage(this.width,this.height);
-    this.train = train;
-    this.data = data;
     this.x = x;
     this.y = y;
   }
