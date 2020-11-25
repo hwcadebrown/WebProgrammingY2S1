@@ -3,7 +3,7 @@ const express = require('express');
 const path = require("path");
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const PORT = process.env.PORT || 3000;
 const mysql = require('mysql');
 const session = require('express-session');
 
@@ -192,8 +192,8 @@ app.get('/menu', function(request, response) {
 
 
 
-//app.listen('3000', () => {
-  //console.log('Server started with nodemon');
-//});
+app.listen(PORT, () => {
+  console.log('Server started with nodemon');
+});
 
 module.exports = app;
