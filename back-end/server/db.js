@@ -16,21 +16,22 @@ module.exports = new Sequelize('', '', '', {
 
 
 // creates Connection locally
-/*
+
 const db = mysql.createConnection({
 host :'localhost',
 user :'root',
 database : 'users',
 password :''
 });
-*/
 
+/*
 const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
 database : 'heroku_cb8d33a19f2dd74',
 password :'5ab9889d'
 });
+*/
 
 const app = express();
 
@@ -99,7 +100,9 @@ app.post('/add', function(request, response){
   var username = request.body.USERNAME;
   var password = request.body.PASSWORD;
   var confirmpassword = request.body.CONFIRMPASSWORD;
-  if (password == confirmpassword) {
+  //if (password != confirmpassword) {
+    //response.send('Please make sure password and confirm password are the same');
+  //}else{
     db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [request.body.USERNAME, request.body.PASSWORD], function(err) {
       if (err) {
         return console.log(err.message);
@@ -109,11 +112,13 @@ app.post('/add', function(request, response){
       response.redirect('/menu');
       }
     });
-  } else {
-    response.send('Please enter Username and Password!');
+  //}
+
+
+
 	//	response.end();
-  }
-});
+
+
 });
 
 
@@ -121,7 +126,7 @@ app.post('/add', function(request, response){
 app.post('/auth', function(request, response) {
 	var username = request.body.USERNAME;
 	var password = request.body.PASSWORD;
-	if (username && password) {
+	if (username && password){
 		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
