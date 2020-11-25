@@ -3,10 +3,12 @@ const AREAfile = require("./AREA");
 
 class Passenger {
 
-  constructor(area, x, y, type) {
+  constructor(area, x, y, type, min, max) {
     this.type = type;
     this.passengerPoints = checkingType(type);
     this.respawn = (area, x, y);
+    this.max = max;
+    this.min = min;
   }
 
   respawn(area, x, y) {
@@ -43,8 +45,8 @@ class Passenger {
     }
   }
 
-  randomise(1, 20) {
-    return Math.round((Math.random() * (1 - 20) + 1) / 50) * 50;
+  randomise(min, max) {
+    return Math.round((Math.random() * (max - min) + min) / 1) * 1;
   }
 
   getType() {
