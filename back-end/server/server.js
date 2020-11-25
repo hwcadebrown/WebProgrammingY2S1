@@ -25,7 +25,7 @@ let gameCurrent = new game_play.Play;
 //Will stream the game to the user
 let Run_Game = () =>{
   gameCurrent.trainUpdates()
-io.socket.emit('game situation', gameCurrent);
+  io.sockets.emit('game situation', gameCurrent);
 }
 
 //sets a base connection to the server that starts the game off.
