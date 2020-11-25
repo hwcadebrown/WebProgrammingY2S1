@@ -58,9 +58,7 @@ class Play {
       }
       return -1;
 
-    });
-
-
+    })
   }
 
   changeDirection(clientConnection, newDirectionx, newDirectiony){
