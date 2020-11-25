@@ -11,11 +11,11 @@ webConnection.on('game situation', function(play){
   allTrains = play.trains;
   area = play.area;
   player = trains.find(function(train){
-    return allTrains.id == webConnection.id;
+    return trains.id == webConnection.id;
   })
 
-  if (player.isActive == False){
-    webConnection.on('')
+  if (!player.isActive){
+    webConnection.on('disconnect')
     return;
   }
 })
@@ -34,7 +34,6 @@ displayTrain(train) {
     // calculate grid position for plotting current point
     x = getFrontAreaPoint(x);
     y = getFrontAreaPoint(y);
-
   }
 }
 
