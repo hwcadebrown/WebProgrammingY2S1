@@ -7,8 +7,8 @@ class Passenger {
     this.type = type;
     this.passengerPoints = checkingType(type);
     this.area = area;
-    this.x = -1;
-    this.y = -1;
+    this.x = 0;
+    this.y = 0;
     this.respawn(area, this.x, this.y);
   }
 
@@ -18,33 +18,29 @@ class Passenger {
       this.x = randomise(0,47);
       this.y = randomise(0,97);
     }
-    area.setTile(x, y, this.type)
+    area.setTile(x, y, type))
     return area;
   }
 
-  checkingType(type) {
+  getType(type) {
     switch (type) {
 
-      case ("Red"):
-        return -1;
+      case (1):
+        return "Red";
         break;
 
-      case ("Yellow"):
-        return 2;
+      case (2):
+        return "Black";
         break;
 
-      case ("Black"):
-        return 1;
+      case (3):
+        return "Gold";
         break;
     }
   }
 
   randomise(min, max) {
     return Math.round((Math.random() * (max - min) + min) / 1) * 1;
-  }
-
-  getType() {
-    return type;
   }
 }
 module.exports = {

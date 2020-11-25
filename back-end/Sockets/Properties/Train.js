@@ -11,15 +11,15 @@ class Train {
       upOrdown: 1};
     this.length = 1;
     this.score = 0;
+    this.noCarriages = [{x:this.x, y:this.y}];
     this.trainColour = "";
-    this.noCarriages = [];
     this.isActive = true;
     this.newCarriage = 0;
   }
 
   updateTrain(area) {
-    this.x += this.direction.leftOrright
-    this.y += this.direction.upOrdown
+    this.x += this.direction.leftOrright;
+    this.y += this.direction.upOrdown;
 
     let carriages = area.infoAtTile(this.x, this.y);
 
@@ -33,30 +33,34 @@ class Train {
   }
 
   collisionDetect(area, carriages) {
-    if (carriages === 1) {
-      switch (area.getType) {
+      switch (area.infoAtTile(carriages[0],[1])) {
         case -1:
-          newCarriage = -1;
+          this.isActive = false;
           break
-
+        case 0:
+        break
         case 1:
-          newCarriage = 1;
+          newCarriage += -1;
           break
-
         case 2:
-          newCarriage = 2;
+          newCarriage += 1;
           break
+        case 3:
+          newCarriage += 2;
+        break
+
+        default:
+          this.isActive = false;
+        break
       }
-    } else if (carriages === 0) {} else {
-      this.isActive = false;
-    }
   }
 
   moveTrain(area) {
     if (this.newCarriage == 0) {
       let newSpace = this.noCarriages.pop();
       area.setTile(newSpace[0], newSpace[1], 0);
-    } else if (this.newCarriage == -1) {
+    }
+    else if (this.newCarriage == -1) {
       let newSpace = this.noCarriages.pop();
       area.setTile(newSpace[0], newSpace[1], 0);
       if (this.length != 1) {
@@ -65,19 +69,21 @@ class Train {
         newSpace = this.noCarriage.pop();
         area.setTile(newSpace[0], newSpace[1], 0);
       }
-    } else {
+    }
+    else {
       this.newCarriage--;
       this.length++;
       this.score = this.length;
     }
-    this.newCarriage.unshift([this.x, this.y]);
+    let tempData = {leftOrright: this.x, upOrdown:this.y}
+    this.newCarriage.unshift([]);
     area.setTile(this.x, this.y, this.id);
     return area;
   }
 
-  changeDirection(newX, newY) {
-    this.direction.leftOrright = newX;
-    this.direction.upOrdown = newY;
+  changeDirection(direction) {
+    this.direction.leftOrright = direction.leftOrright;
+    this.direction.upOrdown = direction.upOrdown;
   }
 }
 

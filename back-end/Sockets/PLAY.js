@@ -14,7 +14,7 @@ class Play {
   trainUpdates() {
     for (let count = 0; count < this.trains.length; count++) {
       if (this.trains[count].isActive){
-        train.changeDirection(this.directions[count]);
+        train.changeDirection(this.directions);
         this.gameStage = this.trains[count].updateTrain(this.gameStage);
       }
       if (!this.trains[count].isActive){
@@ -76,14 +76,19 @@ class Play {
   }
 
   generateTrainLocation(){
-    let x;
-    let y;
-    x = randomise();
-    y = randomise();
+    let x = 0;
+    let y = 0;
+    while (area.infoAtTile(this.x, this.y) != -1) {
+      x = randomise(0,47);
+      y = randomise(0,97);
+    }
     if (this.area.infoAtTile(x,y) != -1) {
       return generateTrainLocation();
     }
     return [x,y];
+  }
+  randomise(min, max) {
+    return Math.round((Math.random() * (max - min) + min) / 1) * 1;
   }
 }
 
