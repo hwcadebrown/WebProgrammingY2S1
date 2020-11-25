@@ -55,7 +55,7 @@ class Area {
     let id = train.id;
     let carriages = train.noCarriages;
     let length = train.length;
-    for (let count = 0,count<length, count+=2){
+    for (let count = 0;count<length; count+=2){
       this.setTile(carriages[count], carriages[count+1],id);
     }
   }
