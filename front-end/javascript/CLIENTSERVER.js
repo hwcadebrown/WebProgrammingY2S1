@@ -32,8 +32,48 @@ webConnection.on('game situation', function(play){
   rerender();
 })
 
+// function which adds the people to the game arena
+displayPeople() {
+  // first person variable initialised with identifier 'person'
+  var person = document.createElement('person');
+  // width of the person gif set to 50px
+  $(person).css('width', 50);
+  // height of the person gif set to 50px
+  $(person).css('height', 50);
+  // the position of the person will be absolute, placed with randompos
+  $(person).css('position', 'absolute');
+  // sets the background of the person to the specified person gif
+  $(person).css('background-image', 'url(' + '../graphics/gifs/PERSON1.gif' + ')');
+  // adds the person to the games arena
+  $(person).appendTo(arena);
 
-displayPassengers(){}
+  // spower person variable initialised with identifier 'powerperson'
+  var powerperson = document.createElement('powerperson');
+  // width of the powerperson gif set to 50px
+  $(powerperson).css('width', 50);
+  // height of the powerperson gif set to 50px
+  $(powerperson).css('height', 50);
+  // the position of the powerperson will be absolute, placed with randompos
+  $(powerperson).css('position', 'absolute');
+  // sets the background of the powerperson to the specified person gif
+  $(powerperson).css('background-image', 'url(' + '../graphics/gifs/POWERPERSON.gif' + ')');
+  // adds the powerperson to the games arena
+  $(powerperson).appendTo(arena);
+
+  // bad person variable initialised with identifier 'badperson'
+  var badperson = document.createElement('badperson');
+  // width of the badperson gif set to 50px
+  $(badperson).css('width', 50);
+  // height of the badperson gif set to 50px
+  $(badperson).css('height', 50);
+  // the position of the badperson will be absolute, placed with randompos
+  $(badperson).css('position', 'absolute');
+  // sets the background of the badperson to the specified person gif
+  $(badperson).css('background-image', 'url(' + '../graphics/gifs/BADPERSON.gif' + ')');
+  // adds the badperson to the games arena
+  $(badperson).appendTo(arena);
+}
+
 displayTrain(train) {
   if (!this.isActive;) // train has crashed so do not display
   {return;}
