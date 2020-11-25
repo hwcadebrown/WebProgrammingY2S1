@@ -16,13 +16,14 @@ class Area {
   //This is where the main grid layout is created
   createMainStage(width,height){
     let tiles = [];
-    for (let count = 0; count < width; count++ ){
-      let placeholder = [];
-      for (let count2 = 0; count2< height; count++){
-        placeholder.push(0);
-      }
+    let placeholder = [];
+
+    for (let count = 0; count < height; count++ ){
+      placeholder.push(0);
+    }
+    for (let count2 = 0; count2< width; count++){
       tiles.push(placeholder);
-  }
+    }
     //Creates the walls for area that train will have to abide or die on the sides
     for (let count = 0; count<width; count++){
       tiles[count][0] = -1;
