@@ -19,8 +19,6 @@ webConnection.on('game situation', function(play){
     return;
   }
 
-  displayTrain(allTrains[0]);
-
   const rerender = (millisec) => {
     if (millis - checkPoint> 30){
       for (int count = 0; count = allTrains.length; count++){
