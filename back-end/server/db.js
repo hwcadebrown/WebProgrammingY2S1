@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const mysql = require('mysql');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -26,7 +26,7 @@ password :''
 });
 */
 
-
+/*
 const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
@@ -59,6 +59,7 @@ db.connect((err) => {
   });
   */
   //Create table
+  /*
   app.get('/createprofilestable' , (req, res) => {
       let sql = "CREATE TABLE IF NOT EXISTS Profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(80) NOT NULL, highscore INT )";
       db.query(sql, (err, result) => {
@@ -169,3 +170,4 @@ app.get('/menu', function(request, response) {
 //app.listen(PORT);
 
 module.export = app;
+*/
