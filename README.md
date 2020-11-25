@@ -1,5 +1,4 @@
-# WebProgrammingY2S1 Team XCGAN
-Repository for Web Programming Y2 S1
+**WebProgrammingY2S1 Team XCGAN**
 
 # Team Members
 Alexander Wickham, Andrew McBain, Daniel Johnstone, Glenn Wright and Cade Brown
