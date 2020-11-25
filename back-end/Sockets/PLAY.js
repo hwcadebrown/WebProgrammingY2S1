@@ -1,3 +1,4 @@
+//Alexander Wickham
 const Passenger = require("./Properties/Passenger");
 const Area = require("./Properties/Area");
 const Train = require("./Properties/Train");
@@ -6,7 +7,7 @@ class Play {
     this.gameStage = new Area.Area(98,48);
     this.trains = [];
     this.passengers = [];
-    this.directions = [];
+    this.directions = [{leftOrright:0, upOrdown:1}];
   }
 
   trainUpdates() {
@@ -20,7 +21,6 @@ class Play {
         let id = this.trains[count].id;
         this.removePlayerViaID(id);
       }
-
     }
   }
 
@@ -68,7 +68,8 @@ class Play {
     let trainChangingDirection = gettingTrainFromID(id);
     let index = this.trains.findIndex(trainChangingDirection);
     if (trainChangingDirection != -1){
-      this.directions[index] = newDirection;
+      this.directions[index].leftOrright = newDirectionx;
+      this.directions[index].upOrdown = newDirectiony;
     }
   }
 
@@ -76,7 +77,7 @@ class Play {
     let x;
     let y;
     x = randomise();
-    y = randomse();
+    y = randomise();
     if (this.area.infoAtTile(x,y) != -1) {
       return generateTrainLocation();
     }
