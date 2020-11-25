@@ -12,7 +12,7 @@ class Play {
   trainUpdates() {
     for (let count = 0; count < this.trains.length; count++) {
       if (this.trains[count].isActive){
-        train.changeDirection(this.directions[count];);
+        train.changeDirection(this.directions[count]);
         this.gameStage = this.trains[count].updateTrain(this.gameStage);
       }
       if (!this.trains[count].isActive){
