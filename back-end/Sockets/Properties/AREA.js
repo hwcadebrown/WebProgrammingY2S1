@@ -55,7 +55,7 @@ class Area {
     let id = train.id;
     let carriages = train.noCarriages;
     let length = train.length;
-    for (let count = 0;count<length; count+=2){
+    for (let count = 0; count<length; count+=2){
       this.setTile(carriages[count], carriages[count+1],id);
     }
   }
@@ -65,7 +65,7 @@ class Area {
     let id = train.id;
     let length = train.length;
     let runningPass = [];
-    for (let count = 0, count<length, count+=2){
+    for (let count = 0; count<length; count+=2){
         let person = new People.Passenger(this,carriages[count],carriages[count+1]);
         runningPass.push(person);
         this.setTile(carriages[count],carriages[count+1],person);
