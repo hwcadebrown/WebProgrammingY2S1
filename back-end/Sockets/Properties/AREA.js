@@ -21,7 +21,7 @@ class Area {
     for (let count = 0; count < height; count++ ){
       placeholder.push(0);
     }
-    for (let count2 = 0; count2< width; count++){
+    for (let count2 = 0; count2< width; count2++){
       tiles.push(placeholder);
     }
     //Creates the walls for area that train will have to abide or die on the sides
