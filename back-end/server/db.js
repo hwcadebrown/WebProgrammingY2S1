@@ -79,8 +79,10 @@ db.connect((err) => {
   app.get('/', function(request, response) {
     let sql = "CREATE TABLE IF NOT EXISTS Profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(80) NOT NULL, highscore INT )";
     db.query(sql, (err, result) => {
-      if(err) throw err;
+      if(err) {
+
       console.log(result);
+    }
     });
 	response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 });
