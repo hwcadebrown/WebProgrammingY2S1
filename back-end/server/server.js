@@ -15,11 +15,12 @@ try {
   console.log(error);
 }
 //Creates a server with a listen and a port
-const server = app.listen(tempPort, () => console.log(`Listening on log ${tempPort}...`))
+const server = app.listen(tempPort, () => {console.log(`Listening on log ${tempPort}...`
+)});
 //Makes it so the server can be use socket module properly
 const io = socketio(server);
 //Uses the main play file a requirement as it nessarcy to use it
-const game_play = require("../Sockets/PLAY") // NOTE: CADE CHANGED THIS
+const game_play = require("../Sockets/PLAY"); // NOTE: CADE CHANGED THIS
 //genreates a class of Play in order to stream it.
 let gameCurrent = new game_play.Play;
 //Will stream the game to the user
