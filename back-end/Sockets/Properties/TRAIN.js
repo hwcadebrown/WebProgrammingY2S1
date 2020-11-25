@@ -11,7 +11,7 @@ class Train {
       upOrdown: 1};
 
     this.length = 1;
-    this.score = 1;
+    this.score = 0;
     this.trainColour = "";
     this.noCarriages = [];
     this.isActive = true;
@@ -27,7 +27,7 @@ class Train {
     this.collisionDetect(area, carriages);
 
     if (this.isActive) {
-      area = this.moveTrain;
+      area = this.moveTrain(area);
     }
 
     return area;

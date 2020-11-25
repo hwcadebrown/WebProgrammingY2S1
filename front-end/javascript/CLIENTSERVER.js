@@ -21,22 +21,33 @@ webConnection.on('game situation', function(play){
 })
 
 displayTrain(train) {
-  if (this.isActive == False;) // train has crashed so do not display
+  if (!this.isActive;) // train has crashed so do not display
   {return;}
 
-  // draw train carriages
-
   // iterates through each point on the train
-  for (var t = 0; t < train.length; t++) {
-    let cartPos = this.train[t]; // get current point
-
+  for (var t = 0; t < train.length; t++){
+    // get current point
+    var x = train.carriages[t].leftOrright;
+    var y = train.carriages[t].upOrdown;
     // calculate grid position for plotting current point
-    let X = getPlotX(point[0]) + currentOffset.x;
-    let Y = getPlotY(point[1]) + currentOffset.y;
+    x = getFrontAreaPoint(x);
+    y = getFrontAreaPoint(y);
 
-    // get the image of the shape
-    let cartColor = colorPicker();
+   var carriage = document.createElement('carriage');
 
-  // draw train head
-  this.rendertrain();
+   $(carriage.x).css(x, 50);
+   // height of the carriage set to 50px
+   $(carriage.y).css(y, 50);
+   // the position of the carriage will be absolute, placed with randompos
+   $(carriage).css('position', 'absolute');
+   // sets the color of the carriage, this uses the colorPicker function
+   $(carriage).css('background-image', 'url(' + colorPicker() + ')');
+   // adds the carriage to the games arena
+   $(carriage).appendTo(arena);
+
+  }
+}
+
+getFrontAreaPoint(gridSpot){
+  return (gridSpot*50);
 }
