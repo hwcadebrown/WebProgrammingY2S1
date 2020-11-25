@@ -4,7 +4,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const Sequelize = require('sequelize');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const bcrypt = require('bcrypt');
 
 /*
