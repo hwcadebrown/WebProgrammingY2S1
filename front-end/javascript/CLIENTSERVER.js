@@ -10,16 +10,30 @@ webConnection.on('game situation', function(play){
   passengers = play.passengers;
   allTrains = play.trains;
   area = play.area;
-  player = trains.find(function(train){
-    return trains.id == webConnection.id;
-  })
+  player = allTrains.find(function(player){
+    return player.id == webConnection.id;
+  }) || player;
 
   if (!player.isActive){
     webConnection.on('disconnect')
     return;
   }
+
+  const rerender = (millisec) => {
+    if (millis - checkPoint> 30){
+      for (int count = 0; count = allTrains.length; count++){
+        displayTrain(allTrains[count]);
+        displayPassengers();
+      }
+      checkPoint += 30;
+    }
+  };
+//This is the constant rendering that will take place.
+  rerender();
 })
 
+
+displayPassengers(){}
 displayTrain(train) {
   if (!this.isActive;) // train has crashed so do not display
   {return;}
@@ -47,7 +61,6 @@ displayTrain(train) {
 
   }
 }
-
 getFrontAreaPoint(gridSpot){
   return (gridSpot*50);
 }
