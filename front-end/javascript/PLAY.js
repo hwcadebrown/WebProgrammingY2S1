@@ -2,7 +2,7 @@
 // Base of game, mostly where functions are called and game is started etc.
 
 // determines the speed of the game, lower = faster & higher = slower
-const GAME_SPEED = 50;
+const GAME_SPEED = 70;
 
 // the arena on which the game is played on
 // assigns arena to the area element from PLAY.html
