@@ -20,4 +20,7 @@ Back end (Game Server): Alexander Wickham, am454 (GH: Alexander-Wickham)
 # Deployment
 
 You can view a demo state of the game at https://hwcadebrown.github.io/WebProgrammingY2S1/
+
+Live game demonstration [PENDING]
+
 Heroku app [PENDING]
