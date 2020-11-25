@@ -41,4 +41,4 @@ app.use(express.static(__dirname + "../../../front-end"));
   //console.log('Server started with nodemon');
 //});
 
-module.exports = app;
+//module.exports = app;
