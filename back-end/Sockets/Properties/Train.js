@@ -9,7 +9,6 @@ class Train {
     this.direction = {
       leftOrright: 0,
       upOrdown: 1};
-
     this.length = 1;
     this.score = 0;
     this.trainColour = "";
