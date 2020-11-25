@@ -23,8 +23,8 @@ const game_play = require("../Sockets/PLAY") // NOTE: CADE CHANGED THIS
 //genreates a class of Play in order to stream it.
 let gameCurrent = new game_play.Play;
 //Will stream the game to the user
-let Run_Game = () =>
-  gameCurrent.trainUpdates())
+let Run_Game = () =>{
+  gameCurrent.trainUpdates()
 io.socket.emit('game situation', gameCurrent);
 }
 
