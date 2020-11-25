@@ -11,7 +11,7 @@ let app;
 const io = socketio();
 //Trys to find the app.js file otherwise it responds with an error
 try {
-  app = require("./app")
+  app = require("./db.js")
 } catch (error) {
   console.log(error)
 }
