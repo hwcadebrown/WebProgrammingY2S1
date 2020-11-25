@@ -18,7 +18,7 @@ class Passenger {
       this.x = randomise(0,47);
       this.y = randomise(0,97);
     }
-    area.setTile(x, y, type))
+    area.setTile(x, y, type);
     return area;
   }
 
