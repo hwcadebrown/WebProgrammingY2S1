@@ -33,6 +33,7 @@ function start() {
   // calls the status function which is used to advance the gameplay
   status();
 
+  $(document).on("keydown", changedirection);
 }
 
 // status function which advances the gameplay with repeated calls
