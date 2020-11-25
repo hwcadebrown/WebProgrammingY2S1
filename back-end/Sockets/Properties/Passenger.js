@@ -18,6 +18,7 @@ class Passenger {
     while (area.infoAtTile(this.x, this.y) != -1) {
       this.x = randomise(0,47);
       this.y = randomise(0,97);
+    }
     area.setTile(x, y, this.type)
     return area;
   }
