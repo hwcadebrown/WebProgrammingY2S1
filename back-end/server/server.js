@@ -15,7 +15,7 @@ try {
   console.log(error);
 }
 //Creates a server with a listen and a port
-const server = app.listen(tempPort, () => {console.log(`Listening on log ${tempPort}...`)})
+const server = app.listen(tempPort, () => {console.log("Listening on the port" + tempPort)})
 //Makes it so the server can be use socket module properly
 const io = socketio(server);
 //Uses the main play file a requirement as it nessarcy to use it
