@@ -1,5 +1,5 @@
 //Alexander Wickham
-const AREAfile = require("./Area");
+const Area = require("./Area");
 
 class Passenger {
 
