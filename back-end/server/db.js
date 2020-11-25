@@ -77,7 +77,7 @@ db.connect((err) => {
   app.use(bodyParser.json());
 
   app.get('/', function(request, response) {
-    let sql = "CREATE TABLE IF NOT EXISTS profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(30) NOT NULL, highscore INT )";
+    let sql = "CREATE TABLE IF NOT EXISTS Profiles(id int AUTO_INCREMENT PRIMARY KEY, username VARCHAR(40) NOT NULL, password VARCHAR(80) NOT NULL, highscore INT )";
     db.query(sql, (err, result) => {
       if(err) throw err;
       console.log(result);
@@ -109,7 +109,7 @@ app.post('/add', function (request, response){
 
 
 
-    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [username, password], function(err) {
+    db.query('INSERT INTO Profiles(username, password) VALUES(?,?)', [username, password], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
@@ -134,7 +134,7 @@ app.post('/auth', function (request, response) {
 
 
 	if ( bcrypt.compare(request.body.PASSWORD, password) ){
-		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+		db.query('SELECT * FROM Profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
