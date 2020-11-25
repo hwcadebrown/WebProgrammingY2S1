@@ -1,5 +1,5 @@
 //Alexander Wickham
-const Area = require("./Area");
+const Area = require("./AREA");
 
 class Passenger {
 
