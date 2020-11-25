@@ -47,7 +47,6 @@ class Passenger {
     return type;
   }
 }
-
 module.exports = {
   Passenger
 }
