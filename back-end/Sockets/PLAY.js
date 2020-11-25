@@ -65,7 +65,7 @@ class Play {
 
     const id = clientConnection.id;
 
-    let trainChangingDire ction = gettingTrainFromID(id);
+    let trainChangingDirection = gettingTrainFromID(id);
     let index = this.trains.findIndex(trainChangingDirection);
     if (trainChangingDirection != -1){
       this.directions[index] = newDirection;
