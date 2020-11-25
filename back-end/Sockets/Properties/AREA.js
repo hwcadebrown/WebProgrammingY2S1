@@ -8,8 +8,6 @@ class Area {
     this.width = width;
     this.height = height;
     this.gameGrid = this.createMainStage(this.width,this.height);
-    this.x = x;
-    this.y = y;
   }
   //This is where the main grid layout is created
   createMainStage(width,height){
