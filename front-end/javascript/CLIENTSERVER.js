@@ -24,8 +24,6 @@ displayTrain(train) {
   if (!this.isActive;) // train has crashed so do not display
   {return;}
 
-  // draw train carriages
-
   // iterates through each point on the train
   for (var t = 0; t < train.length; t++){
     // get current point
@@ -34,6 +32,19 @@ displayTrain(train) {
     // calculate grid position for plotting current point
     x = getFrontAreaPoint(x);
     y = getFrontAreaPoint(y);
+
+   var carriage = document.createElement('carriage');
+
+   $(carriage.x).css(x, 50);
+   // height of the carriage set to 50px
+   $(carriage.y).css(y, 50);
+   // the position of the carriage will be absolute, placed with randompos
+   $(carriage).css('position', 'absolute');
+   // sets the color of the carriage, this uses the colorPicker function
+   $(carriage).css('background-image', 'url(' + colorPicker() + ')');
+   // adds the carriage to the games arena
+   $(carriage).appendTo(arena);
+
   }
 }
 
