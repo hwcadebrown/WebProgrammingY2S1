@@ -100,17 +100,16 @@ response.sendFile(path.join(__dirname + '../../../front-end/html/PLAY.html'));
 
 app.post('/add', function (request, response){
   var username = request.body.USERNAME;
-  var password = request.body.PASSWORD;
+  var password =  bcrypt.hash(request.body.PASSWORD, 10);
   var confirmpassword = request.body.CONFIRMPASSWORD;
   //if (password != confirmpassword) {
     //response.send('Please make sure password and confirm password are the same');
   //}else{
 
-const hashedPass = bcrypt.hash(password, 10);
 
 
 
-    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [username, hashedPass], function(err) {
+    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [username, password], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
@@ -134,8 +133,8 @@ app.post('/auth', function (request, response) {
 	var username = request.body.USERNAME;
 
 
-	if ( bcrypt.compare(request.body.PASSWORD, hashedPass) ){
-		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, hashedPass], function(error, results, fields) {
+	if ( bcrypt.compare(request.body.PASSWORD, password) ){
+		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
