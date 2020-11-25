@@ -3,28 +3,22 @@ const Area = require("./Area");
 
 class Passenger {
 
-  constructor(area, x, y, type, min, max) {
+  constructor(area, type) {
     this.type = type;
     this.passengerPoints = checkingType(type);
-    this.respawn = (area, x, y);
-    this.max = max;
-    this.min = min;
+    this.area = area;
+    this.x = -1;
+    this.y = -1;
+    this.respawn(area, this.x, this.y);
+
+    }
   }
 
-  respawn(area, x, y) {
-    if (x == null || y == null) {
-      this.x = randomise();
-      this.y = randomise();
-      while (area.infoAtTile(this.x, this.y) != -1) {
-        this.x = randomise();
-        this.y = randomise();
-      }
-    } else {
-      this.x = x;
-      this.y = y;
-    }
-
-    area.setTile(this.x, this.y)
+  respawn(area, x, y, type) {
+    while (area.infoAtTile(this.x, this.y) != -1) {
+      this.x = randomise(0,47);
+      this.y = randomise(0,97);
+    area.setTile(x, y, this.type)
     return area;
   }
 

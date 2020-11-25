@@ -5,7 +5,7 @@ const Area = require("./Properties/Area");
 const Train = require("./Properties/Train");
 class Play {
   constructor() {
-    this.gameStage = new Area.Area(98,48);
+    this.gameStage = new Area.Area(97,47);
     this.trains = [];
     this.passengers = [];
     this.directions = [{leftOrright:0, upOrdown:1}];
@@ -26,7 +26,7 @@ class Play {
   }
 
   addNewPlayer(clientConnection){
-    
+
     const id = clientConnection.id;
 
     var startPostion = generateTrainLocation();
