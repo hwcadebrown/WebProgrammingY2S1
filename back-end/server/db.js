@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const Sequelize = require('sequelize');
 const PORT = process.env.PORT || 3000;
+const bcrypt = require('bcrypt');
 
 /*
 module.exports = new Sequelize('', '', '', {
@@ -96,14 +97,19 @@ app.get('/play', function(request, response) {
 response.sendFile(path.join(__dirname + '../../../front-end/html/PLAY.html'));
 });
 
-app.post('/add', function(request, response){
+app.post('/add', async (request, response) =>{
   var username = request.body.USERNAME;
   var password = request.body.PASSWORD;
   var confirmpassword = request.body.CONFIRMPASSWORD;
   //if (password != confirmpassword) {
     //response.send('Please make sure password and confirm password are the same');
   //}else{
-    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [request.body.USERNAME, request.body.PASSWORD], function(err) {
+
+const hashedPass = await bcrypt.hash(password, 10);
+
+
+
+    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [username, password], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
@@ -123,10 +129,11 @@ app.post('/add', function(request, response){
 
 
 
-app.post('/auth', function(request, response) {
+app.post('/auth', async (request, response) => {
 	var username = request.body.USERNAME;
-	var password = request.body.PASSWORD;
-	if (username && password){
+
+
+	if (await bcrypt.compare(request.body.PASSWORD, password) ){
 		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
