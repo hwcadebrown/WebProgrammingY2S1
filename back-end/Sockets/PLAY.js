@@ -1,6 +1,6 @@
-const Passenger = require("Properties/PEOPLE");
-const Area = require("Properties/AREA");
-const Train = require("Properties/TRAIN");
+const Passenger = require("Properties/PEOPLE.js");
+const Area = require("Properties/AREA.js");
+const Train = require("Properties/TRAIN.js");
 class Play {
   constructor() {
     this.gameStage = new Area.Area(98,48);
