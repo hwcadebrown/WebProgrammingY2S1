@@ -1,5 +1,5 @@
 //Alexander Wickham
-const Function = require();
+const Function = require("./Properties/Function");
 const Passenger = require("./Properties/Passenger");
 const Area = require("./Properties/Area");
 const Train = require("./Properties/Train");
