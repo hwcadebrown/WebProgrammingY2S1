@@ -10,7 +10,7 @@ let app;
 //Creates a socket that allows for information  to go back and through between the client and server at a regular rate as it is a multiplayer game
 //Trys to find the app.js file otherwise it responds with an error
 try {
-  app = require("./db.js");
+  app = require("./db");
 } catch (error) {
   console.log(error);
 }
