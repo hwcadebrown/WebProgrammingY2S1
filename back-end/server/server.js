@@ -2,6 +2,7 @@
 //Adds the two modules required to run the server
 const socketio = require("socket.io");
 const express = require("express");
+
 //Creates a port a variable to gain information from the data in order to complete transactions nessarcy
 //Tempory until we get some sort of domain
 
