@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const Sequelize = require('sequelize');
 const PORT = process.env.PORT || 3000;
+const bcrypt = require('bcrypt');
 
 /*
 module.exports = new Sequelize('', '', '', {
@@ -16,22 +17,23 @@ module.exports = new Sequelize('', '', '', {
 
 
 // creates Connection locally
-
+/*
 const db = mysql.createConnection({
 host :'localhost',
 user :'root',
 database : 'users',
 password :''
 });
+*/
 
-/*
+
 const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
 database : 'heroku_cb8d33a19f2dd74',
 password :'5ab9889d'
 });
-*/
+
 
 const app = express();
 
@@ -96,14 +98,18 @@ app.get('/play', function(request, response) {
 response.sendFile(path.join(__dirname + '../../../front-end/html/PLAY.html'));
 });
 
-app.post('/add', function(request, response){
+app.post('/add', function (request, response){
   var username = request.body.USERNAME;
-  var password = request.body.PASSWORD;
+  var password =  bcrypt.hash(request.body.PASSWORD, 10);
   var confirmpassword = request.body.CONFIRMPASSWORD;
   //if (password != confirmpassword) {
     //response.send('Please make sure password and confirm password are the same');
   //}else{
-    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [request.body.USERNAME, request.body.PASSWORD], function(err) {
+
+
+
+
+    db.query('INSERT INTO profiles(username, password) VALUES(?,?)', [username, password], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
@@ -123,10 +129,11 @@ app.post('/add', function(request, response){
 
 
 
-app.post('/auth', function(request, response) {
+app.post('/auth', function (request, response) {
 	var username = request.body.USERNAME;
-	var password = request.body.PASSWORD;
-	if (username && password){
+
+
+	if ( bcrypt.compare(request.body.PASSWORD, password) ){
 		db.query('SELECT * FROM profiles WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
