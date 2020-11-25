@@ -26,6 +26,7 @@ class Play {
   }
 
   addNewPlayer(clientConnection){
+    
     const id = clientConnection.id;
 
     var startPostion = generateTrainLocation();

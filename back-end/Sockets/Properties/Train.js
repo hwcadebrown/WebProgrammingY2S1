@@ -2,7 +2,7 @@
 const Area = require("./Area");
 
 class Train {
-  constructor(x, y, uniqueID, direction, length, score, trainColour, noCarriages, isActive, newCarriage) {
+  constructor(x, y, uniqueID) {
     this.id = uniqueID;
     this.x = x;
     this.y = y;
