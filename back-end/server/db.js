@@ -17,22 +17,23 @@ module.exports = new Sequelize('', '', '', {
 
 
 // creates Connection locally
-
+/*
 const db = mysql.createConnection({
 host :'localhost',
 user :'root',
 database : 'users',
 password :''
 });
+*/
 
-/*
+
 const db = mysql.createConnection({
 host :'eu-cdbr-west-03.cleardb.net',
 user :'bfc3a5cf268044',
 database : 'heroku_cb8d33a19f2dd74',
 password :'5ab9889d'
 });
-*/
+
 
 const app = express();
 
