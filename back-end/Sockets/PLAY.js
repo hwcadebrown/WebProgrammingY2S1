@@ -84,6 +84,6 @@ class Play {
   }
 }
 
-modules.exports = {
+module.exports = {
   Play
 };
