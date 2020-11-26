@@ -10,6 +10,7 @@
 </head>
 
 <!-- Body container, inline styles so the background color of the page is black -->
+
 <body style=background-color:black>
 
   <!-- Grid container created allowing us to create sperate pane's in the register page -->
@@ -25,23 +26,23 @@
       <br><br>
       <h3>ALREADY HAVE</h3>
       <h3>AN ACCOUNT?</h3>
-      <form action="/login" method="GET" name="go-to-login" >
-      <input type="button" value="LOGIN" class='buttons' />
+      <form action="/login" method="GET" name="go-to-login">
+        <input type="button" value="LOGIN" class='buttons' />
       </form>
     </div>
 
     <!-- Register pane where the user can enter account details and create an account-->
     <div id="registerpane">
       <form action="/add" method="POST" name="login_user">
-      <h4>USERNAME</h4>
-      <input name="USERNAME" class="txtboxes">
-      <h4>PASSWORD</h4>
-      <input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
-      <h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
-      <h4 id="confpass">CONFIRM PASSWORD</h4>
-      <input name="CONFRMPASSWORD" type="password" id="passwordconftxt">
-      <br>
-      <input type="submit" value="REGISTER" class="buttons" />
+        <h4>USERNAME</h4>
+        <input name="USERNAME" class="txtboxes">
+        <h4>PASSWORD</h4>
+        <input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
+        <h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
+        <h4 id="confpass">CONFIRM PASSWORD</h4>
+        <input name="CONFRMPASSWORD" type="password" id="passwordconftxt">
+        <br>
+        <input type="submit" value="REGISTER" class="buttons" />
       </form>
     </div>
 

@@ -67,7 +67,7 @@ function advancetrain() {
   } else if (didPickUpBadPerson) {
     // takes 1 point off the score variable
     $('#score').html(score -= 1);
-    if(score < 0) {
+    if (score < 0) {
       $('#score').html(score = 0);
     }
     // creates a new PERSON3 in the arena to be collected again
