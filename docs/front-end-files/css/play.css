@@ -1,14 +1,30 @@
 /* Glenn Wright & Cade--> */
 /* Play CSS */
-
 /* creates a background which changes in color over time */
 @keyframes backgroundmv {
-  0%   {background-color:#0042aa;}
-  20%  {background-color:#0086aa;}
-  40%  {background-color:#0064aa;}
-  60%  {background-color:#0020aa;}
-  80%  {background-color:#0200aa;}
-  100% {background-color:#0042aa;}
+  0% {
+    background-color: #0042aa;
+  }
+
+  20% {
+    background-color: #0086aa;
+  }
+
+  40% {
+    background-color: #0064aa;
+  }
+
+  60% {
+    background-color: #0020aa;
+  }
+
+  80% {
+    background-color: #0200aa;
+  }
+
+  100% {
+    background-color: #0042aa;
+  }
 }
 
 /* animates the background over a 60 second loop */
@@ -18,9 +34,9 @@
 
 /* styles the area that the gameplay takes place in */
 #area {
-  position : relative;
-  top : 140;
-	background-color: #EFD691;
+  position: relative;
+  top: 140;
+  background-color: #EFD691;
   border: 3px solid black;
   zoom: 29%;
 }
@@ -31,7 +47,7 @@
   font-size: 100px;
   font-family: Abel, sans-serif;
   color: #EFD691;
-	text-shadow: 3px 2px black;
+  text-shadow: 3px 2px black;
 }
 
 /* styles the label that is next to score counter */
@@ -44,7 +60,7 @@
   font-weight: 500;
   font-family: Abel, sans-serif;
   color: #EFD691;
-	text-shadow: 3px 2px black;
+  text-shadow: 3px 2px black;
 }
 
 /* styles the back button which lets the player go back to the menu */
@@ -70,7 +86,7 @@
   font-size: 70px;
   font-family: Abel, sans-serif;
   color: #0064aa;
-	text-shadow: 6px 0px black;
+  text-shadow: 6px 0px black;
   z-index: 10;
   position: fixed;
   top: 150px;
@@ -83,7 +99,8 @@
   border: 1px solid #0064aa;
   border-radius: 25px;
   background-color: #0064aa;
-  width: 250px; height: 80px;
+  width: 250px;
+  height: 80px;
   font-family: Abel, sans-serif;
   font-size: 60px;
   box-shadow: 6px 8px #0020aa;

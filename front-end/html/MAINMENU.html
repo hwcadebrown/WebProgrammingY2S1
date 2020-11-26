@@ -10,6 +10,7 @@
 </head>
 
 <!-- Makes the color of the page background black -->
+
 <body style=background-color:black>
 
 	<!-- Created a grid container to allow us to create sperate pane's in the menu -->
@@ -37,22 +38,22 @@
 
 		<!-- User pane where the user can enter their name, press play, register or login -->
 		<div id="userpane">
-			<form action = "/play" method= "GET" name="start-game">
-			<br>
-			<h2>ENTER NAME</h2>
-			<br>
-			<input type="text" id="txtbox">
-			<br><br>
-			<input type="submit" value="PLAY" onclick="window.location.href='PLAY.html'" id="playbutton" />
+			<form action="/play" method="GET" name="start-game">
+				<br>
+				<h2>ENTER NAME</h2>
+				<br>
+				<input type="text" id="txtbox">
+				<br><br>
+				<input type="submit" value="PLAY" onclick="window.location.href='PLAY.html'" id="playbutton" />
 			</form>
 			<br>
-			<form action = "/login" method= "GET" name="start-game">
-			<input type="submit" value="LOGIN" onclick="window.location.href='LOGIN.html'" class="accbuttons" />
+			<form action="/login" method="GET" name="start-game">
+				<input type="submit" value="LOGIN" onclick="window.location.href='LOGIN.html'" class="accbuttons" />
 			</form>
 			<br>
-			<form action = "/register" method= "GET" name="start-game">
-			<input type="submit" value="REGISTER" onclick="window.location.href='register.html'" class="accbuttons" />
-			<br><br>
+			<form action="/register" method="GET" name="start-game">
+				<input type="submit" value="REGISTER" onclick="window.location.href='register.html'" class="accbuttons" />
+				<br><br>
 			</form>
 		</div>
 
@@ -73,7 +74,7 @@
 
 	</div>
 
-<!-- Closes body container -->
+	<!-- Closes body container -->
 </body>
 
 </html>

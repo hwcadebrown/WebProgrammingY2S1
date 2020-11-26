@@ -10,6 +10,7 @@
 </head>
 
 <!-- Body container, inline styles the color of the page background black -->
+
 <body style=background-color:black>
 
 	<!-- Created a grid container to allow us to create sperate pane's in the login page -->
@@ -23,11 +24,11 @@
 		<!-- Register pane which will link to the register menu for registration -->
 		<div id="registerpane">
 			<br><br>
-			<form action = "/register" method= "GET" name="register-user">
-			<h3>DON'T</h3>
-			<h3>HAVE AN</h3>
-			<h3>ACCOUNT?</h3>
-			<input type="submit" value="REGISTER"  class="buttons" />
+			<form action="/register" method="GET" name="register-user">
+				<h3>DON'T</h3>
+				<h3>HAVE AN</h3>
+				<h3>ACCOUNT?</h3>
+				<input type="submit" value="REGISTER" class="buttons" />
 			</form>
 		</div>
 
@@ -35,13 +36,13 @@
 		<div id="loginpane">
 			<br>
 			<form action="/auth" method="POST" name="login_user">
-			<h3>USERNAME</h3>
-			<input name="USERNAME" type="test" class="txtboxes">
-			<h3>PASSWORD</h3>
-			<input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
-			<h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
-			<br>
-			<input type="submit" value="LOGIN" class="buttons" />
+				<h3>USERNAME</h3>
+				<input name="USERNAME" type="test" class="txtboxes">
+				<h3>PASSWORD</h3>
+				<input name="PASSWORD" type="password" id="passwordtxt" class="txtboxes">
+				<h5 onclick="showPass()" id="show">SHOW PASSWORD</h5>
+				<br>
+				<input type="submit" value="LOGIN" class="buttons" />
 			</form>
 		</div>
 
@@ -52,13 +53,13 @@
 			<h3>WITHOUT</h3>
 			<h3>SIGNING IN?</h3>
 			<form action="/menu" method="POST" name="get-menu">
-			<input type="button" value="MENU" onclick="window.location.href='MAINMENU.html'" class="buttons" />
+				<input type="button" value="MENU" onclick="window.location.href='MAINMENU.html'" class="buttons" />
 			</form>
 		</div>
 
 	</div>
 
-<!-- Closes body container -->
+	<!-- Closes body container -->
 </body>
 
 <!-- Load the javascript code required for the register menu (show password)-->

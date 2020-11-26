@@ -19,6 +19,8 @@ Back end (Game Server): Alexander Wickham, am454 (GH: Alexander-Wickham)
 
 # Deployment
 
+Heroku app: https://trains-of-pain-wp.herokuapp.com (it did stay up for one minute and died)
+
 You can view a demo state of the game at https://hwcadebrown.github.io/WebProgrammingY2S1/
 
 Trains of Pain trailer https://youtu.be/tVdoyVwYqSQ

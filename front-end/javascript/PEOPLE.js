@@ -50,33 +50,33 @@ function addperson() {
 function createperson(typeperson) {
 
   // if typeperson equals 1 then person is created
-  if(typeperson === 1) {
-  /* the x position of the first person is anywhere within the arenas total
-  width (minus the sprite size) */
-  personX = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the first person is anywhere within the arenas total
-  height (minus the sprite size) */
-  personY = randompos(0, parseFloat($(arena).css('height')) - 50);
+  if (typeperson === 1) {
+    /* the x position of the first person is anywhere within the arenas total
+    width (minus the sprite size) */
+    personX = randompos(0, parseFloat($(arena).css('width')) - 50);
+    /* the y position of the first person is anywhere within the arenas total
+    height (minus the sprite size) */
+    personY = randompos(0, parseFloat($(arena).css('height')) - 50);
   }
 
   // if typeperson equals 2 then powerperson is created
-  else if(typeperson === 2) {
-  /* the x position of the power person is anywhere within the arenas total
-  width (minus the sprite size) */
-  personXpower = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the power person is anywhere within the arenas total
-  height (minus the sprite size) */
-  personYpower = randompos(0, parseFloat($(arena).css('height')) - 50);
+  else if (typeperson === 2) {
+    /* the x position of the power person is anywhere within the arenas total
+    width (minus the sprite size) */
+    personXpower = randompos(0, parseFloat($(arena).css('width')) - 50);
+    /* the y position of the power person is anywhere within the arenas total
+    height (minus the sprite size) */
+    personYpower = randompos(0, parseFloat($(arena).css('height')) - 50);
   }
 
   // if typeperson equals 3 then the badperson is created
-  else if(typeperson === 3) {
-  /* the x position of the bad person is anywhere within the arenas total
-  width (minus the sprite size) */
-  personXbad = randompos(0, parseFloat($(arena).css('width')) - 50);
-  /* the y position of the bad person is anywhere within the arenas total
-  height (minus the sprite size) */
-  personYbad = randompos(0, parseFloat($(arena).css('height')) - 50);
+  else if (typeperson === 3) {
+    /* the x position of the bad person is anywhere within the arenas total
+    width (minus the sprite size) */
+    personXbad = randompos(0, parseFloat($(arena).css('width')) - 50);
+    /* the y position of the bad person is anywhere within the arenas total
+    height (minus the sprite size) */
+    personYbad = randompos(0, parseFloat($(arena).css('height')) - 50);
   }
 }
 
