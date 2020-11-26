@@ -1,0 +1,49 @@
+[Glenn Wright]
+
+Test sheet for XCGAN
+
+General
+
+Login page: 
+- All users have the ability to register a new account 
+- Previous players of the game have the ability to sign into previously made accounts on the page 
+
+Register page: 
+- Register has a similar look to login page for easy navigation
+- Option to go sign into a previously made account is available 
+- Users registering for a new account are asked for their desired username and password
+- Users registering for a new account are asked to confirm their password held in the password box 
+- Users are given the option to return to the main menu  
+
+Main Menu Page:
+- The highest score is displayed on the leaderboard 
+
+Game Page:
+- Panel containing the actual game
+	
+Player data:
+- When players account is established a unique ID, username, and password are generated
+- Account stores scores of previous scores
+- Highscores are displayed on user board 
+
+
+Actual Game 
+
+Player mechanics:
+- Initially players is moved with use of arrow keys or WASD
+- Players carriage is constantly moving in the direction of the key pressed last
+- Player always has control and can manipulate the direction of the carriage
+- When the player hits a passenger, the passenger is picked up
+- For every passenger a player picks up, the size of the train increases in size
+- The score increases for each person picked up
+
+
+Multiplayer
+- When a players carriage hits another player the player de-rails
+- The player gains the passengers previously obtained by the opposing players 
+	
+
+Game Over
+- When a players carriage hits the wall:
+- Game Over (The player derails)
+- A panel appears displaying “You derailed!” + retry or menu
