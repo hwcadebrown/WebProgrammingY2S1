@@ -38,7 +38,7 @@ class Area {
       this.tiles[x][y] = data;
     }
   }
-
+//Collect the info at the tile using the grid system
   infoAtTile(x,y){
     if (0<x && x<this.width && 0<y  && y<height){
       return this.tiles[x][y];
@@ -47,32 +47,35 @@ class Area {
       return -1;
     }
   }
-
+//Adds a train in put setting the value of a tile to an id where the train carraige is
   trainSpawn(train){
     let id = train.id;
     let carriages = train.noCarriages;
     let length = train.length;
-    for (let count = 0; count<length; count+=2){
-      this.setTile(carriages[count], carriages[count+1],id);
+    for (let count = 0; count<length; count++){
+      this.setTile(carriages[count].x, carriages[count].y,id);
     }
   }
-
+//removes the train by looping through all of its carriages assigning that to a passenger and then pushes it to the rest of the passenger
   trainDespawn(train){
     let carriages = train.noCarriages;
     let id = train.id;
     let length = train.length;
     let runningPass = [];
-    for (let count = 0; count<length; count+=2){
-        let person = new People.Passenger(this,carriages[count],carriages[count+1]);
+    for (let count = 0; count<length; count++){
+        let person = new People.Passenger(carraige[count].x,carriages[count].y);
         runningPass.push(person);
         this.setTile(carriages[count],carriages[count+1],person);
+        //sets the value to 2 meaning that the train will all be passengers
+        this.setTile(train.x,train.y, 2);
       }
-      this.setTile(train.x,train.y, 2);
-      train.noCarriages;
+
+      //returns the passengers that have been spawned in
       return runningPass;
     }
-}
 
+}
+//Exports the area class
 module.exports = {
   Area
 }
