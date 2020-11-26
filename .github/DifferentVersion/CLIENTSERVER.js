@@ -7,20 +7,23 @@ var user;
 //This will call the server and user the Play class to create the setting nessarcy, and if any other commands are called, they they will activate through
 //This will call the server and user the Play class to create the setting nessarcy, and if any other commands are called, they they will activate through
 webConnection.on('game situation', function(play){
+  //This creates a bunch of variables the are equal to the values created this inculdes the area, the passengers and of course the trains
   passengers = play.passengers;
   allTrains = play.trains;
   area = play.area;
+  //Gets the player using the find function using the id provided when the user connects to the server
   player = allTrains.find(function(player){
     return player.id == webConnection.id;
   }) || player;
-
+//If the user is dead then disconnect them from the server
   if (!player.isActive){
     webConnection.on('disconnect')
     return;
   }
-
+//Failed rendering theat should render every 30 seconds but doesn't. Could not reset times as it didn't really work
   const rerender = (millisec) => {
     if (millis - checkPoint> 30){
+      //Adds 30 milliseconds and displays the trains
       for (int count = 0; count = allTrains.length; count++){
         displayTrain(allTrains[count]);
         displayPassengers();
