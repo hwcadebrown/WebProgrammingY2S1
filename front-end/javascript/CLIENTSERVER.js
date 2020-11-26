@@ -7,20 +7,23 @@ var user;
 //This will call the server and user the Play class to create the setting nessarcy, and if any other commands are called, they they will activate through
 //This will call the server and user the Play class to create the setting nessarcy, and if any other commands are called, they they will activate through
 webConnection.on('game situation', function(play){
+  //This creates a bunch of variables the are equal to the values created this inculdes the area, the passengers and of course the trains
   passengers = play.passengers;
   allTrains = play.trains;
   area = play.area;
+  //Gets the player using the find function using the id provided when the user connects to the server
   player = allTrains.find(function(player){
     return player.id == webConnection.id;
   }) || player;
-
+//If the user is dead then disconnect them from the server
   if (!player.isActive){
     webConnection.on('disconnect')
     return;
   }
-
+//Failed rendering theat should render every 30 seconds but doesn't. Could not reset times as it didn't really work
   const rerender = (millisec) => {
     if (millis - checkPoint> 30){
+      //Adds 30 milliseconds and displays the trains
       for (int count = 0; count = allTrains.length; count++){
         displayTrain(allTrains[count]);
         displayPassengers();
@@ -101,4 +104,58 @@ displayTrain(train) {
 }
 getFrontAreaPoint(gridSpot){
   return (gridSpot*50);
+}
+
+// Cade Brown
+// Client interaction handling for game
+
+/* function which will handle changes in the trains direction which
+corresponds to what key has been pressed, this also prevents the train
+from going from left to right as they would then be crashing into themselves */
+changedirection(event) {
+  // variable direction will equal to the keyCode of the key the user pressed
+  const direction = event.keyCode;
+
+  // keyCode variables which correspond to what the user has pressed
+  const LEFT_KEY = 37;
+  const RIGHT_KEY = 39;
+  const UP_KEY = 38;
+  const DOWN_KEY = 40;
+  const W = 87;
+  const A = 65;
+  const S = 83;
+  const D = 68;
+
+  // created variables which tell us what direction the trains moving in
+  const moveUp = directiony === -1;
+  const moveDown = directiony === 1;
+  const moveRight = directionx === 1;
+  const moveLeft = directionx === -1;
+
+  /* if the left arrow key or A is pressed the train will change direction
+  to move left IF the train is NOT already moving right */
+  if (direction === LEFT_KEY && !moveRight || direction === A && !moveRight) {
+    directionx = 1;
+    directiony = 0;
+
+    /* if the up arrow key or W is pressed the train will change direction
+    to move upwards IF the train is NOT already moving down */
+  } else if (direction === UP_KEY && !moveDown || direction === W && !moveDown) {
+    directionx = 0;
+    directiony = 1;
+
+
+    /* if the right arrow key or D is pressed the train will change direction
+    to move right IF the train is NOT already moving left */
+  } else if (direction === RIGHT_KEY && !moveLeft || direction === D && !moveLeft) {
+    directionx = 1;
+    directiony = 0;
+
+    /* if the down arrow key or S is pressed the train will change direction
+    to move down IF the train is NOT already moving up */
+  } else if (direction === DOWN_KEY && !moveUp || direction === S && !moveUp) {
+    directionx = 0;
+    directiony = 1;
+  }
+  socket.emit("changedirection", directionx, directiony);
 }
