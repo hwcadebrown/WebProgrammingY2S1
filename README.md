@@ -13,9 +13,9 @@ Front end: Daniel Johnstone, danbun2001 (GH: danbun2001) **(JOINED)**
 
 Graphics & Front end: Cade Brown, cb313 (GH: hwcadebrown)
 
-Back end (Databases): Andrew McBain, aw127 (GH: ajmcbain)
+Back end (Databases): Andrew McBain, am454 (GH: ajmcbain)
 
-Back end (Game Server): Alexander Wickham, am454 (GH: Alexander-Wickham)
+Back end (Game Server): Alexander Wickham, aw127 (GH: Alexander-Wickham)
 
 # Deployment
 
