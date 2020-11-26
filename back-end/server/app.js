@@ -14,7 +14,7 @@ const session = require('express-session');
 // initialises sequelise module
 const Sequelize = require('sequelize');
 // creates a port to run game from or uses 4000 for localhost
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 // initialises bcrypt module
 const bcrypt = require('bcrypt');
 //creates an instance of express
@@ -188,7 +188,7 @@ app.get('/menu', function(request, response) {
 
 
 
-//listens for port given by heroku or for local port given 
+//listens for port given by heroku or for local port given
 app.listen(PORT);
 
 
