@@ -21,6 +21,6 @@ Back end (Game Server): Alexander Wickham, am454 (GH: Alexander-Wickham)
 
 You can view a demo state of the game at https://hwcadebrown.github.io/WebProgrammingY2S1/
 
-Live game demonstration (client-side)  https://youtu.be/jN-QC9m8PtY
+Trains of Pain trailer https://youtu.be/tVdoyVwYqSQ
 
-Heroku app [PENDING]
+Live game demonstration (client-side)  https://youtu.be/jN-QC9m8PtY
