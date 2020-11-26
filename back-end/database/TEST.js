@@ -1,3 +1,9 @@
+/*
+
+!!Early database attempt
+Find working one on app.js!!
+
+
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize('database', 'username', 'password', {
@@ -12,3 +18,4 @@ try {
 } catch (error) {
   console.error('Unable to connect to the database:', error);
 }
+*/

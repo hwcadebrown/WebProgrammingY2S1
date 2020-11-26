@@ -1,3 +1,10 @@
+/*
+
+
+!!Early database attempt
+Find working one on app.js!!
+
+
 var mysql = require('mysql');
 
 const database = mysql.createConnection({
@@ -14,3 +21,5 @@ database.connect(function(err) {
   console.log("Database created");
   });
 });
+
+*/
