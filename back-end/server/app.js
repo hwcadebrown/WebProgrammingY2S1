@@ -94,10 +94,10 @@ db.connect((err) => {
       if(err) {
 
       console.log(result);
-    }
+      }
     });
-    //sends login page
-	response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
+  //sends login page
+response.sendFile(path.join(__dirname + '../../../front-end/html/LOGIN.html'));
 });
 // route that retrieves register page
 app.get('/register', function(request, response) {
@@ -125,16 +125,16 @@ app.post('/add', function (request, response){
     //response.send('Please make sure password and confirm password are the same');
   //}else{
 //inserts record into table
-    db.query('INSERT INTO Profiles(username, password) VALUES(?,?)', [username, password], function(err) {
+  db.query('INSERT INTO Profiles(username, password) VALUES(?,?)', [username, password], function(err) {
       if (err) {
         return console.log(err.message);
       } else {
       //indicates user is logged on and redirects to menu route
-      request.session.loggedin = true;
-      console.log("User has been added");
-      response.redirect('/menu');
+        request.session.loggedin = true;
+        console.log("User has been added");
+        response.redirect('/menu');
       }
-    });
+  });
   //}
 
 
@@ -188,7 +188,7 @@ app.get('/menu', function(request, response) {
 
 
 
-//listens for port given by heroku or for local port given 
+//listens for port given by heroku or for local port given
 app.listen(PORT);
 
 
