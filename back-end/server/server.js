@@ -39,14 +39,14 @@ io.on('connection', function(newPlayer) {
   newPlayer.on('changedirection', function(directionx, directiony) {
     gameCurrent.changedirection(newPlayer, directionx, directiony);
   })
-
+//disconnect function that removes the player from the game and activates the remove player function so it removes it
   newPlayer.on('disconnect', function() {
     console.log('user has left the game')
     gameCurrent.removePlayer(newPlayer);
     Run_Game()
   })
 })
-
+//Sets an interval for a set period of time
 setInterval(function() {
   Run_Game();
 }, 200)
