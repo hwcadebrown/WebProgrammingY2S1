@@ -14,7 +14,7 @@ const session = require('express-session');
 // initialises sequelise module
 const Sequelize = require('sequelize');
 // creates a port to run game from or uses 4000 for localhost
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 // initialises bcrypt module
 const bcrypt = require('bcrypt');
 //creates an instance of express
